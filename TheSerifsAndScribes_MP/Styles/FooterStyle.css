@@ -1,10 +1,28 @@
-﻿footer {
-    display: flex;
+﻿@font-face {
+    font-family: 'Akatab';
+    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Akatab Bold';
+    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
+}
+
+footer {
     background-color: #058240;
-    font-family: Arial;
+    font-family: Akatab ;
     margin:0;
+    padding:0;
     width: auto;
 }
+
+#container {
+    display: flex;
+    margin: 0px;
+    padding: 50px;
+    width: auto;
+}
+
 img {
     width: 200px;
     height: auto;
@@ -20,7 +38,7 @@ a :hover {
 }
 
 #pages {
-    font-weight: bold;
+    font-family: 'Akatab Bold';
 }
 div {
     margin: 20px;

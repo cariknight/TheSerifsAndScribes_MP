@@ -76,6 +76,7 @@
     <Content Include="Invest.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Styles\FooterStyle.css" />
+    <Content Include="Styles\HomeStyle.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -156,6 +157,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Fonts\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>

@@ -5,46 +5,66 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link href="Styles/HomeStyle.css" rel="stylesheet" />
+    <title>Home</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Welcome to Biñan City</h1>
-            <p>Your Gateway to Heritage and Progress</p>
-            <asp:Button ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
-        </div>
-
-        <div>
-            <h2>Announcements</h2>
-            <div>
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+        <div id="home-bg">
+            <div id="home">
+                <div id="home-filter">
+                </div>
             </div>
-            <asp:Button ID="viewmoreBtn" runat="server" Text="View All" />
-
-        </div>
-        <div>
-            <h2>News and Events</h2>
-            
-            <div>
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                <asp:Button ID="readmoreBtn" runat="server" Text="Read more" />
-            </div>
-            <div>
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                <asp:Button ID="readmoreBtn1" runat="server" Text="Read more" />
-            </div>
-            <div>
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                <asp:Button ID="readmoreBtn2" runat="server" Text="Read more" />
+            <div id="homecontent">
+                <h1>Welcome to <span id="changecolor">Biñan City</span></h1>
+                <p>Your Gateway to Heritage and Progress</p>
+                <asp:Button ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
             </div>
         </div>
         
-        <uc:Footer runat="server" ID="Footer1" />
+
+        <div id="announcement">
+            <div id="flexcontainer">
+                <h2>Announcements</h2>
+                <div>
+                    <div>
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                    </div>
+                    <asp:Button ID="viewmoreBtn" runat="server" Text="View All" />
+                </div>
+            </div>
+
+        </div>
+
+        <div id="news-bg">
+            <div id="news">
+                <h2>News and Events</h2>
+                <div id="flexcontainer">
+                    <div id="newscard">
+                
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                        <asp:Button ID="readmoreBtn" runat="server" Text="Read more" />
+                    </div>
+                    <div id="newscard">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                        <asp:Button ID="readmoreBtn1" runat="server" Text="Read more" />
+                    </div>
+                    <div id="newscard">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                        <asp:Button ID="readmoreBtn2" runat="server" Text="Read more" />
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div id="space"></div>
+        <div id ="map">
+            <img src="..\Images\staticmap.png" />
+        </div>
     </form>
+    <uc:Footer runat="server" ID="Footer1" />
 </body>
 </html>
