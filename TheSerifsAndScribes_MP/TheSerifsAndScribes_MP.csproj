@@ -72,8 +72,13 @@
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\services_banner.png" />
+    <Content Include="Images\services_headerbackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Invest.aspx" />
     <Content Include="Services.aspx" />
+    <Content Include="ServicesStyle.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
