@@ -247,3 +247,25 @@ body {
         transform: translateY(-50%);
         transition: 0.4s;
     }
+
+/*Read more Button*/
+.css-button-rounded--yellow {
+    min-width: 130px;
+    height: 40px;
+    color: #000;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #FFEFCF;
+    background: #FFEFCF;
+}
+
+    .css-button-rounded--yellow:hover {
+        background: #058240;
+        color: #FFEFCF
+    }

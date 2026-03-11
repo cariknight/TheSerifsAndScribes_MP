@@ -52,17 +52,17 @@
                 
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                     <div id="newscard">
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn1" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn1" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                     <div id="newscard">
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn2" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                 </div>
             </div>  
