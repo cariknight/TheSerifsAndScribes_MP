@@ -7,7 +7,6 @@
     <title>Contact</title>
     <link href="~/Styles/contact.css" rel="stylesheet" type="text/css"/>
 </head>
-
 <body>
     <form id="form2" runat="server">
         <div class="contact-wrapper">

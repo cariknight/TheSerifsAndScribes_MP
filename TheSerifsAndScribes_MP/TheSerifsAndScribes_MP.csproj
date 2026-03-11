@@ -74,10 +74,12 @@
     <Content Include="Home.aspx" />
     <Content Include="Images\address.png" />
     <Content Include="Images\email.png" />
+    <Content Include="Images\faq.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Invest.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Styles\contact.css" />
+    <Content Include="Styles\faq.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
