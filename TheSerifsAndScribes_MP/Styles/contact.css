@@ -1,0 +1,220 @@
+﻿@font-face {
+    font-family: 'Akatab';
+    src: url('../Fonts/Akatab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akatab';
+    src: url('../Fonts/Akatab-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akatab';
+    src: url('../Fonts/Akatab-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('../Fonts/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFEFCF;
+}
+
+/*Contact with Form*/
+
+.contact-wrapper {
+    background-color: #FFEFCF;
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 1300px; 
+    margin: 0 auto; 
+}
+
+.contact-left {
+    flex: 0 0 450px;
+    margin-top: 60px;
+}
+
+    .contact-left h2 {
+        font-family: 'Abril Fatface';
+        font-weight: 400;
+        color: #058240; 
+        font-size: 4em;
+        margin-bottom: 10px;
+    }
+
+    .contact-left p {
+        font-family: 'Akatab', sans-serif;
+        font-weight: bold;
+        color: #058240; 
+        font-size: 1.1em;
+    }
+
+.contact-right {
+    flex: 0 0 650px;
+    font-family: 'Akatab', sans-serif;
+    font-weight: bold;
+    background-color: #87C159;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 550px;
+    box-sizing: border-box;
+}
+    .contact-right input[type="text"],
+    .contact-right input[type="email"],
+    .contact-right textarea {
+        background-color: #B8EE8C; 
+        border: 1px solid #000000;
+        padding: 10px;
+        border-radius: 4px;
+        color: #333;
+        width: 92%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.consent {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+    font-size: 0.85em;
+    color: black;
+    gap: 8px; 
+}
+
+    .consent input[type="checkbox"] {
+        margin: 0; 
+    }
+
+.btn-submit {
+    background-color: #058240;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: block; 
+    margin: 10px auto; 
+}
+
+    .btn-submit:hover {
+        background-color: #B8EE8C; 
+    }
+
+/*Contact Information*/
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2e7d32;
+    font-family: 'Akatab', sans-serif;
+    padding: 20px;
+    color: white;
+    min-height: 150px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px; 
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.details {
+    margin-left: 5px;
+    font-size: 0.88em;
+    line-height: 1.5;
+}
+
+/*Hotlines*/
+
+.hotlines {
+    background-color: #87C159;
+    color: white;
+    padding: 40px;
+    font-family: 'Akatab', sans-serif;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .hotlines h3 {
+        font-family: 'Abril Fatface';
+        font-weight: 400;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 2em;
+        color: #058240;
+    }
+
+.hotline-list {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    width: 100%;
+    max-width: 900px; 
+}
+
+    .hotline-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+.hotline-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.office {
+    flex: 1;
+}
+
+.hotline-number {
+    color: #058240;
+    font-weight: 900;
+    min-width: 80px; 
+    text-align: right;
+}

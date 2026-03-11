@@ -71,11 +71,18 @@
     <Content Include="Careers.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />
+    <Content Include="Footer.ascx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\address.png" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\phone.png" />
     <Content Include="Invest.aspx" />
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
     <Content Include="Styles\NavigationBar.css" />
+    <Content Include="Styles\contact.css" />
+    <Content Include="Styles\FooterStyle.css" />
+    <Content Include="Styles\HomeStyle.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -130,6 +137,13 @@
     <Compile Include="Services.aspx.designer.cs">
       <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
     <Compile Include="Transparency.aspx.cs">
       <DependentUpon>Transparency.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,7 +153,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\Akatab-Black.ttf" />
+    <Content Include="Fonts\Akatab-Bold.ttf" />
+    <Content Include="Fonts\Akatab-ExtraBold.ttf" />
+    <Content Include="Fonts\Akatab-Medium.ttf" />
+    <Content Include="Fonts\Akatab-Regular.ttf" />
+    <Content Include="Fonts\Akatab-SemiBold.ttf" />
+    <Content Include="Fonts\AbrilFatface-Regular.ttf" />
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +170,10 @@
     </None>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
