@@ -1,4 +1,10 @@
-﻿@font-face {
+﻿/*
+    COLORS
+    Green - 058240
+    Off-white - FFEFCF
+*/
+
+@font-face {
     font-family: 'Akatab';
     src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
 }
@@ -10,6 +16,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Akatab;
 }
 #home-bg {
     margin: 0;
@@ -66,7 +73,6 @@ body {
 #homecontent p {
     padding: 0;
     margin:0;
-    font-family: Akatab;
     font-size: 30px;
     color: #ffffff;
 }
@@ -116,14 +122,9 @@ body {
     margin: 30px;
     padding: 30px;
     width: 300px;
-    border-radius: 10px;
-    font-family: Akatab;
+    border-radius: 20px;
 
 }
-
-
-
-
 
 
 #space {
@@ -147,3 +148,49 @@ body {
     margin:0;
     padding:0;
 }
+
+#learnmoreBtn {
+    margin-top: 30px;
+}
+
+
+#learnmoreBtn, #viewmoreBtn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #058240
+}
+
+    #learnmoreBtn:hover, #viewmoreBtn:hover {
+        border-radius: 5px;
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+        #learnmoreBtn:hover:after, #viewmoreBtn:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+
+    #learnmoreBtn::after, #viewmoreBtn::after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        line-height: 40px;
+        top: 0;
+        right: -20px;
+        transition: 0.4s;
+    }

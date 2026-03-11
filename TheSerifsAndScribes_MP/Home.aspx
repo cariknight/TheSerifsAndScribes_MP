@@ -18,7 +18,7 @@
             <div id="homecontent">
                 <h1>Welcome to <span id="changecolor">Biñan City</span></h1>
                 <p>Your Gateway to Heritage and Progress</p>
-                <asp:Button ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
+                <asp:LinkButton ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
             </div>
         </div>
         
@@ -31,7 +31,7 @@
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
                     </div>
-                    <asp:Button ID="viewmoreBtn" runat="server" Text="View All" />
+                    <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
                 </div>
             </div>
 
