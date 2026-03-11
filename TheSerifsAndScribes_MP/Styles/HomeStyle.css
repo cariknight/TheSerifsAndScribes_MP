@@ -186,11 +186,12 @@ body {
 
     #learnmoreBtn::after, #viewmoreBtn::after {
         content: "\00bb";
+        padding-right: 20px;
         position: absolute;
         opacity: 0;
         font-size: 20px;
-        line-height: 40px;
-        top: 0;
+        top: 50%;
         right: -20px;
+        transform: translateY(-50%);
         transition: 0.4s;
     }
