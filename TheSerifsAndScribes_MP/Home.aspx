@@ -25,13 +25,20 @@
 
         <div id="announcement">
             <div id="flexcontainer">
-                <h2>Announcements</h2>
-                <div>
-                    <div>
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                <div id="announcement-left">
+                    <h2>Announcements</h2>
+                </div>
+                <div id="announcement-right">
+                    <div id="announcement-right-content">
+                        <div id="announcement-card">
+                            <div id="img-container"></div>
+                            <div id="announcement-content">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                            </div>
+                        </div>
+                        <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
                     </div>
-                    <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
                 </div>
             </div>
 
