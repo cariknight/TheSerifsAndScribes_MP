@@ -19,6 +19,7 @@ body {
     font-family: Akatab;
 }
 
+
 #flexcontainer {
     display: flex;
     margin: 0px;
@@ -103,6 +104,8 @@ body {
         font-family: 'Abril Fatface';
         color: #058240;
         text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 20px;
         font-size: 72px;
     }
 
