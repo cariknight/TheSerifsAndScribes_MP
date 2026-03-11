@@ -2,7 +2,7 @@
 <%@ Register Src="Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 
 <!DOCTYPE html>
-
+    
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Styles/HomeStyle.css" rel="stylesheet" />
@@ -75,3 +75,4 @@
     <uc:Footer runat="server" ID="Footer1" />
 </body>
 </html>
+                        
