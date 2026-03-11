@@ -79,6 +79,40 @@
             </div>
         </div>
         
+        <div>
+            <h2>How To Get To Biñan City</h2>
+
+            <div>
+                <div> image here </div>
+                <div>
+                    <p>By Road</p>
+                    <p>
+                        Gujarat has one of the better developed road networks in India. Ahmedabad is well connected with all major cities and towns by road. State and private buses are a great option to travel between smaller towns in the state.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div> image here </div>
+                <div>
+                    <p>By Train</p>
+                    <p>
+                        Major Indian cities are also connected via the Ahmedabad railway station that lies on the western railways network. The main railway station is located in Kalupur area. This station falls under the prominent national railway circuit and is connected to all major cities of India. 
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div> image here </div>
+                <div>
+                    <p>By Air</p>
+                    <p>
+                        Sardar Vallabhbhai Patel Airport in Ahmedabad connects all major cities in India and key cities abroad to the state.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </form>
     <uc:Footer runat="server" ID="Footer1" />
 </body>
