@@ -77,7 +77,9 @@
     <Content Include="Images\email.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Invest.aspx" />
+    <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
+    <Content Include="Styles\NavigationBar.css" />
     <Content Include="Styles\contact.css" />
     <Content Include="Styles\FooterStyle.css" />
     <Content Include="Styles\HomeStyle.css" />
