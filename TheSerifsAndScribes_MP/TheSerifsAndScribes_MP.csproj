@@ -73,7 +73,9 @@
     <Content Include="FAQ.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Invest.aspx" />
+    <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
+    <Content Include="Styles\NavigationBar.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -145,9 +147,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Styles\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

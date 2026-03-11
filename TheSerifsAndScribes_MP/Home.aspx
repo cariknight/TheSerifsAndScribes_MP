@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TheSerifsAndScribes_MP.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
+<%@ Register Src="NavBar.ascx" TagPrefix="uc" TagName="NavBar" %>
 
 <!DOCTYPE html>
 
@@ -7,6 +8,7 @@
     <title></title>
 </head>
 <body>
+    <uc:NavBar runat="server" ID="Navbar1" />
     <form id="form1" runat="server">
         <div>
         </div>
