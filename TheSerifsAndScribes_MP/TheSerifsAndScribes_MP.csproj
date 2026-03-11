@@ -141,6 +141,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\Akatab-Black.ttf" />
+    <Content Include="Fonts\Akatab-Bold.ttf" />
+    <Content Include="Fonts\Akatab-ExtraBold.ttf" />
+    <Content Include="Fonts\Akatab-Medium.ttf" />
+    <Content Include="Fonts\Akatab-Regular.ttf" />
+    <Content Include="Fonts\Akatab-SemiBold.ttf" />
+    <Content Include="Fonts\AbrilFatface-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
