@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div id="homecontent">
-                <h1>Welcome to <span id="changecolor">Biñan City</span></h1>
+                <h1>Welcome to <span id="changecolor">Bi&ntilde;an City</span></h1>
                 <p>Your Gateway to Heritage and Progress</p>
                 <asp:LinkButton ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
             </div>
