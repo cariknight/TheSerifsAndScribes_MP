@@ -6,9 +6,9 @@
 <head runat="server">
     <title>Contact</title>
     <link href="~/Styles/contact.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
@@ -48,52 +48,106 @@
             </div>
         </div>
 
-        <div class="contact-details">
-            <div class="detail">
-                <div class="detail-title address">
-                    <span class="label">Address</span>
-                </div>
-                <p>City Hall Compound, San Pablo St., Barangay Zapote, City of Biñan, Laguna</p>
-            </div>
 
-            <div class="detail">
-                <div class="detail-title phone">
-                    <span class="label">Phone</span>
-                </div>
-                <p>(049) 513-5028</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="images/address.png" alt="Address Icon" class="icon"/>
+            <span class="title">Address:</span>
+            <div class="details">
+              City Hall, San Pablo St. Brgy. Zapote, Biñan, Laguna
             </div>
+          </div>
 
-            <div class="detail">
-                <div class="detail-title email">
-                    <span class="label">Email</span>
-                </div>
-                <p>serbisyongarman@binan.gov.ph</p>
-            </div>
+          <div class="contact-item">
+            <img src="images/phone.png" alt="Phone Icon" class="icon"/>
+            <span class="title">Phone:</span>
+            <span class="details">(049) 513-5028</span>
+          </div>
+
+          <div class="contact-item">
+            <img src="images/email.png" alt="Email Icon" class="icon"/>
+            <span class="title">Email:</span>
+            <span class="details">serbisyongarman@binan.gov.ph</span>
+          </div>
         </div>
 
 
-
         <div class="hotlines">
-            <h3>Hotlines</h3>
+          <h3>Hotlines:</h3>
+          <div class="hotline-list">
             <ul>
-                <li><strong>City Disaster Risk Reduction Management Office:</strong> 513-9111</li>
-                <li><strong>Bureau of Fire and Protection Department (BFP):</strong> 511-9111</li>
-                <li><strong>Philippine National Police (PNP):</strong> 513-5111</li>
-                <li><strong>Bureau of Jail Management and Penology (BJMP):</strong> 511-6234</li>
-                <li><strong>Public Order and Safety Office (POSO):</strong> 513-8888</li>
-                <li><strong>City Environment and Natural Resources Office (CENRO):</strong> 513-5096</li>
-                <li><strong>Ospital ng Biñan (ONB):</strong> 511-4119</li>
-                <li><strong>Building Admin:</strong> 513-5002</li>
-                <li><strong>City Information Office:</strong> 513-5028</li>
-                <li><strong>Business Permit and Licensing Office (BPLO):</strong> 513-5084</li>
-                <li><strong>Commission on Election (COMELEC):</strong> 513-5100</li>
-                <li><strong>Department of Education (DepEd):</strong> 511-6446</li>
-                <li><strong>Department of the Interior and Local Government (DILG):</strong> 513-5032</li>
-                <li><strong>Department of Social Welfare and Development (DSWD):</strong> 513-5041</li>
-                <li><strong>Public Cemetery:</strong> 511-8499</li>
-                <li><strong>Serbisyong Arman Hall:</strong> 513-5033</li>
-                <li><strong>Negosyo Center:</strong> 513-5104</li>
+              <li class="hotline-item">
+                <span class="office">City Disaster Risk Reduction Management Office</span>
+                <span class="hotline-number">513-9111</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Bureau of Fire and Protection Department (BFP)</span>
+                <span class="hotline-number">511-9111</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Philippine National Police (PNP)</span>
+                <span class="hotline-number">513-5111</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Bureau of Jail Management and Penology (BJMP)</span>
+                <span class="hotline-number">511-6324</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Public Order and Safety Office (POSO)</span>
+                <span class="hotline-number">513-8888</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">City Environment and Natural Resources Office (CENRO)</span>
+                <span class="hotline-number">513-5096</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Ospital ng Biñan (ONB)</span>
+                <span class="hotline-number">511-4119</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Building Admin</span>
+                <span class="hotline-number">513-5002</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">City Information Office</span>
+                <span class="hotline-number">513-5028</span>
+              </li>
             </ul>
+            <ul>
+              <li class="hotline-item">
+                <span class="office">Business Permit and Licensing Office (BPLO)</span>
+                <span class="hotline-number">513-5084</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Commission on Election (COMELEC)</span>
+                <span class="hotline-number">513-5100</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Department of Education (DepEd)</span>
+                <span class="hotline-number">511-6446</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Department of the Interior and Local Government (DILG)</span>
+                <span class="hotline-number">513-5032</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Department of Social Welfare and Development (DSWD)</span>
+                <span class="hotline-number">513-5041</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Public Cemetery</span>
+                <span class="hotline-number">511-8499</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Serbisyong Arman Hall</span>
+                <span class="hotline-number">513-5033</span>
+              </li>
+              <li class="hotline-item">
+                <span class="office">Negosyo Center</span>
+                <span class="hotline-number">513-5104</span>
+              </li>
+            </ul>
+          </div>
         </div>
     </form>
 </body>
