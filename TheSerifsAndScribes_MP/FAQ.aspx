@@ -10,7 +10,10 @@
     <form id="form1" runat="server">
         <div class="faq-wrapper">
             <h2>Frequently Asked Questions</h2>
-            <p>Do you have more questions? Send us a message!</p>
+            <p>
+                Do you have more questions?
+                <a href="Contact.aspx" class="contact-link">Send us a message!</a>
+            </p>
         </div>
 
         <div class="faq-section">
@@ -69,24 +72,6 @@
             </div>
         </div>
     </form>
-
-    <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const arrow = button.querySelector('.arrow');
-
-                document.querySelectorAll('.faq-answer').forEach(a => {
-                    if (a !== answer) {
-                        a.classList.remove('show');
-                        a.previousElementSibling.querySelector('.arrow').textContent = "+";
-                    }
-                });
-
-                answer.classList.toggle('show');
-                arrow.textContent = answer.classList.contains('show') ? "−" : "+";
-            });
-        });
-    </script>
+    <script src="Scripts/faq.js"></script>
 </body>
 </html>
