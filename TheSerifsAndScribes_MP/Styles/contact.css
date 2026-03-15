@@ -1,27 +1,27 @@
 ﻿@font-face {
     font-family: 'Akatab';
-    src: url('../Fonts/Akatab-Regular.ttf') format('truetype');
+    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Akatab';
-    src: url('../Fonts/Akatab-Bold.ttf') format('truetype');
+    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Akatab';
-    src: url('../Fonts/Akatab-Black.ttf') format('truetype');
+    src: url('../Fonts/Akatab/Akatab-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Abril Fatface';
-    src: url('../Fonts/AbrilFatface-Regular.ttf') format('truetype');
+    src: url('../Fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }

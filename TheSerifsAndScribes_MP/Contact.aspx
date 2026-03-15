@@ -1,4 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TheSerifsAndScribes_MP.Contact" %>
+<%@ Register Src="NavBar.ascx" TagPrefix="uc" TagName="NavBar" %>
+<%@ Register Src="Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 
 <!DOCTYPE html>
 
@@ -8,6 +10,7 @@
     <link href="~/Styles/contact.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <uc:NavBar runat="server" ID="Navbar1" />
     <form id="form2" runat="server">
         <div class="contact-wrapper">
             <div class="contact-left">
@@ -146,5 +149,6 @@
           </div>
         </div>
     </form>
+    <uc:Footer runat="server" ID="Footer1" />
 </body>
 </html>
