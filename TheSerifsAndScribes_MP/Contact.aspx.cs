@@ -15,14 +15,12 @@ namespace TheSerifsAndScribes_MP
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Check if consent is ticked
             if (!chkConsent.Checked)
             {
                 Response.Write("<script>alert('You must check the consent box before submitting.');</script>");
                 return;
             }
 
-            // If consent is checked, proceed
             Response.Write("<script>alert('Form submitted successfully!');</script>");
         }
     }

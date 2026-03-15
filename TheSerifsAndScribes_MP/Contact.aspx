@@ -9,7 +9,6 @@
     <title>Contact</title>
     <link href="~/Styles/contact.css" rel="stylesheet" type="text/css"/>
 </head>
-
 <body>
     <uc:NavBar runat="server" ID="Navbar1" />
     <form id="form2" runat="server">
