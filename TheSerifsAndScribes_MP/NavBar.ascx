@@ -3,7 +3,7 @@
 <nav class="navbar">
     <div class="top-bar">
         <div class="logo">
-            <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Binan_City_Seal.png" />
+            <a href="Home.aspx"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Binan_City_Seal.png" /></a>
         </div>
         <div class="search">
             <input type="text" placeholder="Search" />
