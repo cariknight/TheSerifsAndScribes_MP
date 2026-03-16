@@ -1,16 +1,31 @@
-﻿@font-face {
-    font-family: 'Akatab';
-    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
-}
+﻿/*
+    COLORS
+    Green - 058240
+    Off-white - FFEFCF
+*/
 
-@font-face {
-    font-family: 'Abril Fatface';
-    src: url('../Fonts/Abril_Fatface.ttf') format('truetype'); 
-}
-body {
+@import url("Fonts.css");
+
+html, body, #form1 {
     margin: 0;
     padding: 0;
+    font-family: Akatab;
 }
+
+#form1 {
+    margin-top: -22px;
+    margin-bottom: -22px;
+}
+
+#flexcontainer {
+    display: flex;
+    margin: 0px;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Home section*/
 #home-bg {
     margin: 0;
     padding: 0;
@@ -66,7 +81,6 @@ body {
 #homecontent p {
     padding: 0;
     margin:0;
-    font-family: Akatab;
     font-size: 30px;
     color: #ffffff;
 }
@@ -75,18 +89,58 @@ body {
     color: #87C159;
 }
 
-#flexcontainer {
-    display: flex;
-    margin: 0px;
-    padding: 50px;
-}
-
+/*Announcement Section*/
 #announcement {
     background-color: #FFEFCF;
     margin: 0;
     padding: 0;
+    
 }
 
+    #announcement h2 {
+        font-family: 'Abril Fatface';
+        color: #058240;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 20px;
+        font-size: 72px;
+    }
+
+#announcement-card {
+    background-color: #058240;
+    padding: 0px;
+    border-radius: 20px;
+    width: 523px;
+}
+
+#announcement-content{
+    padding: 10px;
+}
+
+#img-container {
+    background-color: lightgrey;
+    height: 248px;
+    width: 523px;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#announcement-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#announcement-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/*News Section*/
 
 #news-bg {
     margin: 0;
@@ -116,14 +170,15 @@ body {
     margin: 30px;
     padding: 30px;
     width: 300px;
-    border-radius: 20px;
-    font-family: Akatab;
+    /*    border-radius: 20px;
 
+    background: rgba(5, 130, 64, 0.89);*/
+    backdrop-filter: blur(7px) saturate(200%);
+    -webkit-backdrop-filter: blur(7px) saturate(200%);
+    background-color: rgba(5, 130, 64, 0.76);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
-
-
-
 
 
 #space {
@@ -147,3 +202,76 @@ body {
     margin:0;
     padding:0;
 }
+
+/*Buttons*/
+
+#learnmoreBtn {
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+
+#learnmoreBtn, #viewmoreBtn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #058240
+}
+
+    #learnmoreBtn:hover, #viewmoreBtn:hover {
+        border-radius: 5px;
+        padding-right: 24px;
+        padding-left: 8px;
+        opacity: 1.0;
+    }
+
+        #learnmoreBtn:hover:after, #viewmoreBtn:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+
+    #learnmoreBtn::after, #viewmoreBtn::after {
+        content: "\00bb";
+        padding-right: 20px;
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        transition: 0.4s;
+    }
+
+/*Read more Button*/
+.css-button-rounded--yellow {
+    min-width: 130px;
+    height: 40px;
+    color: #000;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #FFEFCF;
+    background: #FFEFCF;
+}
+
+    .css-button-rounded--yellow:hover {
+        background: #058240;
+        color: #FFEFCF
+    }
