@@ -30,7 +30,7 @@ namespace TheSerifsAndScribes_MP
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button learnmoreBtn;
+        protected global::System.Web.UI.WebControls.LinkButton learnmoreBtn;
 
         /// <summary>
         /// viewmoreBtn control.
@@ -39,7 +39,7 @@ namespace TheSerifsAndScribes_MP
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewmoreBtn;
+        protected global::System.Web.UI.WebControls.LinkButton viewmoreBtn;
 
         /// <summary>
         /// readmoreBtn control.

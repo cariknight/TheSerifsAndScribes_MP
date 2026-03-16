@@ -1,14 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TheSerifsAndScribes_MP.Home" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
+<%@ Register Src="NavBar.ascx" TagPrefix="uc" TagName="NavBar" %>
 <%@ Register Src="Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+    
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Styles/HomeStyle.css" rel="stylesheet" />
     <title>Home</title>
 </head>
 <body>
+    <uc:NavBar runat="server" ID="Navbar1" />
     <form id="form1" runat="server">
         <div id="home-bg">
             <div id="home">
@@ -16,22 +19,29 @@
                 </div>
             </div>
             <div id="homecontent">
-                <h1>Welcome to <span id="changecolor">Biñan City</span></h1>
+                <h1>Welcome to <span id="changecolor">Bi&ntilde;an City</span></h1>
                 <p>Your Gateway to Heritage and Progress</p>
-                <asp:Button ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
+                <asp:LinkButton ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
             </div>
         </div>
         
 
         <div id="announcement">
             <div id="flexcontainer">
-                <h2>Announcements</h2>
-                <div>
-                    <div>
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                <div id="announcement-left">
+                    <h2>Announcements</h2>
+                </div>
+                <div id="announcement-right">
+                    <div id="announcement-right-content">
+                        <div id="announcement-card">
+                            <div id="img-container"></div>
+                            <div id="announcement-content">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                            </div>
+                        </div>
+                        <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
                     </div>
-                    <asp:Button ID="viewmoreBtn" runat="server" Text="View All" />
                 </div>
             </div>
 
@@ -45,17 +55,17 @@
                 
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                     <div id="newscard">
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn1" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn1" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                     <div id="newscard">
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn2" runat="server" Text="Read more" />
+                        <asp:Button ID="readmoreBtn2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                     </div>
                 </div>
             </div>  
@@ -68,3 +78,4 @@
     <uc:Footer runat="server" ID="Footer1" />
 </body>
 </html>
+                        

@@ -28,6 +28,12 @@ img {
     height: auto;
 }
 
+#ph-transparency-seal, #bagong-pilipinas{
+    width: 100px;
+    height: auto;
+    margin: 0px 60px;
+}
+
 a {
     color: white;
     text-decoration: none;
