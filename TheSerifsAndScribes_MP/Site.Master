@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
-<%@ Control Language="C#" AutoEventWireup="true" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -9,11 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Styles/NavigationBar.css" rel="stylesheet" />
     <link href="Styles/FooterStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
     <title></title>
 </head>
 <body>
 
     <form id="form1" runat="server">
+        <!-- NAVIGATION BAR -->
         <div class="menu-drawer">
             <button class="hamburger" type="button" aria-label="Toggle menu" onclick="toggleMenu()">
             <span></span>
@@ -29,7 +30,7 @@
             <nav class="menu-links"><br /><br />
                 <nav class="menu-links">
                     <a class="menu-item" runat="server" href="~/About.aspx">
-                    <img src=".../Images/Assets/Icons/icon-about.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-about.png" class="menu-icon" alt="" />
                     <span>ABOUT</span>
                     </a>
 
@@ -67,7 +68,10 @@
             </div>
         </div>
 
+        <!-- CONTENT PLACEHOLDER -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
 
+        <!-- FOOTER -->
         <footer>
             <div id="container">
                 <div>
