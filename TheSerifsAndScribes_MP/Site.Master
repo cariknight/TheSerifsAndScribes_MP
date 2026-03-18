@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
     <link href="Styles/NavigationBar.css" rel="stylesheet" />
     <link href="Styles/FooterStyle.css" rel="stylesheet" />
     
@@ -65,6 +65,8 @@
                     </a>
                 </nav>
             </div>
+
+            <div id="menuOverlay" class="menu-overlay is-hidden" onclick="toggleMenu()" aria-hidden="true"></div>
         </div>
 
         <!-- CONTENT PLACEHOLDER -->
@@ -108,8 +110,10 @@
         function toggleMenu() {
             var panel = document.getElementById('menuPanel');
             var button = document.getElementById('hamburger');
-            if (!panel || !button) return;
+            var overlay = document.getElementById('menuOverlay');
+            if (!panel || !button || !overlay) return;
             var isHidden = panel.classList.toggle('is-hidden');
+            overlay.classList.toggle('is-hidden');
             button.setAttribute('aria-expanded', (!isHidden).toString());
         }
     </script>

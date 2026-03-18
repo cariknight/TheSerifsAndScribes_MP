@@ -7,12 +7,18 @@
     --nav-font: "Montserrat", "Segoe UI", sans-serif;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .menu-drawer {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100%;
-    z-index: 9999 !important;
+    width: 280px;
+    z-index: 1000 !important;
+    height: 100vh;
 }
 
 .hamburger {
@@ -28,7 +34,7 @@
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
-    z-index: 10001;
+    z-index: 1002;
 }
 
 .hamburger span {
@@ -40,25 +46,45 @@
 }
 
 .menu-panel {
+    position: relative;
     margin: 0 !important;
     padding: 18px 24px 22px !important;
     background: var(--nav-bg);
     box-shadow: var(--nav-shadow);
-    transform: translateY(-110%);
+    transform: translateX(-105%);
     transition: transform 0.35s ease-in-out;
     will-change: transform;
-    width: 100%;
+    width: 280px;
+    height: 100vh;
     box-sizing: border-box;
+    z-index: 1001;
 }
 
 .menu-panel.is-hidden {
-    transform: translateY(-110%);
+    transform: translateX(-105%);
     pointer-events: none;
 }
 
 .menu-panel:not(.is-hidden) {
-    transform: translateY(0);
+    transform: translateX(0);
     pointer-events: auto;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    transition: opacity 0.25s ease;
+    opacity: 1;
+    z-index: 999;
+}
+
+.menu-overlay.is-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .menu-header {
@@ -102,4 +128,17 @@
 .menu-item:hover,
 .menu-item:focus-visible {
     opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    .menu-drawer,
+    .menu-panel {
+        width: 82vw;
+        max-width: 320px;
+    }
+
+    .hamburger {
+        top: 12px;
+        left: 12px;
+    }
 }
