@@ -1,17 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="TheSerifsAndScribes_MP.About" %>
-<%@ Register Src="NavBar.ascx" TagPrefix="uc" TagName="Navbar" %>
-<%@ Register Src="Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="TheSerifsAndScribes_MP.About" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="Styles/AboutStyle.css" rel="stylesheet" />
+<asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <title>About</title>
-</head>
-<body>
-    <uc:NavBar runat="server" ID="Navbar1" />
-    <form id="form1" runat="server">
+    <link href="Styles/AboutStyle.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div id="bg-color">
             <div id="bg">
                 <div id="bg-filter"></div>
@@ -87,7 +81,4 @@
                 </div>
             </div>
         </div>
-    </form>
-    <uc:Footer runat="server" ID="Footer1" />
-</body>
-</html>
+</asp:Content>
