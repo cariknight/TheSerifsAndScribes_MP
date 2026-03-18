@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TheSerifsAndScribes_MP.Home" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Announcement.aspx.cs" Inherits="TheSerifsAndScribes_MP.Announcement" %>
 
 <asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="Styles/HomeStyle.css" rel="stylesheet" />
