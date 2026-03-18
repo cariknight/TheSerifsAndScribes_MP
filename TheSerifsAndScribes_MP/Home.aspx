@@ -14,7 +14,7 @@
         <div id="homecontent">
             <h1>Welcome to <span id="changecolor">Bi&ntilde;an City</span></h1>
             <p>Your Gateway to Heritage and Progress</p>
-            <asp:LinkButton ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
+            <asp:LinkButton ID="learnmoreBtn" CssClass="cta-btn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
         </div>
     </div>
 
@@ -33,7 +33,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
                         </div>
                     </div>
-                    <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
+                    <asp:LinkButton ID="viewmoreBtn" CssClass="cta-btn" runat="server" Text="View All" />
                 </div>
             </div>
         </div>
