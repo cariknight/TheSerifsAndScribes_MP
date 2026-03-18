@@ -12,13 +12,18 @@ html, body, #form1 {
     font-family: Akatab;
 }
 
-#flex-container {
-    display: flex;
-    flex-direction: column; /* MOBILE FIRST */
-    padding: 20px;
-    gap: 20px;
+#form1 {
+    margin-top: -22px;
+    margin-bottom: -22px;
 }
 
+#flexcontainer {
+    display: flex;
+    margin: 0px;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /*Home section*/
 #home-bg {
@@ -27,13 +32,13 @@ html, body, #form1 {
     background-color: darkgoldenrod;
     position: relative;
 }
+
 #home {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Images/Binan_Aerial.png");
     width: 100%;
     height: 100vh;
-    padding: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +49,6 @@ html, body, #form1 {
 
     text-align: center;
     color: white;
-    
     z-index: 0;
 }
 
@@ -52,7 +56,7 @@ html, body, #form1 {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -62,23 +66,22 @@ html, body, #form1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
-    z-index:2;
+    z-index: 2;
 }
 
     #homecontent h1 {
         padding: 0;
         margin: 0;
         font-family: 'Abril Fatface';
-        font-size: 36px;
+        font-size: 72px;
         color: #ffffff;
     }
 
     #homecontent p {
         padding: 0;
-        margin:0;
-        font-size: 18px;
+        margin: 0;
+        font-size: 30px;
         color: #ffffff;
     }
 
@@ -91,7 +94,6 @@ html, body, #form1 {
     background-color: #FFEFCF;
     margin: 0;
     padding: 0;
-    
 }
 
     #announcement h2 {
@@ -100,9 +102,7 @@ html, body, #form1 {
         text-decoration: underline;
         text-decoration-thickness: 3px;
         text-underline-offset: 20px;
-
-        font-size: 36px;
-        text-align: center;
+        font-size: 72px;
     }
 
 #announcement-card {
@@ -110,31 +110,35 @@ html, body, #form1 {
     padding: 0px;
     border-radius: 20px;
     width: 523px;
-    flex-grow: 1;
 }
 
-#announcement-content{
+#announcement-content {
     padding: 10px;
 }
 
 #img-container {
     background-color: lightgrey;
-    height: 180px;
-    width: 100%;
+    height: 248px;
+    width: 523px;
     margin: 0;
     padding: 0;
     border-radius: 20px 20px 0px 0px;
 }
 
 #announcement-right {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #announcement-right-content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#announcement-right-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,11 +155,12 @@ html, body, #form1 {
     padding: 0;
     background-color: black;
 }
+
 #news {
     background-image: url(../Images/Binan_Bayan.png);
     margin: 0;
-    padding: 20px;
-    width: 100%; /*Fixed overflow ??*/
+    padding: 50px;
+    width: 92.55vw; /*not responsive yet*/
     height: auto;
     background-size: cover;
     background-position: center;
@@ -165,21 +170,20 @@ html, body, #form1 {
     #news h2 {
         text-align: center;
         font-family: 'Abril Fatface';
-        font-size: 32px;
+        font-size: 60px;
         color: #FFEFCF;
     }
 
 #newscard {
     background-color: #058240;
-    margin: 0;
+    margin: 30px;
     padding: 30px;
-    width: 100%;
+    width: 300px;
     backdrop-filter: blur(7px) saturate(200%);
     -webkit-backdrop-filter: blur(7px) saturate(200%);
     background-color: rgba(5, 130, 64, 0.76);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    flex-grow: 1;
 }
 
 
@@ -198,12 +202,12 @@ html, body, #form1 {
     height: auto;
 }
 
-#map img {
-    width: 100%;
-    height: auto;
-    margin:0;
-    padding:0;
-}
+    #map img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
 
 /*Buttons*/
 
@@ -277,177 +281,3 @@ html, body, #form1 {
         background: #058240;
         color: #FFEFCF
     }
-
-@media (min-width: 768px) {
-
-    #flexcontainer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    #homecontent h1 {
-        font-size: 56px;
-    }
-
-    #homecontent p {
-        font-size: 24px;
-    }
-
-    #announcement h2 {
-        font-size: 48px;
-        text-align: left;
-    }
-
-    #newscard {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    #homecontent h1 {
-        font-size: 72px;
-    }
-
-    #homecontent p {
-        font-size: 30px;
-    }
-
-    #newscard {
-        width: 30%;
-    }
-
-    #announcement-card {
-        max-width: 523px;
-    }
-}
-
-/*@media (min-width: 1024px) {
-    #flex-container {
-        display: flex;
-        margin: 0px;
-        padding: 50px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #homecontent h1 {
-        padding: 0;
-        margin: 0;
-        font-family: 'Abril Fatface';
-        font-size: 72px;
-        color: #ffffff;
-    }
-
-    #home {
-        margin: 0;
-        padding: 0;
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Images/Binan_Aerial.png");
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-        display: flex;
-        justify-content: center;*/ /* horizontal center */
-        /*align-items: center;*/ /* vertical center */
-
-        /*text-align: center;
-        color: white;
-        z-index: 0;
-    }
-
-    #homecontent h1 {
-        padding: 0;
-        margin: 0;
-        font-family: 'Abril Fatface';
-        font-size: 36px;
-        color: #ffffff;
-    }
-
-    #homecontent p {
-        padding: 0;
-        margin: 0;
-        font-size: 30px;
-        color: #ffffff;
-    }
-
-    #announcement h2 {
-        font-family: 'Abril Fatface';
-        color: #058240;
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 20px;
-        font-size: 72px;
-    }
-
-    #announcement-card {
-        background-color: #058240;
-        padding: 0px;
-        border-radius: 20px;
-        width: 523px;
-        flex-grow: 1;
-    }
-
-    #img-container {
-        background-color: lightgrey;
-        height: 248px;
-        width: 523px;
-        margin: 0;
-        padding: 0;
-        border-radius: 20px 20px 0px 0px;
-    }
-
-    #announcement-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #announcement-right-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    #news {
-        background-image: url(../Images/Binan_Bayan.png);
-        margin: 0;
-        padding: 50px;
-        width: 92.55vw;*/ /*not responsive yet*/
-        /*height: auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-        #news h2 {
-            text-align: center;
-            font-family: 'Abril Fatface';
-            font-size: 60px;
-            color: #FFEFCF;
-        }
-
-    #newscard {
-        background-color: #058240;
-        margin: 30px;
-        padding: 30px;
-        width: 300px;
-        backdrop-filter: blur(7px) saturate(200%);
-        -webkit-backdrop-filter: blur(7px) saturate(200%);
-        background-color: rgba(5, 130, 64, 0.76);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125);
-        flex-grow: 1;
-    }
-
-    #map img {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
-}*/
