@@ -26,10 +26,13 @@
     font-style: normal;
 }
 
-
-body {
+html, body, form {
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+
+body {
     background-color: #FFEFCF;
 }
 
@@ -39,11 +42,11 @@ body {
     background-color: #FFEFCF;
     display: flex;
     justify-content: center;
-    gap: 100px; 
+    gap: 100px;
     padding: 40px;
     border-radius: 8px;
-    max-width: 1300px; 
-    margin: 0 auto; 
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .contact-left {
@@ -54,7 +57,7 @@ body {
     .contact-left h2 {
         font-family: 'Abril Fatface';
         font-weight: 400;
-        color: #058240; 
+        color: #058240;
         font-size: 4em;
         margin-bottom: 10px;
     }
@@ -62,7 +65,7 @@ body {
     .contact-left p {
         font-family: 'Akatab', sans-serif;
         font-weight: bold;
-        color: #058240; 
+        color: #058240;
         font-size: 1.1em;
     }
 
@@ -76,10 +79,11 @@ body {
     max-width: 550px;
     box-sizing: border-box;
 }
+
     .contact-right input[type="text"],
     .contact-right input[type="email"],
     .contact-right textarea {
-        background-color: #B8EE8C; 
+        background-color: #B8EE8C;
         border: 1px solid #000000;
         padding: 10px;
         border-radius: 4px;
@@ -102,14 +106,14 @@ label {
 .consent {
     margin-top: 10px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     font-size: 0.85em;
     color: black;
-    gap: 8px; 
+    gap: 8px;
 }
 
     .consent input[type="checkbox"] {
-        margin: 0; 
+        margin: 0;
     }
 
 .btn-submit {
@@ -120,12 +124,12 @@ label {
     cursor: pointer;
     border-radius: 4px;
     margin-top: 15px;
-    display: block; 
-    margin: 10px auto; 
+    display: block;
+    margin: 10px auto;
 }
 
     .btn-submit:hover {
-        background-color: #046b32;
+        background-color: #B8EE8C;
     }
 
 /*Contact Information*/
@@ -135,16 +139,18 @@ label {
     justify-content: space-around;
     background-color: #2e7d32;
     font-family: 'Akatab', sans-serif;
-    padding: 20px;
+    padding: 20px 40px;
     color: white;
     min-height: 150px;
+    width: 100%;
+    margin: 0;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    max-width: 300px; 
+    max-width: 300px;
 }
 
 .icon {
@@ -174,6 +180,8 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin: 0;
 }
 
     .hotlines h3 {
@@ -188,9 +196,9 @@ label {
 .hotline-list {
     display: flex;
     justify-content: center;
-    gap: 100px; 
+    gap: 100px;
     width: 100%;
-    max-width: 900px; 
+    max-width: 900px;
 }
 
     .hotline-list ul {
@@ -215,6 +223,74 @@ label {
 .hotline-number {
     color: #058240;
     font-weight: 900;
-    min-width: 80px; 
+    min-width: 80px;
     text-align: right;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-left {
+        margin-top: 0;
+    }
+
+        .contact-left h2 {
+            font-size: 2.5em;
+        }
+
+    .contact-right {
+        padding: 25px;
+    }
+
+        .contact-right input[type="text"],
+        .contact-right input[type="email"],
+        .contact-right textarea {
+            width: 100%;
+        }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .contact-item {
+        max-width: 100%;
+    }
+
+    .hotlines {
+        padding: 25px 20px;
+    }
+
+    .hotline-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+        .hotline-list ul {
+            width: 100%;
+        }
+
+    .hotline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .hotline-number {
+        text-align: left;
+        min-width: 0;
+    }
 }

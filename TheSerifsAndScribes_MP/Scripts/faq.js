@@ -1,16 +1,18 @@
 ﻿document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        const arrow = button.querySelector('.arrow');
+        const item = button.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('active');
 
-        document.querySelectorAll('.faq-answer').forEach(a => {
-            if (a !== answer) {
-                a.classList.remove('show');
-                a.previousElementSibling.querySelector('.arrow').textContent = "+";
-            }
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            otherItem.classList.remove('active');
+            otherAnswer.style.maxHeight = null;
         });
 
-        answer.classList.toggle('show');
-        arrow.textContent = answer.classList.contains('show') ? "−" : "+";
+        if (!isOpen) {
+            item.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
     });
 });

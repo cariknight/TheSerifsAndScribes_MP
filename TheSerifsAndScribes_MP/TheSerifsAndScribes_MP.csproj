@@ -79,8 +79,8 @@
     <Content Include="Invest.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Services.aspx" />
-    <Content Include="Styles\contact.css" />
-    <Content Include="Styles\faq.css" />
+    <Content Include="Styles\Contact.css" />
+    <Content Include="Styles\Faq.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Contact</title>
-    <link href="~/Styles/contact.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Styles/Contact.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form id="form2" runat="server">

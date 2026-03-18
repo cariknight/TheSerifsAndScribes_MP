@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>FAQs</title>
-    <link href="~/Styles/faq.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Styles/Faq.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,7 +21,7 @@
             <div class="faq-item">
                 <button type="button" class="faq-question">
                     How can I request a copy of my birth, marriage, or death certificate?
-                    <span class="arrow">+</span>
+                    <span class="arrow"></span>
                 </button>
                 <div class="faq-answer">
                     You may request civil registry documents at the City Civil Registrar’s Office in Biñan City Hall. 
@@ -31,7 +32,7 @@
             <div class="faq-item">
                 <button type="button" class="faq-question">
                     Where do I apply for or renew a business permit?
-                    <span class="arrow">+</span>
+                    <span class="arrow"></span>
                 </button>
                 <div class="faq-answer">
                     Applications and renewals are handled by the Business Permit and Licensing Office (BPLO). 
@@ -42,7 +43,7 @@
             <div class="faq-item">
                 <button type="button" class="faq-question">
                     What is the official emergency hotline number?
-                    <span class="arrow">+</span>
+                    <span class="arrow"></span>
                 </button>
                 <div class="faq-answer">
                     For urgent concerns, please call our official hotline: (049) 513-9111.
@@ -52,7 +53,7 @@
             <div class="faq-item">
                 <button type="button" class="faq-question">
                     How do I apply for government jobs in Biñan City?
-                    <span class="arrow">+</span>
+                    <span class="arrow"></span>
                 </button>
                 <div class="faq-answer">
                     Job openings are posted on the Jobs/Careers section of our website and at the City Human Resources Office. 
@@ -63,7 +64,7 @@
             <div class="faq-item">
                 <button type="button" class="faq-question">
                     How do I apply for medical, educational, or livelihood assistance?
-                    <span class="arrow">+</span>
+                    <span class="arrow"></span>
                 </button>
                 <div class="faq-answer">
                     Assistance programs are managed by the City Social Welfare and Development Office (CSWDO). 
