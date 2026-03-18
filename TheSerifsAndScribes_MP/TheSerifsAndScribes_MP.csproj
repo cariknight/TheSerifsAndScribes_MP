@@ -72,6 +72,8 @@
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\bploimage.png" />
+    <Content Include="Images\rptaphoto.png" />
     <Content Include="Images\services_banner.png" />
     <Content Include="Images\services_headerbackground.png" />
     <Content Include="Invest.aspx" />

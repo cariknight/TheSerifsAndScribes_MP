@@ -6,6 +6,18 @@ html body form div {
     font-family: Akatab;
 }
 
+p1 {
+    font-family: Akatab;
+    color: #2D1102;
+    font-size: 20px;
+}
+
+p2 {
+    font-family: Akatab;
+    color: #FFEFCF;
+    font-size: 20px;
+}
+
 #bg-color {
     padding: 0;
     margin: 0;
@@ -40,7 +52,7 @@ html body form div {
     padding: 0;
 }
 
-#about-content {
+#content {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -50,15 +62,15 @@ html body form div {
     z-index: 2;
 }
 
-h1, h2, h3 {
+h1 {
     font-family: 'Abril Fatface';
 }
 
-#about-content h1 {
+#content h1 {
     padding: 0;
     margin: 0;
     color: white;
-    font-size: 72PX;
+    font-size: 72px;
 }
 
 #changecolor {
@@ -85,3 +97,48 @@ h1, h2, h3 {
     margin: 0;
     padding: 100px;
 }
+
+#rptabtn, #bplsbtn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #058240
+}
+
+#rptabtn:hover, #bplsbtn:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+    opacity: 1.0;
+}
+
+        #rptabtn:hover:after, #bplsbtn:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+
+    #rptabtn::after, #bplsbtn::after {
+        content: "\00bb";
+        padding-right: 20px;
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        transition: 0.4s;
+    }
+
+
