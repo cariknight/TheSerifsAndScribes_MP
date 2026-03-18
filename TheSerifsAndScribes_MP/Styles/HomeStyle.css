@@ -12,12 +12,8 @@ html, body, #form1 {
     font-family: Akatab;
 }
 
-#form1 {
-    margin-top: -22px;
-    margin-bottom: -22px;
-}
 
-#flexcontainer {
+#flex-container {
     display: flex;
     margin: 0px;
     padding: 50px;

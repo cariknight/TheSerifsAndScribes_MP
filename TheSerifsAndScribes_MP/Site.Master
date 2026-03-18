@@ -75,7 +75,7 @@
         <footer>
             <div id="container">
                 <div>
-                    <img src="..\Images\Binan_City_Seal.png" />
+                    <img src="../Images/Binan_City_Seal.png" />
                 </div>
                 <div>
                     <a href="Home.aspx" id="pages"><p>HOME</p></a>
@@ -97,10 +97,10 @@
                     <a><p>Online Business Registration & Payment</p></a>
                 </div>
                 <div id="ph-transparency-seal">
-                    <img src="..\Images\Transparency_Seal_logo.png" />
+                    <img src="../Images/Transparency_Seal_logo.png" />
                 </div>
                 <div id="bagong-pilipinas">
-                    <img src="..\Images\Bagong_Pilipinas_logo.png" />
+                    <img src="../Images/Bagong_Pilipinas_logo.png" />
                 </div>
             </div>
         </footer>
