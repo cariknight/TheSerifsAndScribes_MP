@@ -1,33 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
+<%@ Page Title="FAQs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>FAQs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="~/Styles/Faq.css" rel="stylesheet" type="text/css"/>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="faq-wrapper">
-            <h2>Frequently Asked Questions</h2>
-            <p>
-                Do you have more questions?
-                <a href="Contact.aspx" class="contact-link">Send us a message!</a>
-            </p>
-        </div>
+<asp:Content ID="FaqHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <link href="Styles/Faq.css" rel="stylesheet" type="text/css" />
+</asp:Content>
 
-        <div class="faq-section">
-            <div class="faq-item">
-                <button type="button" class="faq-question">
-                    How can I request a copy of my birth, marriage, or death certificate?
-                    <span class="arrow"></span>
-                </button>
-                <div class="faq-answer">
-                    You may request civil registry documents at the City Civil Registrar’s Office in Biñan City Hall. 
-                    Please bring valid identification and the required processing fee.
-                </div>
+<asp:Content ID="FaqMain" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="faq-wrapper">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+            Do you have more questions?
+            <a href="Contact.aspx" class="contact-link">Send us a message!</a>
+        </p>
+    </div>
+
+    <div class="faq-section">
+        <div class="faq-item">
+            <button type="button" class="faq-question">
+                How can I request a copy of my birth, marriage, or death certificate?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-answer">
+                You may request civil registry documents at the City Civil Registrar’s Office in Biñan City Hall.
+                Please bring valid identification and the required processing fee.
             </div>
+        </div>
 
             <div class="faq-item">
                 <button type="button" class="faq-question">
@@ -39,6 +35,7 @@
                     Forms are available at City Hall or through the Services section of our website.
                 </div>
             </div>
+        </div>
 
             <div class="faq-item">
                 <button type="button" class="faq-question">
@@ -49,6 +46,7 @@
                     For urgent concerns, please call our official hotline: (049) 513-9111.
                 </div>
             </div>
+        </div>
 
             <div class="faq-item">
                 <button type="button" class="faq-question">
@@ -60,6 +58,7 @@
                     Applicants must submit their résumé and required documents.
                 </div>
             </div>
+        </div>
 
             <div class="faq-item">
                 <button type="button" class="faq-question">
@@ -72,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+
     <script src="Scripts/faq.js"></script>
-</body>
-</html>
+</asp:Content>

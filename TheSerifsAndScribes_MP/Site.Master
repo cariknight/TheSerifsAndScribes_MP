@@ -1,17 +1,122 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
 
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <link href="Styles/NavigationBar.css" rel="stylesheet" />
+    <link href="Styles/FooterStyle.css" rel="stylesheet" />
+    
     <title></title>
 </head>
 <body>
+
     <form id="form1" runat="server">
-        <div>
+        <!-- NAVIGATION BAR -->
+        <div class="menu-drawer">
+            <button id="hamburger" class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div id="menuPanel" class="menu-panel is-hidden">
+                <div class="menu-header">
+                    <a href="Home.aspx"><img class="menu-logo" src="../Images/Binan_City_Seal.png" alt="Logo" /></a>
+                </div>
+
+                <nav class="menu-links">
+                    <a class="menu-item" runat="server" href="~/About.aspx">
+                        <img src="../Images/Assets/Icons/icon-about.png" class="menu-icon" alt="" />
+                        <span>ABOUT</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/Transparency.aspx">
+                        <img src="../Images/Assets/Icons/icon-transparency.png" class="menu-icon" alt="" />
+                        <span>TRANSPARENCY</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/Services.aspx">
+                        <img src="../Images/Assets/Icons/icon-services.png" class="menu-icon" alt="" />
+                        <span>SERVICES</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/Invest.aspx">
+                        <img src="../Images/Assets/Icons/icon-invest.png" class="menu-icon" alt="" />
+                        <span>INVEST</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/Jobs.aspx">
+                        <img src="../Images/Assets/Icons/icon-jobs.png" class="menu-icon" alt="" />
+                        <span>JOBS/CAREERS</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/Contact.aspx">
+                        <img src="../Images/phone.png" class="menu-icon" alt="" />
+                        <span>CONTACT US</span>
+                    </a>
+
+                    <a class="menu-item" runat="server" href="~/FAQ.aspx">
+                        <img src="../Images/Assets/Icons/icon-faq.png" class="menu-icon" alt="" />
+                        <span>FAQS</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div id="menuOverlay" class="menu-overlay is-hidden" onclick="toggleMenu()" aria-hidden="true"></div>
         </div>
-        
+
+        <!-- CONTENT PLACEHOLDER -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        <!-- FOOTER -->
+        <footer>
+            <div id="footer-container">
+                <div>
+                    <img src="../Images/Binan_City_Seal.png" />
+                </div>
+                <div>
+                    <a href="Home.aspx" class="pages"><p>HOME</p></a>
+                    <a href="About.aspx" class="pages"><p>ABOUT</p></a>
+                    <a href="Invest.aspx" class="pages"><p>INVEST</p></a>
+                    <a href="FAQ.aspx" class="pages"><p>FAQS</p></a>
+                    <a href="Contact.aspx" class="pages"><p>CONTACT US</p></a>
+                </div>
+                <div>
+                    <a href="Transparency.aspx" class="pages"><p>TRANSPARENCY</p></a>
+                    <a><p>Organizational Chart</p></a>
+                    <a><p>Citizen's Charter</p></a>
+                    <a><p>Full Disclosure Policy</p></a>
+                </div>
+                <div>
+                    <a href="Services.aspx" class="pages"><p>SERVICES</p></a>
+                    <a><p>Online Real Property</p></a>
+                    <a><p>Tax Assessment & Payment</p></a>
+                    <a><p>Online Business Registration & Payment</p></a>
+                </div>
+                <div id="ph-transparency-seal">
+                    <img src="../Images/Transparency_Seal_logo.png" />
+                </div>
+                <div id="bagong-pilipinas">
+                    <img src="../Images/Bagong_Pilipinas_logo.png" />
+                </div>
+            </div>
+        </footer>
     </form>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var panel = document.getElementById('menuPanel');
+            var button = document.getElementById('hamburger');
+            var overlay = document.getElementById('menuOverlay');
+            if (!panel || !button || !overlay) return;
+            var isHidden = panel.classList.toggle('is-hidden');
+            overlay.classList.toggle('is-hidden');
+            button.setAttribute('aria-expanded', (!isHidden).toString());
+        }
+    </script>
 </body>
 
 </html>

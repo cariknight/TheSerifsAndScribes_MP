@@ -12,17 +12,19 @@ html, body, #form1 {
     font-family: Akatab;
 }
 
-#form1 {
-    margin-top: -22px;
-    margin-bottom: -22px;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-#flexcontainer {
+
+.flex-container {
     display: flex;
-    margin: 0px;
+    margin: 0;
     padding: 50px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
 }
 
 /*Home section*/
@@ -32,6 +34,7 @@ html, body, #form1 {
     background-color: darkgoldenrod;
     position: relative;
 }
+
 #home {
     margin: 0;
     padding: 0;
@@ -48,7 +51,6 @@ html, body, #form1 {
 
     text-align: center;
     color: white;
-    
     z-index: 0;
 }
 
@@ -56,7 +58,7 @@ html, body, #form1 {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -66,24 +68,24 @@ html, body, #form1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
-    z-index:2;
+    z-index: 2;
 }
 
-#homecontent h1 {
-    padding: 0;
-    margin: 0;
-    font-family: 'Abril Fatface';
-    font-size: 72px;
-    color: #ffffff;
-}
-#homecontent p {
-    padding: 0;
-    margin:0;
-    font-size: 30px;
-    color: #ffffff;
-}
+    #homecontent h1 {
+        padding: 0;
+        margin: 0;
+        font-family: 'Abril Fatface';
+        font-size: 72px;
+        color: #ffffff;
+    }
+
+    #homecontent p {
+        padding: 0;
+        margin: 0;
+        font-size: 30px;
+        color: #ffffff;
+    }
 
 #changecolor {
     color: #87C159;
@@ -91,10 +93,9 @@ html, body, #form1 {
 
 /*Announcement Section*/
 #announcement {
-    background-color: #FFEFCF;
+    background-color: white;
     margin: 0;
     padding: 0;
-    
 }
 
     #announcement h2 {
@@ -113,7 +114,7 @@ html, body, #form1 {
     width: 523px;
 }
 
-#announcement-content{
+#announcement-content {
     padding: 10px;
 }
 
@@ -139,15 +140,7 @@ html, body, #form1 {
     gap: 20px;
 }
 
-#announcement-right-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
 
-
-/*News Section*/
 
 /*News Section*/
 
@@ -155,30 +148,36 @@ html, body, #form1 {
     margin: 0;
     padding: 0;
     background-color: black;
+    overflow: hidden;
 }
+
 #news {
     background-image: url(../Images/Binan_Bayan.png);
     margin: 0;
-    padding: 50px;
-    width: 92.55vw; /*not responsive yet*/
+    padding: 50px clamp(16px, 6vw, 64px);
+    width: 100%;
     height: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
     #news h2 {
         text-align: center;
         font-family: 'Abril Fatface';
-        font-size: 60px;
+        font-size: clamp(34px, 5vw, 60px);
         color: #FFEFCF;
+        margin-top: 0;
     }
 
 #newscard {
     background-color: #058240;
-    margin: 30px;
-    padding: 30px;
-    width: 300px;
+    margin: 0;
+    padding: 24px;
+    width: 100%;
+    max-width: 320px;
+    flex: 1 1 260px;
     backdrop-filter: blur(7px) saturate(200%);
     -webkit-backdrop-filter: blur(7px) saturate(200%);
     background-color: rgba(5, 130, 64, 0.76);
@@ -198,26 +197,36 @@ html, body, #form1 {
 #map {
     margin: 0;
     padding: 0;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
-#map img {
-    width: 100%;
-    height: auto;
-    margin:0;
-    padding:0;
-}
+    #map iframe {
+        display: block;
+        width: 100%;
+        height: 420px;
+        border: 0;
+    }
+
+    #map-link {
+        text-align: right;
+        padding: 4px 8px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+        #map-link a {
+            color: #058240;
+            text-decoration: none;
+        }
+
+        #map-link a:hover {
+            text-decoration: underline;
+        }
 
 /*Buttons*/
 
-#learnmoreBtn {
-    margin-top: 30px;
-    opacity: 0.8;
-}
-
-
-#learnmoreBtn, #viewmoreBtn {
+.cta-btn {
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -236,19 +245,19 @@ html, body, #form1 {
     background-color: #058240
 }
 
-    #learnmoreBtn:hover, #viewmoreBtn:hover {
+    .cta-btn:hover {
         border-radius: 5px;
         padding-right: 24px;
         padding-left: 8px;
         opacity: 1.0;
     }
 
-        #learnmoreBtn:hover:after, #viewmoreBtn:hover:after {
+        .cta-btn:hover:after {
             opacity: 1;
             right: 10px;
         }
 
-    #learnmoreBtn::after, #viewmoreBtn::after {
+    .cta-btn::after {
         content: "\00bb";
         padding-right: 20px;
         position: absolute;
@@ -259,6 +268,7 @@ html, body, #form1 {
         transform: translateY(-50%);
         transition: 0.4s;
     }
+
 
 /*Read more Button*/
 .css-button-rounded--yellow {
@@ -281,3 +291,68 @@ html, body, #form1 {
         background: #058240;
         color: #FFEFCF
     }
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .flex-container {
+        padding: 32px 24px;
+        justify-content: center;
+    }
+
+    #announcement h2 {
+        font-size: clamp(36px, 6vw, 52px);
+        text-underline-offset: 12px;
+    }
+
+    #announcement-card,
+    #img-container {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    #homecontent h1 {
+        font-size: clamp(38px, 8vw, 64px);
+    }
+
+    #homecontent p {
+        font-size: clamp(18px, 4vw, 26px);
+    }
+}
+
+@media (max-width: 640px) {
+    .flex-container {
+        padding: 24px 16px;
+        gap: 18px;
+    }
+
+    #home {
+        height: 80vh;
+    }
+
+    #announcement h2 {
+        text-underline-offset: 10px;
+    }
+
+    #announcement-card {
+        border-radius: 14px;
+    }
+
+    #img-container {
+        height: 200px;
+        border-radius: 14px 14px 0 0;
+    }
+
+    #news {
+        padding: 36px 16px;
+    }
+
+    #newscard {
+        max-width: none;
+        width: 100%;
+    }
+
+    .hamburger {
+        top: 12px;
+        left: 12px;
+    }
+}

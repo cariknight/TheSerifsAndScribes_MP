@@ -1,81 +1,75 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
-<%@ Register Src="NavBar.ascx" TagPrefix="uc" TagName="NavBar" %>
-<%@ Register Src="Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TheSerifsAndScribes_MP.Home" %>
 
-
-<!DOCTYPE html>
-    
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="Styles/HomeStyle.css" rel="stylesheet" />
+<asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Home</title>
-</head>
-<body>
-    <uc:NavBar runat="server" ID="Navbar1" />
-    <form id="form1" runat="server">
-        <div id="home-bg">
-            <div id="home">
-                <div id="home-filter">
-                </div>
-            </div>
-            <div id="homecontent">
-                <h1>Welcome to <span id="changecolor">Bi&ntilde;an City</span></h1>
-                <p>Your Gateway to Heritage and Progress</p>
-                <asp:LinkButton ID="learnmoreBtn" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
+    <link href="Styles/HomeStyle.css" rel="stylesheet" />
+</asp:Content>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="home-bg">
+        <div id="home">
+            <div id="home-filter">
             </div>
         </div>
-        
+        <div id="homecontent">
+            <h1>Welcome to <span id="changecolor">Bi&ntilde;an City</span></h1>
+            <p>Your Gateway to Heritage and Progress</p>
+            <asp:LinkButton ID="learnmoreBtn" CssClass="cta-btn" ClientIDMode="Static" runat="server" PostBackUrl="About.aspx" Text="Learn More" />
+        </div>
+    </div>
 
-        <div id="announcement">
-            <div id="flexcontainer">
-                <div id="announcement-left">
-                    <h2>Announcements</h2>
-                </div>
-                <div id="announcement-right">
-                    <div id="announcement-right-content">
-                        <div id="announcement-card">
-                            <div id="img-container"></div>
-                            <div id="announcement-content">
-                                <h3>Lorem Ipsum</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                            </div>
+
+    <div id="announcement">
+        <div class="flex-container">
+            <div id="announcement-left">
+                <h2>Announcements</h2>
+            </div>
+            <div id="announcement-right">
+                <div id="announcement-right-content">
+                    <div id="announcement-card">
+                        <div id="img-container"></div>
+                        <div id="announcement-content">
+                            <h3>Lorem Ipsum</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
                         </div>
-                        <asp:LinkButton ID="viewmoreBtn" runat="server" Text="View All" />
                     </div>
+                    <asp:LinkButton ID="viewmoreBtn" CssClass="cta-btn" runat="server" Text="View All" />
                 </div>
             </div>
-
         </div>
 
-        <div id="news-bg">
-            <div id="news">
-                <h2>News and Events</h2>
-                <div id="flexcontainer">
-                    <div id="newscard">
-                
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
-                    </div>
-                    <div id="newscard">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn1" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
-                    </div>
-                    <div id="newscard">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                        <asp:Button ID="readmoreBtn2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
-                    </div>
+    </div>
+
+    <div id="news-bg">
+        <div id="news">
+            <h2>News and Events</h2>
+            <div class="flex-container">
+                <div id="newscard">
+        
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                    <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
                 </div>
-            </div>  
-        </div>
-        <div id="space"></div>
-        <div id ="map">
-            <img src="..\Images\staticmap.png" />
-        </div>
-    </form>
-    <uc:Footer runat="server" ID="Footer1" />
-</body>
-</html>
-                        
+                <div id="newscard">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                    <asp:Button ID="readmoreBtn1" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
+                </div>
+                <div id="newscard">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
+                    <asp:Button ID="readmoreBtn2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div id="space"></div>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe
+        <p id="map-link">
+            <a href="https://www.openstreetmap.org/?mlat=14.3350&amp;mlon=121.0832#map=17/14.3350/121.0832" target="_blank" rel="noopener">Open map in new tab</a>
+        </p>
+    </div>
+</asp:Content>
+            

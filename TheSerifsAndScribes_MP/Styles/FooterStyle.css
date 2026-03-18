@@ -1,35 +1,53 @@
-﻿@font-face {
-    font-family: 'Akatab';
-    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Akatab Bold';
-    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
-}
+﻿@import url('fonts.css');
 
 footer {
     background-color: #058240;
-    font-family: Akatab ;
+    font-family: Akatab;
     margin:0;
     padding:0;
     width: auto;
 }
 
-#container {
+#footer-container {
     display: flex;
-    margin: 0px;
-    padding: 50px;
-    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 20px;
+}
+
+    #footer-container > div {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+@media (min-width: 768px) {
+    #footer-container > div {
+        flex: 1 1 45%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    #footer-container {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+        #footer-container > div {
+            flex: 1 1 auto;
+        }
 }
 
 img {
-    width: 200px;
+    max-width: 150px;
+/*    width: 150px;*/
     height: auto;
 }
 
 #ph-transparency-seal, #bagong-pilipinas{
-    width: 100px;
+    max-width: 80px;
     height: auto;
     margin: 0px 60px;
 }
@@ -37,15 +55,52 @@ img {
 a {
     color: white;
     text-decoration: none;
+    padding: 8px 0;
 }
 
-a :hover {
+a:hover {
     text-decoration: underline;
 }
 
-#pages {
+.pages {
     font-family: 'Akatab Bold';
 }
-div {
-    margin: 20px;
+
+/*@media (min-width: 768px) {
+    #footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+        #footer-container > div {
+            flex: 1 1 45%;
+            text-align: left;
+        }
 }
+
+@media (min-width: 1024px) {
+    body {background-color: red; }
+    #footer-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+        #footer-container > div {
+            flex: 1 1 auto;
+            text-align: left;
+        }
+
+    #ph-transparency-seal,
+    #bagong-pilipinas {
+        margin: 0;
+    }
+}*/
+
+/*div {
+    margin: 20px;
+}*/
