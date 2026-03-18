@@ -15,6 +15,15 @@ namespace TheSerifsAndScribes_MP
     {
 
         /// <summary>
+        /// Navbar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl Navbar1;
+
+        /// <summary>
         /// form2 control.
         /// </summary>
         /// <remarks>
@@ -76,5 +85,14 @@ namespace TheSerifsAndScribes_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// Footer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl Footer1;
     }
 }
