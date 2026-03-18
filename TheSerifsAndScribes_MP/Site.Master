@@ -4,11 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head runat="server">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
     <link href="Styles/NavigationBar.css" rel="stylesheet" />
     <link href="Styles/FooterStyle.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    
     <title></title>
 </head>
 <body>
@@ -73,7 +74,7 @@
 
         <!-- FOOTER -->
         <footer>
-            <div id="container">
+            <div id="footer-container">
                 <div>
                     <img src="../Images/Binan_City_Seal.png" />
                 </div>

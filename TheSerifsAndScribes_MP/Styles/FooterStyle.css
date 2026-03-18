@@ -8,21 +8,37 @@ footer {
     width: auto;
 }
 
-#container {
+#footer-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0px;
-    padding: 20px;
+    padding: 5px 10px;
     gap: 20px;
-    width: auto;
 }
 
-#container > div {
-    width: 100%;
-    text-align: center;
+    #footer-container > div {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+@media (min-width: 768px) {
+    #footer-container > div {
+        flex: 1 1 45%;
+        text-align: left;
+    }
 }
 
+@media (min-width: 1024px) {
+    #footer-container {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+        #footer-container > div {
+            flex: 1 1 auto;
+        }
+}
 
 img {
     max-width: 150px;
@@ -32,7 +48,6 @@ img {
 
 #ph-transparency-seal, #bagong-pilipinas{
     max-width: 80px;
-/*    width: 100px;*/
     height: auto;
     margin: 0px 60px;
 }
@@ -51,22 +66,23 @@ a:hover {
     font-family: 'Akatab Bold';
 }
 
-@media (min-width: 768px) {
-    #container {
+/*@media (min-width: 768px) {
+    #footer-container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
     }
 
-        #container > div {
-            width: 45%;
+        #footer-container > div {
+            flex: 1 1 45%;
             text-align: left;
         }
 }
 
 @media (min-width: 1024px) {
-    #container {
+    body {background-color: red; }
+    #footer-container {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-evenly;
@@ -74,8 +90,8 @@ a:hover {
 
     }
 
-        #container > div {
-            width: auto;
+        #footer-container > div {
+            flex: 1 1 auto;
             text-align: left;
         }
 
@@ -83,7 +99,7 @@ a:hover {
     #bagong-pilipinas {
         margin: 0;
     }
-}
+}*/
 
 /*div {
     margin: 20px;

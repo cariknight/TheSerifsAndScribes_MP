@@ -20,7 +20,7 @@
 
 
     <div id="announcement">
-        <div id="flex-container">
+        <div class="flex-container">
             <div id="announcement-left">
                 <h2>Announcements</h2>
             </div>
@@ -43,7 +43,7 @@
     <div id="news-bg">
         <div id="news">
             <h2>News and Events</h2>
-            <div id="flex-container">
+            <div class="flex-container">
                 <div id="newscard">
         
                     <h3>Lorem Ipsum</h3>
