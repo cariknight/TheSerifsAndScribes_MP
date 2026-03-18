@@ -11,34 +11,52 @@ namespace TheSerifsAndScribes_MP
 {
 
 
-    public partial class Site
+    public partial class Announcement
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// learnmoreBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.LinkButton learnmoreBtn;
 
         /// <summary>
-        /// form1 control.
+        /// viewmoreBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.LinkButton viewmoreBtn;
 
         /// <summary>
-        /// MainContent control.
+        /// readmoreBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button readmoreBtn;
+
+        /// <summary>
+        /// readmoreBtn1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button readmoreBtn1;
+
+        /// <summary>
+        /// readmoreBtn2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button readmoreBtn2;
     }
 }
