@@ -1,15 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Transparency.aspx.cs" Inherits="TheSerifsAndScribes_MP.Transparency" %>
+<%@ Page Title="Transparency" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Transparency.aspx.cs" Inherits="TheSerifsAndScribes_MP.Transparency" %>
 
-<!DOCTYPE html>
+<asp:Content ID="TransparencyHead" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="TransparencyMain" ContentPlaceHolderID="MainContent" runat="server">
+    <div>
+        <!-- Transparency content goes here -->
+    </div>
+</asp:Content>
