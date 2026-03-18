@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TheSerifsAndScribes_MP
 {
-    public partial class Site : System.Web.UI.Page
+    public partial class Site : MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

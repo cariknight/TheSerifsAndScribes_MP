@@ -68,6 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="assets\img-menu\icon-about.png" />
+    <Content Include="assets\img-menu\icon-binan.png" />
+    <Content Include="assets\img-menu\icon-contact.png" />
+    <Content Include="assets\img-menu\icon-faq.png" />
+    <Content Include="assets\img-menu\icon-invest.png" />
+    <Content Include="assets\img-menu\icon-jobs.png" />
+    <Content Include="assets\img-menu\icon-services.png" />
+    <Content Include="assets\img-menu\icon-transparency.png" />
     <Content Include="Careers.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />
@@ -176,10 +184,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Fonts\" />
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

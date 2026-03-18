@@ -1,17 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
+<%@ Register Src="~/navbar.ascx" TagPrefix="uc" TagName="NavBar" %>
+<%@ Register Src="~/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+  <title></title>
+  <link href="~/Styles/NavigationBar.css" rel="stylesheet" runat="server" />
+  <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <uc:NavBar runat="server" ID="NavBar1" />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <uc:Footer runat="server" ID="Footer1" />
         
     </form>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var panel = document.getElementById('menuPanel');
+            if (panel) {
+                panel.classList.toggle('is-hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
