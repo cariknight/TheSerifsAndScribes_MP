@@ -5,6 +5,12 @@
 }
 
 @font-face {
+    font-family: 'Akatab Bold';
+    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Abril Fatface';
     src: url('../Fonts/Abril_Fatface/Abril_Fatface.ttf') format('truetype');
 }
+

@@ -1,16 +1,8 @@
-﻿@font-face {
-    font-family: 'Akatab';
-    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Akatab Bold';
-    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
-}
+﻿@import url('fonts.css');
 
 footer {
     background-color: #058240;
-    font-family: Akatab ;
+    font-family: Akatab;
     margin:0;
     padding:0;
     width: auto;
@@ -18,18 +10,29 @@ footer {
 
 #container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin: 0px;
-    padding: 50px;
+    padding: 20px;
+    gap: 20px;
     width: auto;
 }
 
+#container > div {
+    width: 100%;
+    text-align: center;
+}
+
+
 img {
-    width: 200px;
+    max-width: 150px;
+/*    width: 150px;*/
     height: auto;
 }
 
 #ph-transparency-seal, #bagong-pilipinas{
-    width: 100px;
+    max-width: 80px;
+/*    width: 100px;*/
     height: auto;
     margin: 0px 60px;
 }
@@ -37,15 +40,51 @@ img {
 a {
     color: white;
     text-decoration: none;
+    padding: 8px 0;
 }
 
-a :hover {
+a:hover {
     text-decoration: underline;
 }
 
-#pages {
+.pages {
     font-family: 'Akatab Bold';
 }
-div {
-    margin: 20px;
+
+@media (min-width: 768px) {
+    #container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+        #container > div {
+            width: 45%;
+            text-align: left;
+        }
 }
+
+@media (min-width: 1024px) {
+    #container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+        #container > div {
+            width: auto;
+            text-align: left;
+        }
+
+    #ph-transparency-seal,
+    #bagong-pilipinas {
+        margin: 0;
+    }
+}
+
+/*div {
+    margin: 20px;
+}*/

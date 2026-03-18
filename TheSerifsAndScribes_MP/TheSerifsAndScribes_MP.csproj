@@ -83,6 +83,7 @@
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
     <Content Include="Styles\AboutStyle.css" />
+    <Content Include="Styles\AnnouncementStyle.css" />
     <Content Include="Styles\Fonts.css" />
     <Content Include="Styles\NavigationBar.css" />
     <Content Include="Styles\contact.css" />
