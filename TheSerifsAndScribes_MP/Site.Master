@@ -1,13 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TheSerifsAndScribes_MP.Site" %>
 <%@ Control Language="C#" AutoEventWireup="true" %>
+
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Styles/NavigationBar.css" rel="stylesheet" />
+    <link href="Styles/FooterStyle.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -22,60 +23,92 @@
             <div id="menuPanel" class="menu-panel is-hidden">
             <div class="menu-header">
                 <span></span>
-                <img class="menu-logo" src="/assets/img-menu/icon-binan.png" alt="Logo" />
+                <img class="menu-logo" src="../Images/Binan_City_Seal.png" alt="Logo" />
             </div>
 
             <nav class="menu-links"><br /><br />
                 <nav class="menu-links">
                     <a class="menu-item" runat="server" href="~/About.aspx">
-                    <img src="/assets/img-menu/icon-about.png" class="menu-icon" alt="" />
+                    <img src=".../Images/Assets/Icons/icon-about.png" class="menu-icon" alt="" />
                     <span>ABOUT</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/Transparency.aspx">
-                    <img src="/assets/img-menu/icon-transparency.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-transparency.png" class="menu-icon" alt="" />
                     <span>TRANSPARENCY</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/Services.aspx">
-                    <img src="/assets/img-menu/icon-services.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-services.png" class="menu-icon" alt="" />
                     <span>SERVICES</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/Invest.aspx">
-                    <img src="/assets/img-menu/icon-invest.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-invest.png" class="menu-icon" alt="" />
                     <span>INVEST</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/Jobs.aspx">
-                    <img src="/assets/img-menu/icon-jobs.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-jobs.png" class="menu-icon" alt="" />
                     <span>JOBS/CAREERS</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/Contact.aspx">
-                    <img src="/assets/img-menu/icon-contact.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons//icon-contact.png" class="menu-icon" alt="" />
                     <span>CONTACT US</span>
                     </a>
 
                     <a class="menu-item" runat="server" href="~/FAQ.aspx">
-                    <img src="/assets/img-menu/icon-faq.png" class="menu-icon" alt="" />
+                    <img src="../Images/Assets/Icons/icon-faq.png" class="menu-icon" alt="" />
                     <span>FAQS</span>
                     </a>
                 </nav>
             </nav>
             </div>
         </div>
-        <script type="text/javascript">
-            function toggleMenu() {
-                var panel = document.getElementById('menuPanel');
-                if (panel) {
-                    panel.classList.toggle('is-hidden');
-                }
-            }
-        </script>
 
 
+        <footer>
+            <div id="container">
+                <div>
+                    <img src="..\Images\Binan_City_Seal.png" />
+                </div>
+                <div>
+                    <a href="Home.aspx" id="pages"><p>HOME</p></a>
+                    <a href="About.aspx" id="pages"><p>ABOUT</p></a>
+                    <a href="Invest.aspx" id="pages"><p>INVEST</p></a>
+                    <a href="FAQ.aspx" id="pages"><p>FAQS</p></a>
+                    <a href="Contact.aspx" id="pages"><p>CONTACT US</p></a>
+                </div>
+                <div>
+                    <a href="Transparency.aspx" id="pages"><p>TRANSPARENCY</p></a>
+                    <a><p>Organizational Chart</p></a>
+                    <a><p>Citizen's Charter</p></a>
+                    <a><p>Full Disclosure Policy</p></a>
+                </div>
+                <div>
+                    <a href="Services.aspx" id="pages"><p>SERVICES</p></a>
+                    <a><p>Online Real Property</p></a>
+                    <a><p>Tax Assessment & Payment</p></a>
+                    <a><p>Online Business Registration & Payment</p></a>
+                </div>
+                <div id="ph-transparency-seal">
+                    <img src="..\Images\Transparency_Seal_logo.png" />
+                </div>
+                <div id="bagong-pilipinas">
+                    <img src="..\Images\Bagong_Pilipinas_logo.png" />
+                </div>
+            </div>
+        </footer>
     </form>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var panel = document.getElementById('menuPanel');
+            if (panel) {
+                panel.classList.toggle('is-hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
