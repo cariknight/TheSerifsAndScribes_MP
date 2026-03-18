@@ -93,7 +93,7 @@ html, body, #form1 {
 
 /*Announcement Section*/
 #announcement {
-    background-color: #FFEFCF;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -197,16 +197,32 @@ html, body, #form1 {
 #map {
     margin: 0;
     padding: 0;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
-    #map img {
+    #map iframe {
+        display: block;
         width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
+        height: 420px;
+        border: 0;
     }
+
+    #map-link {
+        text-align: right;
+        padding: 4px 8px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+        #map-link a {
+            color: #058240;
+            text-decoration: none;
+        }
+
+        #map-link a:hover {
+            text-decoration: underline;
+        }
 
 /*Buttons*/
 
@@ -252,6 +268,7 @@ html, body, #form1 {
         transform: translateY(-50%);
         transition: 0.4s;
     }
+
 
 /*Read more Button*/
 .css-button-rounded--yellow {
