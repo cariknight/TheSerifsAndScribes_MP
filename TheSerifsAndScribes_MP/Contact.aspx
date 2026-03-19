@@ -1,7 +1,8 @@
 <%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TheSerifsAndScribes_MP.Contact" %>
 
 <asp:Content ID="ContactHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="Styles/contact.css" rel="stylesheet" type="text/css" />
+    <title>Contact</title>
+    <link href="~/Styles/Contact.css" rel="stylesheet" type="text/css"/>
 </asp:Content>
 
 <asp:Content ID="ContactMain" ContentPlaceHolderID="MainContent" runat="server">

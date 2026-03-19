@@ -1,7 +1,7 @@
 <%@ Page Title="FAQs" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FAQ.aspx.cs" Inherits="TheSerifsAndScribes_MP.FAQ" %>
 
 <asp:Content ID="FaqHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="Styles/faq.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Faq.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="FaqMain" ContentPlaceHolderID="MainContent" runat="server">
@@ -25,46 +25,50 @@
             </div>
         </div>
 
-        <div class="faq-item">
-            <button type="button" class="faq-question">
-                Where do I apply for or renew a business permit?
-                <span class="arrow">+</span>
-            </button>
-            <div class="faq-answer">
-                Applications and renewals are handled by the Business Permit and Licensing Office (BPLO).
-                Forms are available at City Hall or through the Services section of our website.
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+                    Where do I apply for or renew a business permit?
+                    <span class="arrow"></span>
+                </button>
+                <div class="faq-answer">
+                    Applications and renewals are handled by the Business Permit and Licensing Office (BPLO). 
+                    Forms are available at City Hall or through the Services section of our website.
+                </div>
             </div>
         </div>
 
-        <div class="faq-item">
-            <button type="button" class="faq-question">
-                What is the official emergency hotline number?
-                <span class="arrow">+</span>
-            </button>
-            <div class="faq-answer">
-                For urgent concerns, please call our official hotline: (049) 513-9111.
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+                    What is the official emergency hotline number?
+                    <span class="arrow"></span>
+                </button>
+                <div class="faq-answer">
+                    For urgent concerns, please call our official hotline: (049) 513-9111.
+                </div>
             </div>
         </div>
 
-        <div class="faq-item">
-            <button type="button" class="faq-question">
-                How do I apply for government jobs in Biñan City?
-                <span class="arrow">+</span>
-            </button>
-            <div class="faq-answer">
-                Job openings are posted on the Jobs/Careers section of our website and at the City Human Resources Office.
-                Applicants must submit their résumé and required documents.
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+                    How do I apply for government jobs in Biñan City?
+                    <span class="arrow"></span>
+                </button>
+                <div class="faq-answer">
+                    Job openings are posted on the Jobs/Careers section of our website and at the City Human Resources Office. 
+                    Applicants must submit their résumé and required documents.
+                </div>
             </div>
         </div>
 
-        <div class="faq-item">
-            <button type="button" class="faq-question">
-                How do I apply for medical, educational, or livelihood assistance?
-                <span class="arrow">+</span>
-            </button>
-            <div class="faq-answer">
-                Assistance programs are managed by the City Social Welfare and Development Office (CSWDO).
-                Please visit their office or contact them through the hotline for requirements and application procedures.
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+                    How do I apply for medical, educational, or livelihood assistance?
+                    <span class="arrow"></span>
+                </button>
+                <div class="faq-answer">
+                    Assistance programs are managed by the City Social Welfare and Development Office (CSWDO). 
+                    Please visit their office or contact them through the hotline for requirements and application procedures.
+                </div>
             </div>
         </div>
     </div>

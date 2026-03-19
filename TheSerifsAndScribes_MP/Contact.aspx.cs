@@ -17,11 +17,19 @@ namespace TheSerifsAndScribes_MP
         {
             if (!chkConsent.Checked)
             {
-                Response.Write("<script>alert('You must check the consent box before submitting.');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "consentAlert",
+                    "alert('You must check the consent box before submitting.');", true);
                 return;
             }
 
-            Response.Write("<script>alert('Form submitted successfully!');</script>");
+            txtName.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtMessage.Text = "";
+            chkConsent.Checked = false;
+
+            ClientScript.RegisterStartupScript(this.GetType(), "successAlert",
+                "alert('Form submitted successfully!');", true);
         }
     }
 }
