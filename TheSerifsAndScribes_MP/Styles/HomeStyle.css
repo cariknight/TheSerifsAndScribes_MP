@@ -94,7 +94,17 @@ html, body, #form1 {
 
 /*Navigation Island*/
 #navIsland {
-    color: black
+
+    margin-left: 160px;
+    margin-right: 160px;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    padding: 24px;
+}
+
+#navIsland a{
+    color: black;
 }
 
 /*Announcement Section*/
