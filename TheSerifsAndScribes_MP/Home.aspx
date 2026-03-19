@@ -49,14 +49,12 @@
         </div>
     </div>
 
+    
     <div id="news">
-        <p class="news-kicker">Stay Updated</p>
         <h2>News and Events</h2>
-        <p class="news-subtitle">
-            Discover what's happening around the city. From community events to official government updates.
-        </p>
         <div class="flex-container">
             <div id="newscard">
+    
                 <h3>Lorem Ipsum</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
                 <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
@@ -72,7 +70,8 @@
                 <asp:Button ID="readmoreBtn2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
             </div>
         </div>
-    </div>
+     
+</div>
 
     <div id="announcement">
         <div class="flex-container">
@@ -98,7 +97,7 @@
     
     <div id="space"></div>
     <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe
         <p id="map-link">
             <a href="https://www.openstreetmap.org/?mlat=14.3350&amp;mlon=121.0832#map=17/14.3350/121.0832" target="_blank" rel="noopener">Open map in new tab</a>
         </p>
