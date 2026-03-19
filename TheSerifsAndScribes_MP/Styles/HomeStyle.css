@@ -103,7 +103,7 @@ html, body, #form1 {
     margin: 0;
     padding: 0;
 }
-
+/*
     #announcement h2 {
         font-family: 'Abril Fatface';
         color: #058240;
@@ -111,14 +111,14 @@ html, body, #form1 {
         text-decoration-thickness: 3px;
         text-underline-offset: 20px;
         font-size: 72px;
-    }
+    }*/
 
-#announcement-card {
+/*#announcement-card {
     background-color: #058240;
     padding: 0px;
     border-radius: 20px;
     width: 523px;
-}
+}*/
 
 #announcement-content {
     padding: 10px;
@@ -133,18 +133,17 @@ html, body, #form1 {
     border-radius: 20px 20px 0px 0px;
 }
 
-#announcement-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*#announcement-right {
+    justify-content: left;
 
-#announcement-right-content {
+}*/
+
+/*#announcement-right-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-}
+}*/
 
 
 
@@ -152,30 +151,45 @@ html, body, #form1 {
 
 #news{
     margin: 0;
-    padding: 0;
+    padding: 50px clamp(16px, 6vw, 64px);
     background-color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-    #news h2 {
-        text-align: center;
-        font-family: 'Roboto';
-        font-size: clamp(34px, 5vw, 60px);
-        color: #058240;
-        margin-top: 0;
-    }
+.h2-style {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    color: #058240;
+    margin: 8px 0 12px;
+    font-weight: 700;
+}
 
-#newscard {
-    background-color: #058240;
+.kicker {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #8DC63F;
     margin: 0;
-    padding: 24px;
-    width: 100%;
-    max-width: 320px;
-    flex: 1 1 260px;
-    backdrop-filter: blur(7px) saturate(200%);
-    -webkit-backdrop-filter: blur(7px) saturate(200%);
-    background-color: rgba(5, 130, 64, 0.76);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    font-weight: 400;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #4B5563;
+    margin: 0 auto 28px;
+    max-width: 900px;
+    font-weight: 400;
+}
+
+#announcement-right .kicker, #announcement-right .subtitle, #announcement-right .h2-style {
+    text-align: left;
+}
+
+#city-service .kicker, #city-service .subtitle, #city-service .h2-style {
+    text-align: left;
 }
 
 
