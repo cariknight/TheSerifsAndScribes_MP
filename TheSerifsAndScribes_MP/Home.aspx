@@ -23,6 +23,7 @@
         </div>
     </div>
 
+    <!-- NAVIGATION ISLAND -->
     <div id="navIsland" class="flex-container">
         <div>
             <a href="">
