@@ -2,6 +2,7 @@
     COLORS
     Green - 058240
     Off-white - FFEFCF
+    Ghost white - F8FAFC
 */
 
 @import url("Fonts.css");
@@ -91,6 +92,11 @@ html, body, #form1 {
     color: #87C159;
 }
 
+/*Navigation Island*/
+#navIsland {
+    color: black
+}
+
 /*Announcement Section*/
 #announcement {
     background-color: white;
@@ -144,30 +150,17 @@ html, body, #form1 {
 
 /*News Section*/
 
-#news-bg {
+#news{
     margin: 0;
     padding: 0;
-    background-color: black;
-    overflow: hidden;
-}
-
-#news {
-    background-image: url(../Images/Binan_Bayan.png);
-    margin: 0;
-    padding: 50px clamp(16px, 6vw, 64px);
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
+    background-color: white;
 }
 
     #news h2 {
         text-align: center;
-        font-family: 'Abril Fatface';
+        font-family: 'Roboto';
         font-size: clamp(34px, 5vw, 60px);
-        color: #FFEFCF;
+        color: #058240;
         margin-top: 0;
     }
 
@@ -225,8 +218,25 @@ html, body, #form1 {
         }
 
 /*Buttons*/
+#learnmoreBtn {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #058240;
+    border-color: #058240;
+    
+}
 
-.cta-btn {
+#cityservicesBtn {
+    background-color: white;
+    color: black;
+}
+.btn {
+    font-family: 'Akatab Bold';
+    font-size: 20px;
+    margin: 15px;
+}
+
+/*.cta-btn {
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -267,7 +277,7 @@ html, body, #form1 {
         right: -20px;
         transform: translateY(-50%);
         transition: 0.4s;
-    }
+    }*/
 
 
 /*Read more Button*/
