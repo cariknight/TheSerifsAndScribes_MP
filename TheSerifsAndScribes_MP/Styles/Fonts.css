@@ -11,6 +11,11 @@
 
 @font-face {
     font-family: 'Abril Fatface';
-    src: url('../Fonts/Abril_Fatface/Abril_Fatface.ttf') format('truetype');
+    src: url('../Fonts/Abril_Fatface/AbrilFatface-Regular.ttf"') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 

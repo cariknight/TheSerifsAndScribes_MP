@@ -2,6 +2,7 @@
     COLORS
     Green - 058240
     Off-white - FFEFCF
+    Ghost white - F8FAFC
 */
 
 @import url("Fonts.css");
@@ -10,6 +11,11 @@ html, body, #form1 {
     margin: 0;
     padding: 0;
     font-family: Akatab;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
 }
 
 *, *::before, *::after {
@@ -91,27 +97,29 @@ html, body, #form1 {
     color: #87C159;
 }
 
+/*Navigation Island*/
+#navIsland {
+    color: #000;
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    padding: 25px 100px;
+    max-width: 1200px;
+    width: calc(100% - 320px);
+    margin: -60px auto 40px auto;
+    position: relative;
+    z-index: 5;
+}
+
+#navIsland a{
+    color: black;
+}
+
 /*Announcement Section*/
 #announcement {
     background-color: white;
     margin: 0;
     padding: 0;
-}
-
-    #announcement h2 {
-        font-family: 'Abril Fatface';
-        color: #058240;
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 20px;
-        font-size: 72px;
-    }
-
-#announcement-card {
-    background-color: #058240;
-    padding: 0px;
-    border-radius: 20px;
-    width: 523px;
 }
 
 #announcement-content {
@@ -127,64 +135,130 @@ html, body, #form1 {
     border-radius: 20px 20px 0px 0px;
 }
 
-#announcement-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#announcement-right-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-
 
 /*News Section*/
 
-#news-bg {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    overflow: hidden;
-}
-
-#news {
-    background-image: url(../Images/Binan_Bayan.png);
+#news{
     margin: 0;
     padding: 50px clamp(16px, 6vw, 64px);
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-    #news h2 {
-        text-align: center;
-        font-family: 'Abril Fatface';
-        font-size: clamp(34px, 5vw, 60px);
-        color: #FFEFCF;
-        margin-top: 0;
-    }
+.h2-style {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    color: #058240;
+    margin: 8px 0 12px;
+    font-weight: 700;
+}
 
-#newscard {
-    background-color: #058240;
+.kicker {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #8DC63F;
     margin: 0;
+    font-weight: 400;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #4B5563;
+    margin: 0 auto 28px;
+    max-width: 900px;
+    font-weight: 400;
+}
+
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.news-card {
+    /*    background-color: rgba(5, 130, 64, 0.76);*/
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     padding: 24px;
     width: 100%;
-    max-width: 320px;
-    flex: 1 1 260px;
+    max-width: 360px;
+    flex: 1 1 280px;
     backdrop-filter: blur(7px) saturate(200%);
     -webkit-backdrop-filter: blur(7px) saturate(200%);
-    background-color: rgba(5, 130, 64, 0.76);
-    border-radius: 12px;
+    border-radius: 60px;
     border: 1px solid rgba(255, 255, 255, 0.125);
+    position: relative;
 }
 
+.news-link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.news-link {
+    color: #058240;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-arrow {
+    color: #058240;
+    font-size: 22px;
+    line-height: 1;
+}
+
+#announcement-right .kicker, #announcement-right .subtitle, #announcement-right .h2-style {
+    text-align: left;
+}
+
+#announcement-right > .flex-container {
+    gap: 8px !important;
+    padding: 6px 0 !important;
+    margin: 6px 0 !important;
+    align-items: flex-start;
+}
+
+#city-service .kicker, #city-service .subtitle, #city-service .h2-style {
+    text-align: left;
+}
+
+#city-service {
+    background-color: #F8FAFC;
+   
+}
+
+#city-service .card{
+    max-width: 335px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 0;
+    box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
+}
+
+.serviceBtn {
+    color: #FDC013;
+    font-family: Roboto;
+}
 
 #space {
     margin: 0;
@@ -226,49 +300,53 @@ html, body, #form1 {
 
 /*Buttons*/
 
-.cta-btn {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    overflow: hidden;
-    border-radius: 5px;
-    border: none;
-    background-color: #058240
+#learnmoreBtn.btn {
+    background-color: #058240 !important;
+    border-color: #058240 !important;
+    color: #ffffff !important;
 }
 
-    .cta-btn:hover {
-        border-radius: 5px;
-        padding-right: 24px;
-        padding-left: 8px;
-        opacity: 1.0;
-    }
+#learnmoreBtn.btn:hover,
+#learnmoreBtn.btn:focus {
+    background-color: #047237 !important;
+    border-color: #047237 !important;
+    color: #ffffff !important;
+}
 
-        .cta-btn:hover:after {
-            opacity: 1;
-            right: 10px;
-        }
+#cityservicesBtn.btn {
+    background-color: #ffffff !important;
+    color: #058240 !important;
+    border-color: #058240 !important;
+}
 
-    .cta-btn::after {
-        content: "\00bb";
-        padding-right: 20px;
-        position: absolute;
-        opacity: 0;
-        font-size: 20px;
-        top: 50%;
-        right: -20px;
-        transform: translateY(-50%);
-        transition: 0.4s;
-    }
+#cityservicesBtn.btn:hover,
+#cityservicesBtn.btn:focus {
+    background-color: #058240 !important;
+    color: #ffffff !important;
+    border-color: #058240 !important;
+}
 
+#viewmoreBtn.btn,
+[id$="viewmoreBtn"].btn {
+    background-color: #058240 !important;
+    border-color: #058240 !important;
+    color: #ffffff !important;
+}
+
+#viewmoreBtn.btn:hover,
+#viewmoreBtn.btn:focus,
+[id$="viewmoreBtn"].btn:hover,
+[id$="viewmoreBtn"].btn:focus {
+    background-color: #047237 !important;
+    border-color: #047237 !important;
+    color: #ffffff !important;
+}
+
+.btn {
+    font-family: 'Akatab Bold';
+    font-size: 20px;
+    margin: 15px;
+}
 
 /*Read more Button*/
 .css-button-rounded--yellow {
@@ -346,7 +424,7 @@ html, body, #form1 {
         padding: 36px 16px;
     }
 
-    #newscard {
+    .news-card {
         max-width: none;
         width: 100%;
     }
@@ -354,5 +432,11 @@ html, body, #form1 {
     .hamburger {
         top: 12px;
         left: 12px;
+    }
+
+    #navIsland {
+        margin: -30px 16px 32px 16px;
+        max-width: none;
+        width: auto;
     }
 }

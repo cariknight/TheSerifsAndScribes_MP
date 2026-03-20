@@ -1,10 +1,10 @@
-﻿@import url('fonts.css');
+@import url('Fonts.css');
 
 footer {
     background-color: #058240;
     font-family: Akatab;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     width: auto;
 }
 
@@ -16,10 +16,10 @@ footer {
     gap: 20px;
 }
 
-    #footer-container > div {
-        flex: 1 1 100%;
-        text-align: center;
-    }
+#footer-container > div {
+    flex: 1 1 100%;
+    text-align: center;
+}
 
 @media (min-width: 768px) {
     #footer-container > div {
@@ -33,74 +33,51 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         align-items: flex-start;
+        padding: 30px 50px;
     }
 
-        #footer-container > div {
-            flex: 1 1 auto;
-        }
+    #footer-container > div {
+        flex: 1 1 auto;
+    }
 }
 
 img {
     max-width: 150px;
-/*    width: 150px;*/
     height: auto;
 }
 
-#ph-transparency-seal, #bagong-pilipinas{
+#ph-transparency-seal,
+#bagong-pilipinas {
     max-width: 80px;
     height: auto;
-    margin: 0px 60px;
+    margin: 0 60px;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 0;
+footer #footer-container a,
+footer #footer-container a:visited,
+footer #footer-container a:active {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 5px;
 }
 
-a:hover {
-    text-decoration: underline;
+footer #footer-container a:hover {
+    text-decoration: underline !important;
 }
 
-.pages {
+footer #footer-container a p {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: 'Akatab';
+}
+
+footer #footer-container .navpg p {
     font-family: 'Akatab Bold';
 }
 
-/*@media (min-width: 768px) {
-    #footer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-        #footer-container > div {
-            flex: 1 1 45%;
-            text-align: left;
-        }
+/* fallback to force white text if other styles leak in */
+footer #footer-container p {
+    margin: 0;
+    color: white !important;
 }
-
-@media (min-width: 1024px) {
-    body {background-color: red; }
-    #footer-container {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-
-    }
-
-        #footer-container > div {
-            flex: 1 1 auto;
-            text-align: left;
-        }
-
-    #ph-transparency-seal,
-    #bagong-pilipinas {
-        margin: 0;
-    }
-}*/
-
-/*div {
-    margin: 20px;
-}*/
