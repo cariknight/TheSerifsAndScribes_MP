@@ -57,7 +57,7 @@ h1, h2, h3 {
     padding: 0;
     margin: 0;
     color: white;
-    font-size: 72px;
+    font-size: 48px;
 }
 
 #changecolor {
@@ -66,16 +66,17 @@ h1, h2, h3 {
 
 .flex-container {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+    column-gap: 0;
     margin: 0;
-    padding: 50px;
-    column-gap: 100px;
-    justify-content: space-between;
-    align-items: center;
+    padding: 24px;
 }
 
 #heritagediv, #historydiv, #factsdiv, #howtogettodiv {
     margin: 0;
-    padding: 100px;
+    padding: 60px 24px;
 }
 
 #heritagediv {
@@ -85,13 +86,13 @@ h1, h2, h3 {
 
 #heritagediv .flex-container, #historydiv .flex-container {
     justify-content: flex-start;
-    align-items: center;   
-    gap: 10px;
+    align-items: flex-start;   
+    gap: 16px;
 }
 
 .h2-style {
     text-align: left !important;
-    font-size: 52px;
+    font-size: 32px;
 }
 
 /* BREADCRUMB*/
@@ -134,28 +135,44 @@ nav[aria-label="breadcrumb"] {
 /*GRID PICTURES*/
 #history-img, #heritage-img {
     display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 20px;
-    max-width: 900px;
+    gap: 16px;
     width: 100%;
 }
 
-.img-large {
+#history-img .img-large,
+#heritage-img .img-large {
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
+}
+
+#history-img .img-small,
+#heritage-img .img-small {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#history-img .card {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#heritage-img .img-small1 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.img-large {
     width: 100%;
-    height: 300px;
+    height: 260px;
     border-radius: 30px;
     background-color: grey;
 }
 
-.img-small {
-    grid-column: 2;
-    grid-row: 1;
+.img-small, .img-small1 {
     width: 100%;
-    height: 180px;
+    height: 160px;
     border-radius: 20px;
     background-color: grey;
 }
@@ -169,17 +186,11 @@ nav[aria-label="breadcrumb"] {
     color: #058240;
 }
 
-#history-img .card, .img-small1 {
-    grid-column: 2;
-    grid-row: 2;
+#history-img .card {
     width: 100%;
     padding: 10px 20px;
     border-radius: 16px;
     background: #f5f5f5;
-    
-}
-
-#history-img .card {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -197,23 +208,6 @@ nav[aria-label="breadcrumb"] {
 }
 
 /* HERITAGE DIV */
-#heritagediv .img-large {
-    height: 300px;
-    border-radius: 30px;
-    background-color: grey;
-}
-
-#heritagediv .img-small {
-    height: 180px;
-    border-radius: 20px;
-    background-color: grey;
-}
-
-#heritagediv .img-small1 {
-    height: 180px;
-    border-radius: 20px;
-    background-color: grey;
-}
 #heritagediv .kicker {
     color: #87C159;
 }
@@ -236,7 +230,7 @@ nav[aria-label="breadcrumb"] {
 
 /* FACTS SECTION*/
 #factsdiv h2{
-    font: bold 52px Roboto;
+    font: bold 36px Roboto;
     text-align: center;
 }
 
@@ -245,14 +239,16 @@ nav[aria-label="breadcrumb"] {
 }
 
 #factsdiv #cards {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 #factsdiv .card {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    max-width: 360px;
+    min-height: 220px;
+    height: auto;
 }
 
 #factsdiv .card h3 {
@@ -283,12 +279,12 @@ nav[aria-label="breadcrumb"] {
 }
 
 #howtogettodiv h2 {
-    font: bold 52px Roboto;
+    font: bold 36px Roboto;
     text-align: center;
 }
 
 #howtogettodiv h3{
-    font: bold 40px Roboto;
+    font: bold 28px Roboto;
     margin: 20px;
 }
 
@@ -311,9 +307,120 @@ nav[aria-label="breadcrumb"] {
     
 }
 
+@media (min-width: 768px){
+    .flex-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 60px;
+        row-gap: 32px;
+        padding: 50px;
+    }
+
+    #heritagediv, #historydiv, #factsdiv, #howtogettodiv {
+        padding: 80px 50px;
+    }
+
+    #about-content h1 {
+        font-size: 60px;
+    }
+
+    .h2-style {
+        font-size: 42px;
+    }
+
+    #history-img, #heritage-img {
+        grid-template-columns: 1.35fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        max-width: 900px;
+    }
+
+    #history-img .img-large,
+    #heritage-img .img-large {
+        grid-row: 1 / span 2;
+        height: 320px;
+    }
+
+    #history-img .img-small,
+    #heritage-img .img-small {
+        grid-column: 2;
+        grid-row: 1;
+        height: 200px;
+    }
+
+    #history-img .card {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #heritage-img .img-small1 {
+        grid-column: 2;
+        grid-row: 2;
+        height: 200px;
+    }
+
+    #factsdiv h2,
+    #howtogettodiv h2 {
+        font: bold 44px Roboto;
+    }
+
+    #howtogettodiv h3{
+        font: bold 32px Roboto;
+    }
+
+    #factsdiv .card {
+        max-width: 320px;
+    }
+
+    #factsdiv .flex-container,
+    #howtogettodiv #cards .flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+}
+
 @media (min-width: 1024px){
     .flex-container {
+        column-gap: 100px;
+        padding: 60px;
         flex-wrap: nowrap;
+    }
+
+    #heritagediv, #historydiv, #factsdiv, #howtogettodiv {
+        padding: 100px;
+    }
+
+    #about-content h1 {
+        font-size: 72px;
+    }
+
+    .h2-style {
+        font-size: 52px;
+    }
+
+    #factsdiv h2,
+    #howtogettodiv h2 {
+        font: bold 52px Roboto;
+    }
+
+    #howtogettodiv h3{
+        font: bold 40px Roboto;
+    }
+
+    #factsdiv .card {
+        max-width: 400px;
+        min-height: 260px;
+    }
+
+    .img-large {
+        height: 340px;
+    }
+
+    .img-small, .img-small1 {
+        height: 200px;
     }
 }
 
