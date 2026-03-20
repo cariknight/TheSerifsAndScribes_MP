@@ -1,6 +1,6 @@
-<link href="Styles/FooterStyle.css" rel="stylesheet" />
+<link href="~/Styles/FooterStyle.css?v=20260320" rel="stylesheet" runat="server" />
 <footer>
-    <div id="container">
+    <div id="footer-container">
         <div>
             <img src="..\Images\Binan_City_Seal.png" />
         </div>

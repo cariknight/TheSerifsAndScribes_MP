@@ -1,10 +1,10 @@
-﻿@import url('fonts.css');
+@import url('Fonts.css');
 
 footer {
     background-color: #058240;
     font-family: Akatab;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     width: auto;
 }
 
@@ -16,10 +16,10 @@ footer {
     gap: 20px;
 }
 
-    #footer-container > div {
-        flex: 1 1 100%;
-        text-align: center;
-    }
+#footer-container > div {
+    flex: 1 1 100%;
+    text-align: center;
+}
 
 @media (min-width: 768px) {
     #footer-container > div {
@@ -36,33 +36,48 @@ footer {
         padding: 30px 50px;
     }
 
-        #footer-container > div {
-            flex: 1 1 auto;
-        }
+    #footer-container > div {
+        flex: 1 1 auto;
+    }
 }
 
 img {
     max-width: 150px;
-/*    width: 150px;*/
     height: auto;
 }
 
-#ph-transparency-seal, #bagong-pilipinas{
+#ph-transparency-seal,
+#bagong-pilipinas {
     max-width: 80px;
     height: auto;
-    margin: 0px 60px;
+    margin: 0 60px;
 }
 
-footer a {
+footer #footer-container a,
+footer #footer-container a:visited,
+footer #footer-container a:active {
     color: white !important;
     text-decoration: none !important;
-    padding: 8px 0;
+    padding: 5px;
 }
 
-footer a:hover {
+footer #footer-container a:hover {
     text-decoration: underline !important;
 }
 
-.navpg {
+footer #footer-container a p {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: 'Akatab';
+}
+
+footer #footer-container .navpg p {
     font-family: 'Akatab Bold';
+}
+
+/* fallback to force white text if other styles leak in */
+footer #footer-container p {
+    margin: 0;
+    color: white !important;
 }
