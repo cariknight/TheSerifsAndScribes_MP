@@ -230,6 +230,13 @@ iframe {
     text-align: left;
 }
 
+#announcement-right > .flex-container {
+    gap: 8px !important;
+    padding: 6px 0 !important;
+    margin: 6px 0 !important;
+    align-items: flex-start;
+}
+
 #city-service .kicker, #city-service .subtitle, #city-service .h2-style {
     text-align: left;
 }
@@ -317,6 +324,22 @@ iframe {
     background-color: #058240 !important;
     color: #ffffff !important;
     border-color: #058240 !important;
+}
+
+#viewmoreBtn.btn,
+[id$="viewmoreBtn"].btn {
+    background-color: #058240 !important;
+    border-color: #058240 !important;
+    color: #ffffff !important;
+}
+
+#viewmoreBtn.btn:hover,
+#viewmoreBtn.btn:focus,
+[id$="viewmoreBtn"].btn:hover,
+[id$="viewmoreBtn"].btn:focus {
+    background-color: #047237 !important;
+    border-color: #047237 !important;
+    color: #ffffff !important;
 }
 
 .btn {
