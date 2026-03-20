@@ -53,7 +53,9 @@
     <div id="heritagediv" class="flex-container">
         <div>
             <div class="flex-container">
-                image
+                <div id="img-container">
+                    <img src="../Images/Assets/Icons/building-green-icon.png" alt="logo" />
+                </div>
                 <p class="kicker">HERITAGE & CULTURE</p>
             </div>
 
@@ -62,6 +64,16 @@
                 </p>
                 <p>Beyond historical sites, Biñan's heritage lives on in its traditions, like the famous Puto Latik Festival. These customs highlight the city's identity as a place of hard work, resilience, and pride in local culture.
                 </p> 
+                <div class="flex-container">
+                    <div>
+                        <h2>20 +</h2>
+                        <p>HERITAGE SITES</p>
+                    </div>
+                    <div>
+                        <h2>100k +</h2>
+                        <p>ANNUAL VISITORS</p>
+                    </div>
+                </div>
         </div>
         <div id="heritage-img">
             <div class="img-large"></div>
@@ -113,25 +125,32 @@
 
     <!-- HOW TO GET TO BINAN CITY -->
     <div id="howtogettodiv">
-        <h2>How to Get To Bi&ntilde;an City</h2>
+        <h2>How to Get To <span id="changecolor">Bi&ntilde;an City</span></h2>
+
         <div id="cards" class="flex-container">
             <div class="flex-container">
                 <div>
-                    logo
+                    <div>
+                        <img src="../Images/Assets/Icons/car-green-icon.png" alt="green car icon" id="img-container" />
+                    </div>
                     <h3>By Road</h3>
                     <p>Connected via major road networks like SLEX and the National Highway. Public buses and jeepneys are readily available.</p>
                 </div>
             </div>
             <div class="flex-container">
                 <div>
-                    logo
+                    <div>
+                        <img src="../Images/Assets/Icons/train-green-icon.png" alt="green train icon" id="img-container" />
+                    </div>
                     <h3>By Train</h3>
                     <p>The PNR South Commuter line passes through the city, offering a scenic and efficient route from Manila.</p>
                 </div>
             </div>
             <div class="flex-container">
                 <div>
-                    logo
+                    <div>
+                        <img src="../Images/Assets/Icons/plane-green-icon.png" alt="green plane icon" id="img-container" />
+                    </div>
                     <h3>By Air</h3>
                     <p>Conveniently located near NAIA, making it accessible for international and domestic travelers.</p>
                 </div>

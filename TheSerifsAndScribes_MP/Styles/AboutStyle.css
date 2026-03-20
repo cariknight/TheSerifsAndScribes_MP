@@ -196,6 +196,7 @@ nav[aria-label="breadcrumb"] {
     color: #058240;
 }
 
+/* HERITAGE DIV */
 #heritagediv .img-large {
     height: 300px;
     border-radius: 30px;
@@ -222,13 +223,24 @@ nav[aria-label="breadcrumb"] {
     color: white;
 }
 
+#heritagediv #img-container {
+    background-color: white;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+    padding: 15px;
+    margin: 0;
+
+}
+
 /* FACTS SECTION*/
 #factsdiv h2{
     font: bold 52px Roboto;
     text-align: center;
 }
 
-#factsdiv #changecolor {
+#historydiv #changecolor, #factsdiv #changecolor, #howtogettodiv #changecolor {
     color: #058240;
 }
 
@@ -263,9 +275,40 @@ nav[aria-label="breadcrumb"] {
     max-width: 100%;
 }
 
+/* HOW TO GET TO BINAN CITY SECTION*/
 
 #howtogettodiv {
     background-color: #F8FAFC;
+    align-items: center;
+}
+
+#howtogettodiv h2 {
+    font: bold 52px Roboto;
+    text-align: center;
+}
+
+#howtogettodiv h3{
+    font: bold 40px Roboto;
+    margin: 20px;
+}
+
+#howtogettodiv #cards .flex-container{
+    text-align: center;
+    align-items: center;
+}
+#howtogettodiv #img-container {
+    background-color: white;    
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+#howtogettodiv #cards img {
+    width: 100px;
+    height: auto;
+    
 }
 
 @media (min-width: 1024px){
