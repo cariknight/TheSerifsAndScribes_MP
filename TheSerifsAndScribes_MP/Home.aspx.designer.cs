@@ -78,57 +78,57 @@ namespace TheSerifsAndScribes_MP
         protected global::System.Web.UI.WebControls.LinkButton allservicesBtn;
 
         /// <summary>
-        /// accessportalBtn control.
+        /// businessPermitBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton accessportalBtn;
+        protected global::System.Web.UI.WebControls.LinkButton businessPermitBtn;
 
         /// <summary>
-        /// LinkButton1 control.
+        /// realPropertyTaxBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton realPropertyTaxBtn;
 
         /// <summary>
-        /// LinkButton2 control.
+        /// civilRegistryBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.LinkButton civilRegistryBtn;
 
         /// <summary>
-        /// LinkButton3 control.
+        /// healthServicesBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.LinkButton healthServicesBtn;
 
         /// <summary>
-        /// LinkButton4 control.
+        /// educationBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.LinkButton educationBtn;
 
         /// <summary>
-        /// LinkButton5 control.
+        /// environmentBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
+        protected global::System.Web.UI.WebControls.LinkButton environmentBtn;
     }
 }

@@ -13,6 +13,10 @@ html, body, #form1 {
     font-family: Akatab;
 }
 
+iframe {
+    margin: 0;
+    padding: 0;
+}
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -188,6 +192,59 @@ html, body, #form1 {
     font-weight: 400;
 }
 
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.news-card {
+    /*    background-color: rgba(5, 130, 64, 0.76);*/
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    width: 100%;
+    max-width: 360px;
+    flex: 1 1 280px;
+    backdrop-filter: blur(7px) saturate(200%);
+    -webkit-backdrop-filter: blur(7px) saturate(200%);
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    position: relative;
+}
+
+.news-link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.news-link {
+    color: #058240;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-arrow {
+    color: #058240;
+    font-size: 22px;
+    line-height: 1;
+}
+
 #announcement-right .kicker, #announcement-right .subtitle, #announcement-right .h2-style {
     text-align: left;
 }
@@ -196,6 +253,24 @@ html, body, #form1 {
     text-align: left;
 }
 
+#city-service {
+    background-color: #F8FAFC;
+   
+}
+
+#city-service .card{
+    max-width: 335px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 0;
+    box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
+}
+
+.serviceBtn {
+    color: #FDC013;
+    font-family: Roboto;
+}
 
 #space {
     margin: 0;
@@ -374,7 +449,7 @@ html, body, #form1 {
         padding: 36px 16px;
     }
 
-    #newscard {
+    .news-card {
         max-width: none;
         width: 100%;
     }

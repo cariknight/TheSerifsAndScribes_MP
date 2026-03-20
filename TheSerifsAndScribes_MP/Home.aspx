@@ -2,8 +2,6 @@
 
 <asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link href="Styles/HomeStyle.css" rel="stylesheet" />
 </asp:Content>
 
@@ -57,35 +55,45 @@
         <p class="kicker">STAY UPDATED</p>
         <h2 class="h2-style">News and Events</h2>
         <p class="subtitle">Discover what's happening around the city. From community events to official government </p>
-        <div class="flex-container">
-            <div id="newscard" class="card">
+        <div class="flex-container news-cards">
+            <div class="news-card card">
                 <img class="card-img-top" src="" alt="Card image cap" />
                 <div class="card-body">
                     <h3 class="card-title">Lorem Ipsum</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <asp:Button ID="readmoreBtn" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
+                    <div class="news-link-row">
+                        <asp:Button ID="readmoreBtn" CssClass="news-link" runat="server" Text="Read more" />
+                        <span class="news-arrow">&#8594;</span>
+                    </div>
                 </div>
             </div>
-            <div id="newscard" class="card">
+            <div class="news-card card">
                 <img class="card-img-top" src="" alt="Card image cap" />
                 <div class="card-body">
                     <h3 class="card-title">Lorem Ipsum</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <asp:Button ID="Button1" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
+                    <div class="news-link-row">
+                        <asp:Button ID="Button1" CssClass="news-link" runat="server" Text="Read more" />
+                        <span class="news-arrow">&#8594;</span>
+                    </div>
                 </div>
             </div>
             
-            <div id="newscard" class="card">
+            <div class="news-card card">
                 <img class="card-img-top" src="" alt="Card image cap" />
                 <div class="card-body">
                     <h3 class="card-title">Lorem Ipsum</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <asp:Button ID="Button2" CssClass="css-button-rounded--yellow" runat="server" Text="Read more" />
+                    <div class="news-link-row">
+                        <asp:Button ID="Button2" CssClass="news-link" runat="server" Text="Read more" />
+                        <span class="news-arrow">&#8594;</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="space"></div>
     <!-- ANNOUNCEMENT SECTION -->
     <div id="announcement">
         <div class="flex-container">
@@ -154,55 +162,54 @@
         <div id="service-cards" class="flex-container">
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Business Permit</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="accessportalBtn" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="businessPermitBtn" runat="server" Text="Access Portal" />
             </div>
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Real Property Tax</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="LinkButton1" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="realPropertyTaxBtn" runat="server" Text="Access Portal" />
             </div>
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Civil Registry</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="LinkButton2" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="civilRegistryBtn" runat="server" Text="Access Facebook" />
             </div>
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Health Services</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="LinkButton3" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="healthServicesBtn" runat="server" Text="Access Facebook" />
             </div>
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Education</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="LinkButton4" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="educationBtn" runat="server" Text="Access Website" />
             </div>
             <div class="card">
                 logo
-                <h3></h3>
+                <h3>Environment</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-                <asp:LinkButton ID="LinkButton5" runat="server" Text="Access Portal" />
+                <asp:LinkButton CssClass="serviceBtn" ID="environmentBtn" runat="server" Text="Access Website" />
             </div>
         </div>
     </div>
     
+    <!-- MAP -->
     <div id="space"></div>
     <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe
-        <p id="map-link">
-            <a href="https://www.openstreetmap.org/?mlat=14.3350&amp;mlon=121.0832#map=17/14.3350/121.0832" target="_blank" rel="noopener">Open map in new tab</a>
-        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </asp:Content>
             
