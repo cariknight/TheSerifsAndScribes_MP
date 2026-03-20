@@ -293,6 +293,32 @@ iframe {
 
 /*Buttons*/
 
+#learnmoreBtn.btn {
+    background-color: #058240 !important;
+    border-color: #058240 !important;
+    color: #ffffff !important;
+}
+
+#learnmoreBtn.btn:hover,
+#learnmoreBtn.btn:focus {
+    background-color: #047237 !important;
+    border-color: #047237 !important;
+    color: #ffffff !important;
+}
+
+#cityservicesBtn.btn {
+    background-color: #ffffff !important;
+    color: #058240 !important;
+    border-color: #058240 !important;
+}
+
+#cityservicesBtn.btn:hover,
+#cityservicesBtn.btn:focus {
+    background-color: #058240 !important;
+    color: #ffffff !important;
+    border-color: #058240 !important;
+}
+
 .btn {
     font-family: 'Akatab Bold';
     font-size: 20px;
