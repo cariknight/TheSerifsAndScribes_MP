@@ -161,28 +161,37 @@
         <!-- ALL SERVICES -->
         <div id="service-cards" class="flex-container">
             <div class="card">
-                logo
+                <div>
+                    <img src="" alt="logo" />
+                </div>
+                
                 <h3>Business Permit</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                 <asp:LinkButton CssClass="serviceBtn" ID="businessPermitBtn" runat="server" Text="Access Portal" />
             </div>
             <div class="card">
-                logo
+                <div>
+                    <img src="" alt="logo" />
+                </div>
                 <h3>Real Property Tax</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                 <asp:LinkButton CssClass="serviceBtn" ID="realPropertyTaxBtn" runat="server" Text="Access Portal" />
             </div>
             <div class="card">
-                logo
+                <div>
+                    <img src="" alt="logo" />
+                </div>
                 <h3>Civil Registry</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                 <asp:LinkButton CssClass="serviceBtn" ID="civilRegistryBtn" runat="server" Text="Access Facebook" />
             </div>
             <div class="card">
-                logo
+                <div>
+                    <img src="" alt="logo" />
+                </div>
                 <h3>Health Services</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
