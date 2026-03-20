@@ -78,15 +78,38 @@ h1, h2, h3 {
     padding: 100px;
 }
 
+#historydiv, #factsdiv {
+    background-color: #FFEFCF;
+}
+
 #heritagediv {
     background-color: #058240;
 }
 
-
-#heritagediv .flex-container, #historydiv .flex-container {
+#heritagediv.flex-container,
+#historydiv.flex-container,
+#heritagediv .flex-container,
+#historydiv .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: center;   
+    align-items: center;
     gap: 10px;
+}
+
+#historydiv.flex-container > div,
+#historydiv .flex-container > div {
+    flex: 1 1 0;
+}
+
+#historydiv.flex-container > div:first-child,
+#historydiv .flex-container > div:first-child {
+    max-width: 45%;
+}
+
+#historydiv.flex-container > div:last-child,
+#historydiv .flex-container > div:last-child {
+    max-width: 55%;
 }
 
 .h2-style {

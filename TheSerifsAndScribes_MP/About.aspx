@@ -3,8 +3,8 @@
 <asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <title>About</title>
     <!-- Use relative paths so the page can render when served statically; cache-bust with version query -->
-    <link href="Styles/AboutStyle.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
     <link href="Styles/HomeStyle.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
+    <link href="Styles/AboutStyle.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
     
 </asp:Content>
 
