@@ -74,7 +74,7 @@ h1 {
 }
 
 #changecolor {
-    color: #FFE656;
+    color: #87C159;
 }
 
 .flex-container {
@@ -82,8 +82,8 @@ h1 {
     margin: 0px;
     padding: 50px;
     column-gap: 100px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #rptadiv {
@@ -96,25 +96,6 @@ h1 {
     background-color: #87C159;
     margin: 0;
     padding: 100px;
-}
-
-#rptabtn, #bplsbtn {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    overflow: hidden;
-    border-radius: 5px;
-    border: none;
-    background-color: #058240
 }
 
 #rptabtn:hover, #bplsbtn:hover {
@@ -141,4 +122,28 @@ h1 {
         transition: 0.4s;
     }
 
+#rptaimage, #bplsimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers image + button */
+    width: 100%; /* ensures full width */
+}
+
+    #rptaimage img, #bplsimage img {
+        display: block;
+        max-width: 100%; /* keeps it responsive */
+        height: auto;
+    }
+
+#rptabtn, #bplsbtn {
+    margin-top: 12px;
+    height: 30px;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #058240;
+}
 
