@@ -212,7 +212,13 @@ nav[aria-label="breadcrumb"] {
     color: #87C159;
 }
 
-#heritagediv h2,
+#heritagediv .h2-style{
+    color: white;
+}
+
+#heritagediv h2 {
+    color: #FDC013;
+}
 #heritagediv p {
     color: white;
 }
