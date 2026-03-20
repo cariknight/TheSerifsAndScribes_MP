@@ -99,6 +99,10 @@ html, body, #form1 {
     margin-top: -80px;
 }
 
+.trans-card {
+    z-index: 1;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
