@@ -2,142 +2,282 @@
 
 <asp:Content ID="ContactHead" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Contact</title>
-    <link href="~/Styles/Contact.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/Contact.css" rel="stylesheet" type="text/css"/>
 </asp:Content>
 
 <asp:Content ID="ContactMain" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="contact-wrapper">
-        <div class="contact-left">
-            <h2>Contact Us</h2>
-            <p>Have a question or concern? Fill out the form and our team will assist you promptly.</p>
+         <div id="contact-page">
+            <div class="contact-section flex-container">
+                <div class="contact-left">
+                    <p class="kicker">CONNECT WITH US</p>
+                    <h2 class="h2-style">We're here to <span>Serve You</span></h2>
+                    <p class="subtitle contact-subtitle">
+                        Have a question, concern, or feedback? Reach out to the City Government of Bi&ntilde;an. Our team is dedicated to providing prompt assistance.
+                    </p>
+
+                    <div class="contact-info-row">
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <span class="contact-icon-placeholder">ICON</span>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Visit Us</h3>
+                                <p>City Hall Compound, Zapote, Bi&ntilde;an City</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <span class="contact-icon-placeholder">ICON</span>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Office Hours</h3>
+                                <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <div class="form-title">Send us a Message</div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <asp:TextBox ID="fullname" runat="server" CssClass="contact-input" placeholder="Full Name" />
+                        </div>
+
+                        <div class="form-group">
+                            <asp:TextBox ID="email" runat="server" CssClass="contact-input" TextMode="Email" placeholder="Email Address" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <asp:TextBox ID="subject" runat="server" CssClass="contact-input" placeholder="Subject" />
+                    </div>
+
+                    <div class="form-group">
+                        <asp:TextBox ID="message" runat="server" CssClass="contact-input contact-textarea" TextMode="MultiLine" Rows="6" placeholder="How can we help you?" />
+                    </div>
+
+                    <div class="consent">
+                        <asp:CheckBox ID="consent" runat="server" />
+                        <label for="consent">I consent to the processing of my personal data (Privacy Policy)</label>
+                    </div>
+
+                    <div class="button-wrap">
+                        <asp:Button ID="submitBtn" runat="server" CssClass="btn-submit" Text="Send Message" OnClick="submitBtn_Click" />
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="contact-right">
-            <div class="form-group">
-                <label for="txtName">Full Name</label>
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-            </div>
+        <div class="hotlines">
+            <h3>Government <span>Hotlines</span></h3>
+            <p class="hotlines-subtitle">
+                Keep these numbers saved for immediate assistance and government-related inquiries.
+            </p>
+            <div class="hotline-list">
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Emergency</span>
+                    </div>
+                    <h4>Disaster Risk Reduction</h4>
+                    <p class="hotline-number">513-9111</p>
+                </div>
 
-            <div class="form-group">
-                <label for="txtEmail">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
-            </div>
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Emergency</span>
+                    </div>
+                    <h4>Bureau of Fire Protection</h4>
+                    <p class="hotline-number">511-9111</p>
+                </div>
 
-            <div class="form-group">
-                <label for="txtPhone">Phone Number</label>
-                <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
-            </div>
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Emergency</span>
+                    </div>
+                    <h4>Philippine National Police</h4>
+                    <p class="hotline-number">513-5111</p>
+                </div>
 
-            <div class="form-group">
-                <label for="txtMessage">Message</label>
-                <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine"></asp:TextBox>
-            </div>
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Medical</span>
+                    </div>
+                    <h4>Ospital ng Bi&ntilde;an (ONB)</h4>
+                    <p class="hotline-number">511-4119</p>
+                </div>
 
-            <div class="consent">
-                <asp:CheckBox ID="chkConsent" runat="server" Text="I consent to the processing of my personal data (Privacy Policy)" />
-            </div>
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Security</span>
+                    </div>
+                    <h4>Public Order &amp; Safety</h4>
+                    <p class="hotline-number">513-8888</p>
+                </div>
 
-            <asp:Button ID="btnSubmit" runat="server" Text="SEND" CssClass="btn-submit" OnClick="btnSubmit_Click" />
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Admin</span>
+                    </div>
+                    <h4>Building Admin</h4>
+                    <p class="hotline-number">513-5002</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">General</span>
+                    </div>
+                    <h4>City Information Office</h4>
+                    <p class="hotline-number">513-5028</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Business</span>
+                    </div>
+                    <h4>Negosyo Center</h4>
+                    <p class="hotline-number">513-5104</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Emergency</span>
+                    </div>
+                    <h4>Bureau of Jail Management</h4>
+                    <p class="hotline-number">511-6324</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Environment</span>
+                    </div>
+                    <h4>City Environment and Natural Resources Office</h4>
+                    <p class="hotline-number">513-5096</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Business</span>
+                    </div>
+                    <h4>Business Permit and Licensing Office</h4>
+                    <p class="hotline-number">513-5084</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">General</span>
+                    </div>
+                    <h4>Commission on Election</h4>
+                    <p class="hotline-number">513-5100</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">Education</span>
+                    </div>
+                    <h4>Department of Education</h4>
+                    <p class="hotline-number">511-6446</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">General</span>
+                    </div>
+                    <h4>Department of the Interior and Local Government</h4>
+                    <p class="hotline-number">513-5032</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">General</span>
+                    </div>
+                    <h4>Department of Social Welfare and Development</h4>
+                    <p class="hotline-number">513-5041</p>
+                </div>
+
+                <div class="hotline-card">
+                    <div class="hotline-top">
+                        <div class="hotline-icon-box">
+                            <span class="hotline-icon-placeholder">ICON</span>
+                        </div>
+                        <span class="hotline-category">General</span>
+                    </div>
+                    <h4>Public Cemetery</h4>
+                    <p class="hotline-number">511-8499</p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="contact-info">
-        <div class="contact-item">
-            <img src="Images/address.png" alt="Address Icon" class="icon" />
-            <span class="title">Address:</span>
-            <div class="details">
-                City Hall, San Pablo St. Brgy. Zapote, Biñan, Laguna
+        <div class="social-section">
+            <div class="social-content">
+                <div class="social-text">
+                    <h3>Join the Conversation</h3>
+                    <p>Follow our official social media channels for real-time updates.</p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/CIOBinan/" target="_blank" class="icon-box">F</a>
+                    <a href="https://www.instagram.com/cityofbinan/" target="_blank" class="icon-box">I</a>
+                    <a href="https://x.com/CIO_BINAN" target="_blank" class="icon-box">T</a>
+                </div>
             </div>
         </div>
 
-        <div class="contact-item">
-            <img src="Images/phone.png" alt="Phone Icon" class="icon" />
-            <span class="title">Phone:</span>
-            <span class="details">(049) 513-5028</span>
+        <div class="map-section">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1149.3495159631427!2d121.07942613549059!3d14.315176308457174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9d7d402a00b%3A0x98d248e973356fb4!2sBi%C3%B1an%20City%20Hall!5e0!3m2!1sen!2sph!4v1773864686026!5m2!1sen!2sph"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
-
-        <div class="contact-item">
-            <img src="Images/email.png" alt="Email Icon" class="icon" />
-            <span class="title">Email:</span>
-            <span class="details">serbisyongarman@binan.gov.ph</span>
-        </div>
-    </div>
-
-    <div class="hotlines">
-        <h3>Hotlines:</h3>
-        <div class="hotline-list">
-            <ul>
-                <li class="hotline-item">
-                    <span class="office">City Disaster Risk Reduction Management Office</span>
-                    <span class="hotline-number">513-9111</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Bureau of Fire and Protection Department (BFP)</span>
-                    <span class="hotline-number">511-9111</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Philippine National Police (PNP)</span>
-                    <span class="hotline-number">513-5111</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Bureau of Jail Management and Penology (BJMP)</span>
-                    <span class="hotline-number">511-6324</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Public Order and Safety Office (POSO)</span>
-                    <span class="hotline-number">513-8888</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">City Environment and Natural Resources Office (CENRO)</span>
-                    <span class="hotline-number">513-5096</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Ospital ng Biñan (ONB)</span>
-                    <span class="hotline-number">511-4119</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Building Admin</span>
-                    <span class="hotline-number">513-5002</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">City Information Office</span>
-                    <span class="hotline-number">513-5028</span>
-                </li>
-            </ul>
-            <ul>
-                <li class="hotline-item">
-                    <span class="office">Business Permit and Licensing Office (BPLO)</span>
-                    <span class="hotline-number">513-5084</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Commission on Election (COMELEC)</span>
-                    <span class="hotline-number">513-5100</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Department of Education (DepEd)</span>
-                    <span class="hotline-number">511-6446</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Department of the Interior and Local Government (DILG)</span>
-                    <span class="hotline-number">513-5032</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Department of Social Welfare and Development (DSWD)</span>
-                    <span class="hotline-number">513-5041</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Public Cemetery</span>
-                    <span class="hotline-number">511-8499</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Serbisyong Arman Hall</span>
-                    <span class="hotline-number">513-5033</span>
-                </li>
-                <li class="hotline-item">
-                    <span class="office">Negosyo Center</span>
-                    <span class="hotline-number">513-5104</span>
-                </li>
-            </ul>
-        </div>
-    </div>
 </asp:Content>

@@ -13,20 +13,20 @@ namespace TheSerifsAndScribes_MP
         {
 
         }
-        protected void btnSubmit_Click(object sender, EventArgs e)
+        protected void submitBtn_Click(object sender, EventArgs e)
         {
-            if (!chkConsent.Checked)
+            if (!consent.Checked)
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "consentAlert",
                     "alert('You must check the consent box before submitting.');", true);
                 return;
             }
 
-            txtName.Text = "";
-            txtEmail.Text = "";
-            txtPhone.Text = "";
-            txtMessage.Text = "";
-            chkConsent.Checked = false;
+            fullname.Text = "";
+            email.Text = "";
+            subject.Text = "";
+            message.Text = "";
+            consent.Checked = false;
 
             ClientScript.RegisterStartupScript(this.GetType(), "successAlert",
                 "alert('Form submitted successfully!');", true);
