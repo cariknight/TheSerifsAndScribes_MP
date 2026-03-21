@@ -1,0 +1,133 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="TheSerifsAndScribes_MP.Dashboard" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Styles/Fonts.css?v=20260321" rel="stylesheet" runat="server" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <link href="~/Styles/DashboardStyle.css?v=20260321" rel="stylesheet" runat="server" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <form id="dashboardForm" runat="server">
+        <div class="dashboard-shell">
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <a class="brand" href="Home.aspx">
+                        <img src="~/Images/Binan_City_Seal.png" runat="server" alt="Biñan Seal" class="brand-logo" />
+                    </a>
+                    <button type="button" class="icon-button" aria-label="Collapse menu" aria-expanded="true" onclick="toggleSidebar()">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+
+                <nav class="sidebar-menu">
+                    <a class="menu-link is-active" href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="menu-text">Dashboard</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </a>
+                    <a class="menu-link" href="#">
+                        <i class="fa-regular fa-comments"></i>
+                        <span class="menu-text">Inquiries</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </a>
+                    <a class="menu-link" href="#">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="menu-text">Announcements</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </a>
+                    <a class="menu-link" href="#">
+                        <i class="fa-solid fa-sitemap"></i>
+                        <span class="menu-text">Organization</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </a>
+                    <a class="menu-link" href="#">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <span class="menu-text">Admins</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <a class="logout-link" href="#">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span class="menu-text">Logout</span>
+                    </a>
+                </div>
+            </aside>
+
+            <div class="dashboard-main">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <button type="button" class="icon-button mobile-toggle" aria-label="Toggle menu" aria-expanded="true" onclick="toggleSidebar()">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </button>
+                        <a class="brand" href="Home.aspx">
+                            <img src="~/Images/Binan_City_Seal.png" runat="server" alt="Biñan Seal" class="brand-logo" />
+                            <span class="brand-title">Admin Dashboard</span>
+                        </a>
+                    </div>
+
+                    <div class="topbar-right">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search" aria-label="Search" />
+                        </div>
+                        <div class="user-chip">
+                            <div class="avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <span class="user-name">Admin</span>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                </main>
+            </div>
+        </div>
+
+        <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+    </form>
+
+    <script type="text/javascript">
+        (function () {
+            var body = document.body;
+            var overlay = document.getElementById('sidebarOverlay');
+            var sidebar = document.getElementById('sidebar');
+
+            function syncOverlay() {
+                var open = body.classList.contains('sidebar-open');
+                var useOverlay = window.innerWidth < 992;
+                overlay.classList.toggle('is-visible', open && useOverlay);
+                sidebar.setAttribute('aria-hidden', (!open).toString());
+            }
+
+            window.toggleSidebar = function () {
+                body.classList.toggle('sidebar-open');
+                syncOverlay();
+            };
+
+            window.closeSidebar = function () {
+                body.classList.remove('sidebar-open');
+                syncOverlay();
+            };
+
+            // Ensure correct state on load for desktop
+            if (window.innerWidth >= 992) {
+                body.classList.add('sidebar-open');
+            }
+            syncOverlay();
+        })();
+    </script>
+</body>
+</html>
