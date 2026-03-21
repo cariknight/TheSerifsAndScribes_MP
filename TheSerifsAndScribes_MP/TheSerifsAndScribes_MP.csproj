@@ -77,6 +77,7 @@
     <Content Include="Images\address.png" />
     <Content Include="Images\email.png" />
     <Content Include="Images\faq.png" />
+    <Content Include="Images\FAQs.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Invest.aspx" />
     <Content Include="Scripts\faq.js" />

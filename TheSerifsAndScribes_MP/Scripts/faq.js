@@ -1,18 +1,22 @@
-﻿document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const item = button.parentElement;
-        const answer = item.querySelector('.faq-answer');
-        const isOpen = item.classList.contains('active');
+﻿document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
 
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-            const otherAnswer = otherItem.querySelector('.faq-answer');
-            otherItem.classList.remove('active');
-            otherAnswer.style.maxHeight = null;
+    faqItems.forEach(item => {
+        const button = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        button.addEventListener("click", function () {
+            const isActive = item.classList.contains("active");
+
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove("active");
+                otherItem.querySelector(".faq-answer").style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
         });
-
-        if (!isOpen) {
-            item.classList.add('active');
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
     });
 });
