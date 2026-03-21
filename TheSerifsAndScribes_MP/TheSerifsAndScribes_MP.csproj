@@ -87,6 +87,7 @@
     <Content Include="Styles\AboutStyle.css" />
     <Content Include="Styles\AnnouncementStyle.css" />
     <Content Include="Styles\Fonts.css" />
+    <Content Include="Styles\InvestStyle.css" />
     <Content Include="Styles\NavigationBar.css" />
     <Content Include="Styles\contact.css" />
     <Content Include="Styles\faq.css" />
