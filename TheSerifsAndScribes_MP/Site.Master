@@ -90,9 +90,9 @@
                 </div>
                 <div>
                     <a href="Transparency.aspx" class="navpg"><p>TRANSPARENCY</p></a>
-                    <a href=""><p>Organizational Chart</p></a>
-                    <a href=""><p>Citizen's Charter</p></a>
-                    <a href=""><p>Full Disclosure Policy</p></a>
+                    <a href="OrganizationalChart.aspx"><p>Organizational Chart</p></a>
+                    <a href="CitizensCharter.aspx"><p>Citizen's Charter</p></a>
+                    <a href="FullDisclosurePolicy.aspx"><p>Full Disclosure Policy</p></a>
                 </div>
                 <div>
                     <a href="Services.aspx" class="navpg"><p>SERVICES</p></a>

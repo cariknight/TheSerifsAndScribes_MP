@@ -24,7 +24,7 @@
                     </div>
                     <h3>Organizational Chart</h3>
                     <p>Understand the hierarchy and leadership structure of the City Government of Bi&ntilde;an. View departments, executive offices, and the flow of administrative responsibility.</p>
-                    <a class="card-button" href="#" role="button">View Structure <span aria-hidden="true">></span></a>
+                    <a class="card-button" href="OrganizationalChart.aspx" role="button">View Structure <span aria-hidden="true">></span></a>
                 </article>
 
                 <article class="trans-card">
@@ -33,7 +33,7 @@
                     </div>
                     <h3>Citizen's Charter</h3>
                     <p>Our commitment to efficient service. This document outlines the step-by-step procedures, requirements, and turnaround times for all frontline government services.</p>
-                    <a class="card-button" href="#" role="button">Access Charter <span aria-hidden="true">></span></a>
+                    <a class="card-button" href="CitizensCharter.aspx" role="button">Access Charter <span aria-hidden="true">></span></a>
                 </article>
 
                 <article class="trans-card">
@@ -42,7 +42,7 @@
                     </div>
                     <h3>Full Disclosure Policy</h3>
                     <p>In compliance with DILG standards, we provide public access to financial documents, budget allocations, and procurement reports to ensure absolute integrity.</p>
-                    <a class="card-button" href="#" role="button">View Disclosures <span aria-hidden="true">></span></a>
+                    <a class="card-button" href="FullDisclosurePolicy.aspx" role="button">View Disclosures <span aria-hidden="true">></span></a>
                 </article>
             </div>
         </section>
