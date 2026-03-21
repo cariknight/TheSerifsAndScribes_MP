@@ -70,15 +70,72 @@
     <Content Include="About.aspx" />
     <Content Include="Announcement.aspx" />
     <Content Include="Careers.aspx" />
+    <Content Include="CitizensCharter.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="FAQ.aspx" />
+    <Content Include="Fonts\Abril_Fatface\OFL.txt" />
+    <Content Include="Fonts\Akatab\OFL.txt" />
+    <Content Include="Fonts\Roboto\OFL.txt" />
+    <Content Include="Fonts\Roboto\README.txt" />
     <Content Include="Footer.ascx" />
+    <Content Include="FullDisclosurePolicy.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\address.png" />
+    <Content Include="Images\Assets\Icons\admin-green-icon.png" />
+    <Content Include="Images\Assets\Icons\award-green-icon.png" />
+    <Content Include="Images\Assets\Icons\building-green-icon.png" />
+    <Content Include="Images\Assets\Icons\business-yellow-icon.png" />
+    <Content Include="Images\Assets\Icons\cake-green-icon.png" />
+    <Content Include="Images\Assets\Icons\calendar-lightgreen-icon.png" />
+    <Content Include="Images\Assets\Icons\car-green-icon.png" />
+    <Content Include="Images\Assets\Icons\clock-green-icon.png" />
+    <Content Include="Images\Assets\Icons\contactus-yellow-icon.png" />
+    <Content Include="Images\Assets\Icons\doc-green-icon.png" />
+    <Content Include="Images\Assets\Icons\doc-white-icon.png" />
+    <Content Include="Images\Assets\Icons\Election-green-icon.png" />
+    <Content Include="Images\Assets\Icons\emergency-green-icon.png" />
+    <Content Include="Images\Assets\Icons\eservices-green-icon.png" />
+    <Content Include="Images\Assets\Icons\f-white-icon.png" />
+    <Content Include="Images\Assets\Icons\fdab39792a30b0947b072fc97f24c24c.gif" />
+    <Content Include="Images\Assets\Icons\gradcap-green-icon.png" />
+    <Content Include="Images\Assets\Icons\Grave-green-icon.png" />
+    <Content Include="Images\Assets\Icons\history-icon.png" />
+    <Content Include="Images\Assets\Icons\history-white-icon.png" />
+    <Content Include="Images\Assets\Icons\icon-about.png" />
+    <Content Include="Images\Assets\Icons\icon-faq.png" />
+    <Content Include="Images\Assets\Icons\icon-invest.png" />
+    <Content Include="Images\Assets\Icons\icon-jobs.png" />
+    <Content Include="Images\Assets\Icons\icon-services.png" />
+    <Content Include="Images\Assets\Icons\icon-transparency.png" />
+    <Content Include="Images\Assets\Icons\images.jpg" />
+    <Content Include="Images\Assets\Icons\info-green-icon.png" />
+    <Content Include="Images\Assets\Icons\insta-white-icon.png" />
+    <Content Include="Images\Assets\Icons\jail-green-icon.png" />
+    <Content Include="Images\Assets\Icons\mail-white-icon.png" />
+    <Content Include="Images\Assets\Icons\map-green-icon.png" />
+    <Content Include="Images\Assets\Icons\msg-white-icon.png" />
+    <Content Include="Images\Assets\Icons\phone white icon.png" />
+    <Content Include="Images\Assets\Icons\plane-green-icon.png" />
+    <Content Include="Images\Assets\Icons\send-white-icon.png" />
+    <Content Include="Images\Assets\Icons\stetoscope-green-icon.png" />
+    <Content Include="Images\Assets\Icons\stetoscope-yellow-icon.png" />
+    <Content Include="Images\Assets\Icons\tourism-green-icon.png" />
+    <Content Include="Images\Assets\Icons\train-green-icon.png" />
+    <Content Include="Images\Assets\Icons\tree-green-icon.png" />
+    <Content Include="Images\Assets\Icons\twt-white-icon.png" />
+    <Content Include="Images\Assets\Icons\writting-img.jpg" />
+    <Content Include="Images\Bagong_Pilipinas_logo.png" />
+    <Content Include="Images\Binan_Aerial.png" />
+    <Content Include="Images\Binan_Bayan.png" />
+    <Content Include="Images\Binan_Church.png" />
+    <Content Include="Images\Binan_City_Seal.png" />
     <Content Include="Images\email.png" />
     <Content Include="Images\faq.png" />
     <Content Include="Images\phone.png" />
+    <Content Include="Images\staticmap.png" />
+    <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
+    <Content Include="OrganizationalChart.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
@@ -93,6 +150,7 @@
     <Content Include="Styles\faq.css" />
     <Content Include="Styles\FooterStyle.css" />
     <Content Include="Styles\HomeStyle.css" />
+    <Content Include="Styles\TransparencyStyle.css" />
     <Content Include="Transparency.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -118,6 +176,13 @@
     <Compile Include="Careers.aspx.designer.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CitizensCharter.aspx.cs">
+      <DependentUpon>CitizensCharter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CitizensCharter.aspx.designer.cs">
+      <DependentUpon>CitizensCharter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +197,13 @@
     <Compile Include="FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FullDisclosurePolicy.aspx.cs">
+      <DependentUpon>FullDisclosurePolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FullDisclosurePolicy.aspx.designer.cs">
+      <DependentUpon>FullDisclosurePolicy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +217,13 @@
     </Compile>
     <Compile Include="Invest.aspx.designer.cs">
       <DependentUpon>Invest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationalChart.aspx.cs">
+      <DependentUpon>OrganizationalChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationalChart.aspx.designer.cs">
+      <DependentUpon>OrganizationalChart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">
@@ -170,13 +249,69 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\Akatab-Black.ttf" />
-    <Content Include="Fonts\Akatab-Bold.ttf" />
-    <Content Include="Fonts\Akatab-ExtraBold.ttf" />
-    <Content Include="Fonts\Akatab-Medium.ttf" />
-    <Content Include="Fonts\Akatab-Regular.ttf" />
-    <Content Include="Fonts\Akatab-SemiBold.ttf" />
-    <Content Include="Fonts\AbrilFatface-Regular.ttf" />
+    <Content Include="Fonts\Abril_Fatface\AbrilFatface-Regular.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-Black.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-Bold.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-ExtraBold.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-Medium.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-Regular.ttf" />
+    <Content Include="Fonts\Akatab\Akatab-SemiBold.ttf" />
+    <Content Include="Fonts\Roboto\Roboto-Italic-VariableFont_wdth,wght.ttf" />
+    <Content Include="Fonts\Roboto\Roboto-VariableFont_wdth,wght.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Black.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-BlackItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Bold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-BoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-ExtraBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-ExtraBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-ExtraLight.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-ExtraLightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Italic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Light.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-LightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Medium.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-MediumItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Regular.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-SemiBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-SemiBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-Thin.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto-ThinItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Black.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-BlackItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Bold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-BoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-ExtraBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-ExtraBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-ExtraLight.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-ExtraLightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Italic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Light.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-LightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Medium.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-MediumItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Regular.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-SemiBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-SemiBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-Thin.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_Condensed-ThinItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Black.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-BlackItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Bold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-BoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ExtraBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ExtraBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ExtraLight.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ExtraLightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Italic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Light.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-LightItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Medium.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-MediumItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Regular.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-SemiBold.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-SemiBoldItalic.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Thin.ttf" />
+    <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ThinItalic.ttf" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
