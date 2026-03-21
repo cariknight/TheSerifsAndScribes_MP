@@ -12,7 +12,7 @@
                     <p class="kicker">CONNECT WITH US</p>
                     <h2 class="h2-style">We're here to <span>Serve You</span></h2>
                     <p class="subtitle contact-subtitle">
-                        Have a question, concern, or feedback? Reach out to the City Government of Binan. Our team is dedicated to providing prompt assistance.
+                        Have a question, concern, or feedback? Reach out to the City Government of Bi&ntilde;an. Our team is dedicated to providing prompt assistance.
                     </p>
 
                     <div class="contact-info-row">
@@ -22,7 +22,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Visit Us</h3>
-                                <p>City Hall Compound, Zapote, Binan City</p>
+                                <p>City Hall Compound, Zapote, Bi&ntilde;an City</p>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
                         <span class="hotline-category">Emergency</span>
                     </div>
                     <h4>Bureau of Fire Protection</h4>
-                    <p class="hotline-number">513-9111</p>
+                    <p class="hotline-number">511-9111</p>
                 </div>
 
                 <div class="hotline-card">
@@ -107,7 +107,7 @@
                         <span class="hotline-category">Emergency</span>
                     </div>
                     <h4>Philippine National Police</h4>
-                    <p class="hotline-number">513-9111</p>
+                    <p class="hotline-number">513-5111</p>
                 </div>
 
                 <div class="hotline-card">
@@ -117,8 +117,8 @@
                         </div>
                         <span class="hotline-category">Medical</span>
                     </div>
-                    <h4>Ospital ng Biñan (ONB)</h4>
-                    <p class="hotline-number">513-9111</p>
+                    <h4>Ospital ng Bi&ntilde;an (ONB)</h4>
+                    <p class="hotline-number">511-4119</p>
                 </div>
 
                 <div class="hotline-card">
@@ -128,7 +128,7 @@
                         </div>
                         <span class="hotline-category">Security</span>
                     </div>
-                    <h4>Public Order &amp; Safety Office</h4>
+                    <h4>Public Order &amp; Safety</h4>
                     <p class="hotline-number">513-8888</p>
                 </div>
 
@@ -263,9 +263,9 @@
                 </div>
 
                 <div class="social-icons">
-                    <div class="icon-box">F</div>
-                    <div class="icon-box">I</div>
-                    <div class="icon-box">T</div>
+                    <a href="https://www.facebook.com/CIOBinan/" target="_blank" class="icon-box">F</a>
+                    <a href="https://www.instagram.com/cityofbinan/" target="_blank" class="icon-box">I</a>
+                    <a href="https://x.com/CIO_BINAN" target="_blank" class="icon-box">T</a>
                 </div>
             </div>
         </div>
