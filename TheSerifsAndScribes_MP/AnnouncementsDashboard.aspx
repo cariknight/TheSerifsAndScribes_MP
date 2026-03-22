@@ -29,12 +29,12 @@
             </div>
             <asp:GridView runat="server" ID="AnnouncementsGrid" AutoGenerateColumns="False" CssClass="table table-striped" DataKeyNames="Id" OnRowCommand="AnnouncementsGrid_RowCommand">
                 <Columns>
-                    <BoundField DataField="Title" HeaderText="Title" />
-                    <BoundField DataField="CreatedAt" HeaderText="Posted" DataFormatString="{0:MMM dd, yyyy}" />
-                    <TemplateField HeaderText="Status">
+                    <asp:BoundField DataField="Title" HeaderText="Title" />
+                    <asp:BoundField DataField="CreatedAt" HeaderText="Posted" DataFormatString="{0:MMM dd, yyyy}" />
+                    <asp:TemplateField HeaderText="Status">
                         <ItemTemplate><%# (bool)Eval("IsArchived") ? "Archived" : "Active" %></ItemTemplate>
-                    </TemplateField>
-                    <TemplateField HeaderText="Actions">
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Actions">
                         <ItemTemplate>
                             <asp:LinkButton runat="server" CommandName="toggle" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-sm btn-outline-secondary me-1">
                                 <%# (bool)Eval("IsArchived") ? "Unarchive" : "Archive" %>
@@ -43,7 +43,7 @@
                                 Delete
                             </asp:LinkButton>
                         </ItemTemplate>
-                    </TemplateField>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
