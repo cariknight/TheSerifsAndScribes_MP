@@ -70,8 +70,8 @@
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="Admins.aspx" />
-    <Content Include="Announcement.aspx" />
     <Content Include="Images\Binan_Login.png" />
+    <Content Include="Announcements.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
     <Content Include="CitizensCharter.aspx" />
@@ -84,6 +84,10 @@
     <Content Include="Footer.ascx" />
     <Content Include="FullDisclosurePolicy.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\bploimage.png" />
+    <Content Include="Images\rptaphoto.png" />
+    <Content Include="Images\services_banner.png" />
+    <Content Include="Images\services_headerbackground.png" />
     <Content Include="Images\address.png" />
     <Content Include="Images\Assets\Icons\admin-green-icon.png" />
     <Content Include="Images\Assets\Icons\award-green-icon.png" />
@@ -144,12 +148,16 @@
     <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Organizations.aspx" />
     <Content Include="OrganizationalChart.aspx" />
+    <Content Include="AnnouncementsDashboard.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Scripts\Password.js" />
     <Content Include="Services.aspx" />
     <Content Include="Styles\AdminsStyle.css" />
+    <Content Include="Styles\CareerStyle.css" />
+    <Content Include="ServicesStyle.css" />
     <Content Include="Styles\Contact.css" />
     <Content Include="Styles\Faq.css" />
     <Content Include="Styles\AboutStyle.css" />
@@ -189,19 +197,19 @@
     <Compile Include="Admins.aspx.designer.cs">
       <DependentUpon>Admins.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Announcements.aspx.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announcements.aspx.designer.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inquiries.aspx.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Inquiries.aspx.designer.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Announcement.aspx.cs">
-      <DependentUpon>Announcement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Announcement.aspx.designer.cs">
-      <DependentUpon>Announcement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Careers.aspx.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
@@ -259,12 +267,28 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Organizations.aspx.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organizations.aspx.designer.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementRepository.cs" />
+    <Compile Include="OrganizationRepository.cs" />
     <Compile Include="OrganizationalChart.aspx.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="OrganizationalChart.aspx.designer.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementsDashboard.aspx.cs">
+      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnouncementsDashboard.aspx.designer.cs">
+      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">
