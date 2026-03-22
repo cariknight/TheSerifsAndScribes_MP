@@ -1,2 +1,121 @@
-﻿body {
+﻿@import url("Fonts.css");
+
+:root {
+    --green: #058240;
+    --green-dark: #047237;
+    --yellow: #FDC013;
+    --gray-100: #F8FAFC;
+    --gray-300: #E5E7EB;
+    --gray-600: #4B5563;
+    --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+html, body, #form1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--gray-100);
+    color: #111827;
+}
+
+.page-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px clamp(16px, 5vw, 32px) 72px;
+}
+
+.announcement-hero {
+    background: linear-gradient(135deg, rgba(5, 130, 64, 0.92), rgba(4, 114, 55, 0.92)), url("../Images/Binan_Bayan.png") center/cover;
+    color: #ffffff;
+    border-radius: 28px;
+    padding: clamp(24px, 6vw, 48px);
+    box-shadow: var(--card-shadow);
+    margin: 24px 0 32px;
+}
+
+    .announcement-hero h1 {
+        margin: 0 0 10px;
+        font-family: 'Abril Fatface', serif;
+        font-size: clamp(36px, 5vw, 52px);
+        letter-spacing: 0.4px;
+    }
+
+    .announcement-hero .subtitle {
+        margin: 0;
+        font-size: clamp(16px, 3vw, 20px);
+        color: #e5f7ec;
+    }
+
+.announcement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.announcement-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--gray-300);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.announcement-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.announcement-date {
+    font-size: 14px;
+    color: var(--gray-600);
+    white-space: nowrap;
+}
+
+.announcement-card p {
+    margin: 0;
+    color: #1f2937;
+    line-height: 1.55;
+    font-size: 15px;
+}
+
+.alert {
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 0 0 18px 0;
+    border: 1px solid #a7f3d0;
+    background: #ecfdf3;
+    color: #065f46;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        padding: 24px 16px 56px;
+    }
+
+    .announcement-card {
+        padding: 18px;
+    }
+
+    .announcement-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .announcement-date {
+        margin-top: -4px;
+    }
 }
