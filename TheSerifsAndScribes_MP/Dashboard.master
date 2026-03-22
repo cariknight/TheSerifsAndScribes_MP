@@ -21,7 +21,7 @@
                 </div>
 
                 <nav class="sidebar__nav" aria-label="Primary">
-                    <a class="nav-item" href="~/Dashboard.aspx" runat="server">
+                    <a class="nav-item" href="~/AdminDashboard.aspx" runat="server">
                         <i class="fa-solid fa-house"></i>
                         <span class="nav-label">Dashboard</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
@@ -31,7 +31,7 @@
                         <span class="nav-label">Inquiries</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
-                    <a class="nav-item" href="~/Announcement.aspx" runat="server">
+                    <a class="nav-item" href="~/AnnouncementsDashboard.aspx" runat="server">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav-label">Announcements</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
