@@ -113,13 +113,183 @@ iframe {
 
 #navIsland a{
     color: black;
+    text-decoration: none;
+}
+
+#navIsland .nav-item {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+#navIsland .nav-icon-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#navIsland .light-green {
+    background: #e7f4ec;
+}
+
+#navIsland .light-yellow {
+    background: #fff5da;
+}
+
+#navIsland .nav-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+}
+
+#navIsland p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#navIsland .nav-item:hover .nav-icon-wrap {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /*Announcement Section*/
 #announcement {
     background-color: white;
     margin: 0;
-    padding: 0;
+    padding: 56px 64px;
+}
+
+#announcement .flex-container {
+    padding: 20px 16px;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#announcement .announcement-shell {
+    align-items: center;
+    gap: 32px;
+}
+
+#announcement-left {
+    flex: 0 0 45%;
+    max-width: 480px;
+    min-width: 340px;
+    position: relative;
+    min-height: 390px;
+}
+
+#announcement-right {
+    flex: 1 1 55%;
+    min-width: 320px;
+}
+
+.announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.announcement-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.announcement-copy h4 {
+    margin: 0 0 4px;
+}
+
+.announcement-copy p {
+    margin: 0 0 4px;
+}
+
+.subtitle-left {
+    text-align: left;
+    max-width: 520px;
+}
+
+.icon-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    border: 1px solid #e3e8ef;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.hero-rect {
+    background: #e5e7eb;
+    border-radius: 26px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-rect--large {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 320px;
+}
+.hero-rect--small {
+    position: absolute;
+    left: 190px;
+    top: 20px;
+    width: 230px;
+    height: 190px;
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    padding: 14px 16px;
+    border: 1px solid #e8ecf1;
+    position: absolute;
+    left: 190px;
+    bottom: 10px;
+    width: 240px;
+}
+
+.hero-img-1 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Bi%C3%B1an_City_Hall.jpg");
+}
+
+.hero-img-2 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Bi%C3%B1an_City%2C_SLEX_from_air_%28Laguna%3B_04-17-2024%29.jpg");
+}
+
+.featured-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #d1fae5;
+    color: #0a7d3b;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.featured-card h5 {
+    margin: 0 0 6px;
+}
+
+.featured-card p {
+    margin: 0 0 6px;
+}
+
+.view-all-btn {
+    margin-top: 14px;
+    border-radius: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 #announcement-content {
@@ -197,6 +367,31 @@ iframe {
     position: relative;
 }
 
+#newsCarousel .carousel-item {
+    padding: 12px 0;
+}
+
+#newsCarousel .slide-cards {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#newsCarousel .news-card {
+    margin: 0;
+    max-width: 360px;
+    flex: 1 1 300px;
+}
+
+#newsCarousel .carousel-control-prev-icon,
+#newsCarousel .carousel-control-next-icon {
+    filter: invert(69%) sepia(80%) saturate(654%) hue-rotate(352deg) brightness(97%) contrast(96%);
+}
+
+#newsCarousel .carousel-control-prev,
+#newsCarousel .carousel-control-next {
+    width: 5%;
+}
+
 .news-link-row {
     display: flex;
     align-items: center;
@@ -253,6 +448,34 @@ iframe {
     border-radius: 30px;
     margin: 0;
     box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
+}
+
+.service-icon-wrap {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-light-green {
+    background: #e8f5ed; /* lighter than green icons */
+}
+
+.service-light-yellow {
+    background: #fff8e4; /* lighter than yellow icons */
+}
+
+.service-icon {
+    width: 36px;
+    height: 36px;
+}
+
+#city-service .card:hover .service-icon-wrap {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.16);
 }
 
 .serviceBtn {

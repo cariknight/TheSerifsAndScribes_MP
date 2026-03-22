@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace TheSerifsAndScribes_MP
 {
@@ -11,6 +12,8 @@ namespace TheSerifsAndScribes_MP
         {
             if (!IsPostBack)
             {
+                TheSerifsAndScribes_MP.CareerRepository.SeedDefaultsIfEmpty();
+
                 ddlStatus.SelectedValue = "All";
                 ddlSort.SelectedValue = "DESC";
                 LoadVacancies();
@@ -56,15 +59,22 @@ namespace TheSerifsAndScribes_MP
             string status = ddlStatus.SelectedValue ?? "All";
             string sortDir = (ddlSort.SelectedValue ?? "DESC").ToUpperInvariant() == "ASC" ? "ASC" : "DESC";
 
-            // Use mock data for now
-            var items = GetMockVacancies();
+            var items = TheSerifsAndScribes_MP.CareerRepository.GetAll()
+                .Select(c => new VacancyItem
+                {
+                    Id = c.Id,
+                    Title = $"Vacancy List: {c.VacancyDate:MMMM dd, yyyy}",
+                    Status = c.Status,
+                    PostedDate = c.VacancyDate == DateTime.MinValue ? DateTime.Today : c.VacancyDate,
+                    FileUrl = !string.IsNullOrWhiteSpace(c.PreviewUrl) ? c.PreviewUrl : c.DownloadUrl
+                })
+                .ToList();
 
             // Filter
             if (!string.IsNullOrWhiteSpace(q))
             {
                 items = items.Where(v =>
                     v.Title.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    v.Department.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0 ||
                     v.PostedDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture).Contains(q)).ToList();
             }
 
@@ -84,28 +94,10 @@ namespace TheSerifsAndScribes_MP
             pnlEmpty.Visible = items.Count == 0;
         }
 
-
-        //testing
-        private List<VacancyItem> GetMockVacancies()
-        {
-            return new List<VacancyItem>
-            {
-                new VacancyItem { Id = 12, Title = "Vacancy List: March 13, 2026", Department = "City Admin", Status = "New", PostedDate = new DateTime(2026, 3, 13), FileUrl = "files/vacancies-march-13-2026.pdf" },
-                new VacancyItem { Id = 11, Title = "Vacancy List: March 07, 2026", Department = "HR Office", Status = "New", PostedDate = new DateTime(2026, 3, 7), FileUrl = "files/vacancies-march-07-2026.pdf" },
-                new VacancyItem { Id = 10, Title = "Vacancy List: February 28, 2026", Department = "Public Safety", Status = "Active", PostedDate = new DateTime(2026, 2, 28), FileUrl = "files/vacancies-feb-28-2026.pdf" },
-                new VacancyItem { Id = 9, Title = "Vacancy List: February 21, 2026", Department = "Public Safety", Status = "Active", PostedDate = new DateTime(2026, 2, 21), FileUrl = "files/vacancies-feb-21-2026.pdf" },
-                new VacancyItem { Id = 8, Title = "Vacancy List: February 14, 2026", Department = "Public Safety", Status = "Active", PostedDate = new DateTime(2026, 2, 14), FileUrl = "files/vacancies-feb-14-2026.pdf" },
-                new VacancyItem { Id = 7, Title = "Vacancy List: February 07, 2026", Department = "Public Safety", Status = "Archived", PostedDate = new DateTime(2026, 2, 7), FileUrl = "files/vacancies-feb-07-2026.pdf" },
-                new VacancyItem { Id = 6, Title = "Vacancy List: January 31, 2026", Department = "Public Safety", Status = "Archived", PostedDate = new DateTime(2026, 1, 31), FileUrl = "files/vacancies-jan-31-2026.pdf" }
-            };
-        }
-        //edit this when sql is done
-
         private class VacancyItem
         {
             public int Id { get; set; }
             public string Title { get; set; }
-            public string Department { get; set; }
             public string Status { get; set; }
             public DateTime PostedDate { get; set; }
             public string FileUrl { get; set; }

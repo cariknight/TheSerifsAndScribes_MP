@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TheSerifsAndScribes_MP.Home" %>
+ï»¿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Invest.aspx.cs" Inherits="TheSerifsAndScribes_MP.Invest" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="Styles/InvestStyle.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
             </h1>
 
             <p class="hero-text">
-                Bi�an is a premier industrial and commercial destination in the Philippines.
+                Biï¿½an is a premier industrial and commercial destination in the Philippines.
                 Join our thriving economy supported by pro-business policies and world-class infrastructure.
             </p>
         </div>
@@ -35,7 +35,7 @@
                 <p class="section-subtitle">Governance Framework</p>
                 <h2 class="section-title">The Legal Foundation
                     <br />
-                    of <span>Business in Bi�an</span>
+                    of <span>Business in Biï¿½an</span>
                 </h2>
                 <p class="section-text">
                     Our legislative codes are designed to provide transparency, stability, and incentives for long-term business partnerships.
@@ -81,7 +81,7 @@
         <div class="econ-header">
             <div class="econ-title-text">
                 <h2>Economic <span>Fundamentals</span></h2>
-                <p>Detailed data on market values and the operational environment in Bi�an.</p>
+                <p>Detailed data on market values and the operational environment in Biï¿½an.</p>
             </div>
         </div>
 
@@ -93,7 +93,7 @@
                 </div>
                 <h3>Market Value</h3>
                 <br />
-                <p>Access updated Real Property Market Values. Bi�an offers highly competitive property valuations, making it an ideal location for industrial plants and large-scale commercial developments.</p>
+                <p>Access updated Real Property Market Values. Bi&ntilde;an offers highly competitive property valuations, making it an ideal location for industrial plants and large-scale commercial developments.</p>
                 <a runat="server" href="~/Files/Invest/Market-Value.pdf" target="_blank" rel="noopener">View Schedule of Values &gt;
                 </a>
             </div>
@@ -104,7 +104,7 @@
                 </div>
                 <h3>Cost of Doing Business</h3>
                 <br />
-                <p>Compare labor costs, utility rates, and regulatory fees. We maintain a lean fee structure to ensure Bi�an remains the most cost-effective hub in the CALABARZON region.</p>
+                <p>Compare labor costs, utility rates, and regulatory fees. We maintain a lean fee structure to ensure Bi&ntilde;an remains the most cost-effective hub in the CALABARZON region.</p>
                 <a runat="server" href="~/Files/Invest/Cost-of-Doing-Business.pdf" target="_blank" rel="noopener">Operational Cost Guide &gt;
                 </a>
             </div>
@@ -128,7 +128,7 @@
                 </div>
                 <h3 class="opportunities-feature-title">Trading Center</h3>
                 <p class="opportunities-feature-desc">
-                    Bi�an City is the premier trading hub south of Metro Manila, housing the largest public market in Laguna and the CALABARZON Region. It is a center of commerce with numerous banking institutions and emerging shopping centers serving retailers from nearby towns.
+                    Biï¿½an City is the premier trading hub south of Metro Manila, housing the largest public market in Laguna and the CALABARZON Region. It is a center of commerce with numerous banking institutions and emerging shopping centers serving retailers from nearby towns.
                 </p>
             </div>
         </div>
@@ -190,7 +190,7 @@
                         <h4>Commercial &amp; Leisure</h4>
                     </div>
                     <p>
-                        Prime opportunities for developers in shopping malls, supermarkets, department stores, and supermarts. Bi�an�s growing population and strategic location make it the ideal site for large-scale activity areas and retail centers.
+                        Prime opportunities for developers in shopping malls, supermarkets, department stores, and supermarts. Biï¿½anï¿½s growing population and strategic location make it the ideal site for large-scale activity areas and retail centers.
                     </p>
                 </div>
             </div>
@@ -229,3 +229,4 @@
     </section>
 
 </asp:Content>
+

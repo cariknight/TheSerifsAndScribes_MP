@@ -18,6 +18,9 @@
                     <a class="brand__logo" href="~/Home.aspx" runat="server">
                         <img src="~/Images/Binan_City_Seal.png" alt="City seal" runat="server" />
                     </a>
+                    <button type="button" class="icon-button sidebar__close" aria-label="Close navigation" onclick="closeSidebar()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
 
                 <nav class="sidebar__nav" aria-label="Primary">
@@ -34,6 +37,16 @@
                     <a class="nav-item" href="~/AnnouncementsDashboard.aspx" runat="server">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav-label">Announcements</span>
+                        <i class="fa-solid fa-chevron-right nav-chevron"></i>
+                    </a>
+                    <a class="nav-item" href="~/NewsDashboard.aspx" runat="server">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span class="nav-label">News &amp; Events</span>
+                        <i class="fa-solid fa-chevron-right nav-chevron"></i>
+                    </a>
+                    <a class="nav-item" href="~/CareersDashboard.aspx" runat="server">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="nav-label">Jobs / Careers</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/Organizations.aspx" runat="server">
@@ -87,13 +100,15 @@
                 </main>
             </div>
         </div>
-        <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()" aria-hidden="true"></div>
+        <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     </form>
 
     <script type="text/javascript">
         (function () {
             var sidebar = document.getElementById('sidebar');
             var overlay = document.getElementById('sidebarOverlay');
+            var body = document.body;
+            var toggleButton = document.querySelector('.topbar__hamburger');
 
             function syncOverlay() {
                 if (!overlay || !sidebar) return;
@@ -101,12 +116,26 @@
                 overlay.classList.toggle('is-visible', showOverlay);
             }
 
-            window.toggleSidebar = function () {
+            function setSidebar(expanded) {
                 if (!sidebar) return;
-                var expanded = sidebar.classList.toggle('is-expanded');
+                sidebar.classList.toggle('is-expanded', expanded);
                 sidebar.classList.toggle('is-collapsed', !expanded);
                 sidebar.setAttribute('aria-expanded', expanded.toString());
+                body.classList.toggle('menu-open', expanded);
+                if (toggleButton) {
+                    toggleButton.setAttribute('aria-expanded', expanded.toString());
+                    toggleButton.setAttribute('aria-pressed', expanded.toString());
+                }
                 syncOverlay();
+            }
+
+            window.toggleSidebar = function () {
+                var expanded = sidebar && sidebar.classList.contains('is-expanded');
+                setSidebar(!expanded);
+            };
+
+            window.closeSidebar = function () {
+                setSidebar(false);
             };
 
             window.addEventListener('resize', syncOverlay);

@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
+    <Content Include="CareersDashboard.aspx" />
     <Content Include="Admins.aspx" />
     <Content Include="Images\Binan_Login.png" />
     <Content Include="Announcements.aspx" />
+    <Content Include="News.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
     <Content Include="CitizensCharter.aspx" />
@@ -151,6 +153,7 @@
     <Content Include="Organizations.aspx" />
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="AnnouncementsDashboard.aspx" />
+    <Content Include="NewsDashboard.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Scripts\Modal.js" />
@@ -204,6 +207,13 @@
     </Compile>
     <Compile Include="Announcements.aspx.designer.cs">
       <DependentUpon>Announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inquiries.aspx.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
@@ -276,7 +286,18 @@
       <DependentUpon>Organizations.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnnouncementRepository.cs" />
+    <Compile Include="CareerRepository.cs" />
+    <Compile Include="CareersDashboard.aspx.cs">
+      <DependentUpon>CareersDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CareersDashboard.aspx.designer.cs">
+      <DependentUpon>CareersDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OrganizationRepository.cs" />
+    <Compile Include="InquiryRepository.cs" />
+    <Compile Include="AdminRepository.cs" />
+    <Compile Include="NewsRepository.cs" />
     <Compile Include="OrganizationalChart.aspx.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -290,6 +311,13 @@
     </Compile>
     <Compile Include="AnnouncementsDashboard.aspx.designer.cs">
       <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDashboard.aspx.cs">
+      <DependentUpon>NewsDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDashboard.aspx.designer.cs">
+      <DependentUpon>NewsDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">

@@ -13,6 +13,7 @@
         <a href="About.aspx">ABOUT</a>
         <a href="Transparency.aspx">TRANSPARENCY</a>
         <a href="Services.aspx">SERVICES</a>
+        <a href="News.aspx">NEWS &amp; EVENTS</a>
         <a href="Invest.aspx">INVEST</a>
         <a href="Careers.aspx">CAREERS/JOBS</a>
         <a href="Contact.aspx">CONTACT US</a>

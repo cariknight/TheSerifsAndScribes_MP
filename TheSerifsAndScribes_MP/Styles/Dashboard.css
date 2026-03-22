@@ -100,13 +100,24 @@ html, body {
     background: var(--brand-foreground);
 }
 
+.topbar__hamburger {
+    display: inline-flex;
+    position: relative;
+    z-index: 1060; /* float above sidebar & overlay */
+}
+
 .sidebar__close {
     display: none;
     margin-left: auto;
+    color: var(--brand-foreground);
 }
 
 .sidebar.is-expanded .sidebar__close {
     display: inline-flex;
+}
+
+.sidebar__close i {
+    font-size: 18px;
 }
 
 .sidebar__nav {
@@ -166,8 +177,7 @@ html, body {
 }
 
 .topbar {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
     gap: 18px;
     padding: 16px 24px;
@@ -175,7 +185,7 @@ html, body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1050;
 }
 
 .topbar__hamburger span {
@@ -189,6 +199,7 @@ html, body {
     font-family: var(--font-heading);
     font-size: 20px;
     color: var(--brand-green-dark);
+    margin-right: auto;
 }
 
 .topbar__title img {
@@ -201,6 +212,7 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 18px;
+    margin-left: auto;
 }
 
 .topbar__search {
@@ -268,7 +280,7 @@ html, body {
 }
 
 .menu-open .topbar__hamburger {
-    display: none;
+    display: inline-flex;
 }
 
 .menu-open .sidebar__close {
@@ -276,7 +288,7 @@ html, body {
 }
 
 .sidebar.is-expanded ~ .dashboard-main .topbar__hamburger {
-    display: none;
+    display: inline-flex;
 }
 
 @media (max-width: 991px) {
@@ -309,6 +321,7 @@ html, body {
         grid-column: 1 / -1;
         justify-content: space-between;
         width: 100%;
+        justify-self: stretch;
     }
 
     .topbar__search {

@@ -12,16 +12,9 @@ namespace TheSerifsAndScribes_MP
             {
                 try
                 {
-                    BindHeadDropdown(HeadOfficerDropDown, null);
                     BindDepartmentDropdown(OfficerDepartmentDropDown, null);
                     BindGrid();
                     BindOfficersGrid();
-
-                    if (!OrganizationRepository.SupportsHeadOfficer)
-                    {
-                        HeadOfficerDropDown.Enabled = false;
-                        HeadInfoLabel.Visible = true;
-                    }
                 }
                 catch (Exception ex)
                 {
@@ -36,7 +29,6 @@ namespace TheSerifsAndScribes_MP
             var description = DescriptionTextBox.Text.Trim();
             var pldtHotline = PldtHotlineTextBox.Text.Trim();
             var intelcoHotline = IntelcoHotlineTextBox.Text.Trim();
-            var headOfficerId = OrganizationRepository.SupportsHeadOfficer ? HeadOfficerDropDown.SelectedValue : null;
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(pldtHotline) || string.IsNullOrWhiteSpace(intelcoHotline))
             {
@@ -46,7 +38,7 @@ namespace TheSerifsAndScribes_MP
 
             try
             {
-                OrganizationRepository.AddDepartment(name, description, pldtHotline, intelcoHotline, headOfficerId);
+                OrganizationRepository.AddDepartment(name, description, pldtHotline, intelcoHotline, null);
                 ClearAddForm();
                 ShowMessage("Department saved.");
                 BindGrid();
@@ -96,7 +88,6 @@ namespace TheSerifsAndScribes_MP
                 OrganizationRepository.AddOfficer(id, first, last, position, start, end, photo, deptId);
                 ClearOfficerForm();
                 ShowMessage("Officer saved.");
-                BindHeadDropdown(HeadOfficerDropDown, null);
                 BindDepartmentDropdown(OfficerDepartmentDropDown, null);
                 BindGrid();
                 BindOfficersGrid();
@@ -281,10 +272,6 @@ namespace TheSerifsAndScribes_MP
             DescriptionTextBox.Text = string.Empty;
             PldtHotlineTextBox.Text = string.Empty;
             IntelcoHotlineTextBox.Text = string.Empty;
-            if (HeadOfficerDropDown.Items.Count > 0)
-            {
-                HeadOfficerDropDown.SelectedIndex = 0;
-            }
         }
 
         private void ClearOfficerForm()
@@ -356,7 +343,6 @@ namespace TheSerifsAndScribes_MP
                 OrganizationRepository.UpdateOfficer(officerId, firstBox.Text.Trim(), lastBox.Text.Trim(), positionBox.Text.Trim(), start, end, photoBox?.Text.Trim(), deptId);
                 OfficersGrid.EditIndex = -1;
                 ShowMessage("Officer updated.");
-                BindHeadDropdown(HeadOfficerDropDown, null);
                 BindDepartmentDropdown(OfficerDepartmentDropDown, null);
                 BindGrid();
                 BindOfficersGrid();
@@ -375,7 +361,6 @@ namespace TheSerifsAndScribes_MP
             {
                 OrganizationRepository.DeleteOfficer(officerId);
                 ShowMessage("Officer deleted.");
-                BindHeadDropdown(HeadOfficerDropDown, null);
                 BindDepartmentDropdown(OfficerDepartmentDropDown, null);
                 BindGrid();
                 BindOfficersGrid();

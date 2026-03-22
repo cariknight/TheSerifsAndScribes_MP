@@ -14,13 +14,6 @@
                     <asp:Label runat="server" AssociatedControlID="DepartmentNameTextBox" CssClass="form-label" Text="Department / office name" />
                     <asp:TextBox runat="server" ID="DepartmentNameTextBox" CssClass="form-control" />
                 </div>
-                <div class="col-md-6">
-                    <asp:Label runat="server" AssociatedControlID="HeadOfficerDropDown" CssClass="form-label" Text="Head of office (Officer)" />
-                    <asp:DropDownList runat="server" ID="HeadOfficerDropDown" CssClass="form-select" AppendDataBoundItems="true">
-                        <asp:ListItem Text="-- Select head (optional) --" Value="" />
-                    </asp:DropDownList>
-                    <asp:Label runat="server" ID="HeadInfoLabel" CssClass="form-text text-muted" Visible="false" Text="Head assignment is disabled because the headOfficerID column is not available in the Department table." />
-                </div>
                 <div class="col-12">
                     <asp:Label runat="server" AssociatedControlID="DescriptionTextBox" CssClass="form-label" Text="Description" />
                     <asp:TextBox runat="server" ID="DescriptionTextBox" CssClass="form-control" TextMode="MultiLine" Rows="2" />
