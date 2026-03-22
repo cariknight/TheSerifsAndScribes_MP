@@ -23,27 +23,35 @@
 
     <!-- NAVIGATION ISLAND -->
     <div id="navIsland" class="flex-container">
-        <div>
-            <a href="">
-                image
+        <div class="nav-item">
+            <a href="Services.aspx">
+                <div class="nav-icon-wrap light-green">
+                    <img class="nav-icon" src="Images/Assets/Icons/eservices-green-icon.png" alt="E-Services" />
+                </div>
                 <p>E-Services</p>
             </a>
         </div>
-        <div>
-            <a href="">
-                image
+        <div class="nav-item">
+            <a href="Invest.aspx">
+                <div class="nav-icon-wrap light-yellow">
+                    <img class="nav-icon" src="Images/Assets/Icons/business-yellow-icon.png" alt="Business" />
+                </div>
                 <p>Business</p>
             </a>
         </div>
-        <div>
-            <a href="">
-                image
+        <div class="nav-item">
+            <a href="About.aspx">
+                <div class="nav-icon-wrap light-green">
+                    <img class="nav-icon" src="Images/Assets/Icons/tourism-green-icon.png" alt="Tourism" />
+                </div>
                 <p>Tourism</p>
             </a>
         </div>
-        <div>
-            <a href="">
-                image
+        <div class="nav-item">
+            <a href="Contact.aspx">
+                <div class="nav-icon-wrap light-yellow">
+                    <img class="nav-icon" src="Images/Assets/Icons/contactus-yellow-icon.png" alt="Contact Us" />
+                </div>
                 <p>Contact Us</p>
             </a>
         </div>
@@ -151,55 +159,59 @@
         <!-- ALL SERVICES -->
         <div id="service-cards" class="flex-container">
             <div class="card">
-                <div>
-                    <img src="" alt="logo" />
+                <div class="service-icon-wrap service-light-green">
+                    <img class="service-icon" src="Images/Assets/Icons/building-green-icon.png" alt="Business Permit" />
                 </div>
                 
                 <h3>Business Permit</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>Apply for or renew your business permit online.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="businessPermitBtn" runat="server" Text="Access Portal" />
+                <a class="serviceBtn" href="https://www.binancitybusinesspermit.online/" target="_blank" rel="noopener">Access Portal</a>
             </div>
             <div class="card">
-                <div>
-                    <img src="" alt="logo" />
+                <div class="service-icon-wrap service-light-yellow">
+                    <img class="service-icon" src="Images/Assets/Icons/house-yellow-icon.png" alt="Real Property Tax" />
                 </div>
                 <h3>Real Property Tax</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>Check balances and pay your real property tax dues.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="realPropertyTaxBtn" runat="server" Text="Access Portal" />
+                <a class="serviceBtn" href="https://binancityrealproperty.online/" target="_blank" rel="noopener">Access Portal</a>
             </div>
             <div class="card">
-                <div>
-                    <img src="" alt="logo" />
+                <div class="service-icon-wrap service-light-green">
+                    <img class="service-icon" src="Images/Assets/Icons/doc-green-icon.png" alt="Civil Registry" />
                 </div>
                 <h3>Civil Registry</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>Request certificates for birth, marriage, and other records.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="civilRegistryBtn" runat="server" Text="Access Facebook" />
+                <a class="serviceBtn" href="https://www.facebook.com/binancivilregistrar/" target="_blank" rel="noopener">Access Facebook</a>
             </div>
             <div class="card">
-                <div>
-                    <img src="" alt="logo" />
+                <div class="service-icon-wrap service-light-green">
+                    <img class="service-icon" src="Images/Assets/Icons/stetoscope-green-icon.png" alt="Health Services" />
                 </div>
                 <h3>Health Services</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>View advisories and programs from the City Health Office.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="healthServicesBtn" runat="server" Text="Access Facebook" />
+                <a class="serviceBtn" href="https://www.facebook.com/CHOBinanLaguna/" target="_blank" rel="noopener">Access Facebook</a>
             </div>
             <div class="card">
-                logo
+                <div class="service-icon-wrap service-light-green">
+                    <img class="service-icon" src="Images/Assets/Icons/gradcap-green-icon.png" alt="Education" />
+                </div>
                 <h3>Education</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>Explore updates and resources from DepEd Bi&ntilde;an City.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="educationBtn" runat="server" Text="Access Website" />
+                <a class="serviceBtn" href="https://www.depedbinancity.ph/" target="_blank" rel="noopener">Access Website</a>
             </div>
             <div class="card">
-                logo
+                <div class="service-icon-wrap service-light-green">
+                    <img class="service-icon" src="Images/Assets/Icons/tree-green-icon.png" alt="Environment" />
+                </div>
                 <h3>Environment</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>Learn about environmental projects and how to participate.</p>
 
-                <asp:LinkButton CssClass="serviceBtn" ID="environmentBtn" runat="server" Text="Access Website" />
+                <a class="serviceBtn" href="https://www.facebook.com/pgenrolaguna" target="_blank" rel="noopener">Access Website</a>
             </div>
         </div>
     </div>

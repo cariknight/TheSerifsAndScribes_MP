@@ -113,6 +113,48 @@ iframe {
 
 #navIsland a{
     color: black;
+    text-decoration: none;
+}
+
+#navIsland .nav-item {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+#navIsland .nav-icon-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#navIsland .light-green {
+    background: #e7f4ec;
+}
+
+#navIsland .light-yellow {
+    background: #fff5da;
+}
+
+#navIsland .nav-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+}
+
+#navIsland p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#navIsland .nav-item:hover .nav-icon-wrap {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /*Announcement Section*/
@@ -381,6 +423,34 @@ iframe {
     border-radius: 30px;
     margin: 0;
     box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
+}
+
+.service-icon-wrap {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-light-green {
+    background: #e8f5ed; /* lighter than green icons */
+}
+
+.service-light-yellow {
+    background: #fff8e4; /* lighter than yellow icons */
+}
+
+.service-icon {
+    width: 36px;
+    height: 36px;
+}
+
+#city-service .card:hover .service-icon-wrap {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.16);
 }
 
 .serviceBtn {
