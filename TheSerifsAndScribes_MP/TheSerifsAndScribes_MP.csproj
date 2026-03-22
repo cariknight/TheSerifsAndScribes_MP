@@ -384,6 +384,7 @@
     <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-SemiBoldItalic.ttf" />
     <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-Thin.ttf" />
     <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ThinItalic.ttf" />
+    <Content Include="Files\Invest\2016_1-Local-Revenue-Code.pdf" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Dashboard.master" />

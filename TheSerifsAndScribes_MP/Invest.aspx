@@ -47,9 +47,11 @@
                             <div class="code-title">Local Revenue Code</div>
                             <div class="code-desc">Guidelines on local taxation, fees, and charges.</div>
                         </div>
-                        <button type="button" class="code-icon-btn" aria-label="Download">
-                            <img src="../Images/Assets/Icons/download-lightgray-icon.png" alt="Download" />
-                        </button>
+                        <a runat="server" href="~/Files/Invest/2016_1-Local-Revenue-Code.pdf" target="_blank" class="code-icon-btn" rel="noopener">
+                            <img src="../Images/Assets/Icons/download-lightgray-icon.png" alt="Open PDF" />
+                        </a>
+
+
 
                     </div>
 
@@ -58,9 +60,9 @@
                             <div class="code-title">Local Investment & Incentive Code</div>
                             <div class="code-desc">Tax holidays and fiscal incentives for new enterprises.</div>
                         </div>
-                        <button type="button" class="code-icon-btn" aria-label="Download">
+                        <a runat="server" href="~/Files/Invest/Local-Investment-and-Incentive-Code" target="_blank" class="code-icon-btn" rel="noopener">
                             <img src="../Images/Assets/Icons/download-lightgray-icon.png" alt="Download" />
-                        </button>
+                        </a>
 
                     </div>
                 </div>
@@ -81,9 +83,6 @@
                 <h2>Economic <span>Fundamentals</span></h2>
                 <p>Detailed data on market values and the operational environment in Biñan.</p>
             </div>
-            <div class="econ-btn">
-                <asp:Button runat="server" Text="Download Economic Profile" CssClass="btn-download" />
-            </div>
         </div>
 
         <div class="econ-cards">
@@ -95,7 +94,8 @@
                 <h3>Market Value</h3>
                 <br />
                 <p>Access updated Real Property Market Values. Biñan offers highly competitive property valuations, making it an ideal location for industrial plants and large-scale commercial developments.</p>
-                <a href="#">View Schedule of Values &gt;</a>
+                <a runat="server" href="~/Files/Invest/Market-Value.pdf" target="_blank" rel="noopener">View Schedule of Values &gt;
+                </a>
             </div>
 
             <div class="econ-card">
@@ -105,7 +105,8 @@
                 <h3>Cost of Doing Business</h3>
                 <br />
                 <p>Compare labor costs, utility rates, and regulatory fees. We maintain a lean fee structure to ensure Biñan remains the most cost-effective hub in the CALABARZON region.</p>
-                <a href="#" class="yellow-link">Operational Cost Guide &gt;</a>
+                <a runat="server" href="~/Files/Invest/Cost-of-Doing-Business.pdf" target="_blank" rel="noopener">Operational Cost Guide &gt;
+                </a>
             </div>
         </div>
     </section>
@@ -206,7 +207,8 @@
                 <p>
                     Search through our database of registered businesses and partners in the city.
                 </p>
-                <a href="#" class="biz-link">Search Directory <span>&gt;</span></a>
+                <a runat="server" href="~/Files/Invest/Active-Businesses-2017.pdf" target="_blank" class="biz-link" rel="noopener">Search Directory <span>&gt;</span>
+                </a>
             </div>
 
             <div class="biz-card">
@@ -217,7 +219,11 @@
                 <p>
                     Ensure your business meets the required safety standards and health protocols for public safety.
                 </p>
-                <a href="#" class="biz-link">Apply for Certification <span>&gt;</span></a>
+                <a href="https://docs.google.com/forms/d/19rWKK0aY7mDrq6kXhJhabZZuq9AAG1Su_smWxBltptk/viewform?edit_requested=true"
+                    target="_blank"
+                    class="biz-link"
+                    rel="noopener">Apply for Certification <span>&gt;</span>
+                </a>
             </div>
         </div>
     </section>
