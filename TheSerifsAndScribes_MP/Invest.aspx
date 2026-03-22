@@ -43,22 +43,33 @@
 
                 <div class="code-boxes">
                     <div class="code-box green">
-                        <div class="code-title">Local Revenue Code</div>
-                        <div class="code-desc">Guidelines on local taxation, fees, and charges.</div>
-                        <div class="code-icon">&#8681;</div>
+                        <div class="code-text">
+                            <div class="code-title">Local Revenue Code</div>
+                            <div class="code-desc">Guidelines on local taxation, fees, and charges.</div>
+                        </div>
+                        <button type="button" class="code-icon-btn" aria-label="Download">
+                            <img src="../Images/Assets/Icons/download-lightgray-icon.png" alt="Download" />
+                        </button>
+
                     </div>
 
                     <div class="code-box yellow">
-                        <div class="code-title">Local Investment & Incentive Code</div>
-                        <div class="code-desc">Tax holidays and fiscal incentives for new enterprises.</div>
-                        <div class="code-icon">&#8681;</div>
+                        <div class="code-text">
+                            <div class="code-title">Local Investment & Incentive Code</div>
+                            <div class="code-desc">Tax holidays and fiscal incentives for new enterprises.</div>
+                        </div>
+                        <button type="button" class="code-icon-btn" aria-label="Download">
+                            <img src="../Images/Assets/Icons/download-lightgray-icon.png" alt="Download" />
+                        </button>
+
                     </div>
                 </div>
+
             </div>
 
             <!-- img  -->
             <div class="legal-image-wrapper">
-                <img src="../Images/Assets/justice-img.png" alt="Lady Justice" class="legal-img" />
+                <img src="../Images/justice-img.png" alt="Lady Justice" class="legal-img" />
             </div>
         </div>
     </section>
@@ -79,18 +90,20 @@
             <div class="econ-card">
                 <div class="econ-icon market-icon">
                     <!-- rep img rememver  -->
-                    <img src="../Images/Assets/market-icon.png" alt="Market Icon" />
+                    <img src="../Images/Assets/Icons/market-green-icon.png" alt="Market Icon" />
                 </div>
                 <h3>Market Value</h3>
+                <br />
                 <p>Access updated Real Property Market Values. Biñan offers highly competitive property valuations, making it an ideal location for industrial plants and large-scale commercial developments.</p>
                 <a href="#">View Schedule of Values &gt;</a>
             </div>
 
             <div class="econ-card">
                 <div class="econ-icon cost-icon">
-                    <img src="../Images/Assets/cost-icon.png" alt="Cost Icon" />
+                    <img src="../Images/Assets/Icons/money-yellow-icon.png" alt="Cost Icon" />
                 </div>
                 <h3>Cost of Doing Business</h3>
+                <br />
                 <p>Compare labor costs, utility rates, and regulatory fees. We maintain a lean fee structure to ensure Biñan remains the most cost-effective hub in the CALABARZON region.</p>
                 <a href="#" class="yellow-link">Operational Cost Guide &gt;</a>
             </div>
@@ -107,10 +120,10 @@
         </div>
 
         <div class="opportunities-feature-card">
-            <img src="../Images/Assets/trading-center.jpg" alt="Trading Center" class="opportunities-feature-img" />
+            <img src="../Images/tradingcenter-img.jpeg" alt="Trading Center" class="opportunities-feature-img" />
             <div class="opportunities-feature-overlay">
                 <div class="opportunities-feature-icon">
-                    <img src="../Images/Assets/trading-center-icon.png" alt="Trading Center Icon" />
+                    <img src="../Images/Assets/Icons/market-white-icon.png" alt="Trading Center Icon" />
                 </div>
                 <h3 class="opportunities-feature-title">Trading Center</h3>
                 <p class="opportunities-feature-desc">
@@ -121,10 +134,11 @@
 
         <div class="opportunities-cards-grid">
             <div class="opportunity-card">
+                <img src="../Images/cottage-img.jpg" alt="Cottage Thumbnail" class="opportunity-thumb-img" />
                 <div class="opportunity-card-body">
                     <div class="opportunity-head">
                         <span class="opportunity-icon yellow">
-                            <img src="../Images/Assets/cottage-industry-icon.png" alt="Cottage Industry Icon" />
+                            <img src="../Images/Assets/Icons/house-yellow-icon.png" alt="Cottage Industry Icon" />
                         </span>
                         <h4>Cottage Industry</h4>
                     </div>
@@ -134,11 +148,13 @@
                 </div>
             </div>
 
+
             <div class="opportunity-card">
+                <img src="../Images/tourism-img.jpg" alt="Tourism Thumbnail" class="opportunity-thumb-img" />
                 <div class="opportunity-card-body">
                     <div class="opportunity-head">
                         <span class="opportunity-icon green">
-                            <img src="../Images/Assets/tourism-icon.png" alt="Tourism Development Icon" />
+                            <img src="../Images/Assets/Icons/palmtree-lightgreen-icon.png" alt="Tourism Development Icon" />
                         </span>
                         <h4>Tourism Development</h4>
                     </div>
@@ -149,10 +165,11 @@
             </div>
 
             <div class="opportunity-card">
+                <img src="../Images/agricultural-img.jpg" alt="Agricultural Thumbnail" class="opportunity-thumb-img" />
                 <div class="opportunity-card-body">
                     <div class="opportunity-head">
                         <span class="opportunity-icon green">
-                            <img src="../Images/Assets/agricultural-icon.png" alt="Agricultural Icon" />
+                            <img src="../Images/Assets/Icons/seedling-green-icon.png" alt="Agricultural Icon" />
                         </span>
                         <h4>Agricultural</h4>
                     </div>
@@ -163,10 +180,11 @@
             </div>
 
             <div class="opportunity-card">
+                <img src="../Images/commerceleisure-img.jpg" alt="Commercial Thumbnail" class="opportunity-thumb-img" />
                 <div class="opportunity-card-body">
                     <div class="opportunity-head">
                         <span class="opportunity-icon yellow">
-                            <img src="../Images/Assets/commercial-leisure-icon.png" alt="Commercial &amp; Leisure Icon" />
+                            <img src="../Images/Assets/Icons/bag-yellow-icon.png" alt="Commercial &amp; Leisure Icon" />
                         </span>
                         <h4>Commercial &amp; Leisure</h4>
                     </div>
@@ -182,7 +200,7 @@
         <div class="biz-services-grid">
             <div class="biz-card">
                 <div class="biz-icon">
-                    <img src="../Images/Assets/business-directory-icon.png" alt="Business Directory" />
+                    <img src="../Images/Assets/Icons/market-green-icon.png" alt="Business Directory" />
                 </div>
                 <h3>Business Directory</h3>
                 <p>
@@ -193,7 +211,7 @@
 
             <div class="biz-card">
                 <div class="biz-icon">
-                    <img src="../Images/Assets/safety-seal-icon.png" alt="Safety Seal Certification" />
+                    <img src="../Images/Assets/Icons/award-green-icon.png" alt="Safety Seal Certification" />
                 </div>
                 <h3>Safety Seal Certification</h3>
                 <p>
