@@ -1,0 +1,149 @@
+﻿@import url("Fonts.css");
+
+html body form div {
+    margin: 0;
+    padding: 0;
+    font-family: Akatab;
+}
+
+p1 {
+    font-family: Akatab;
+    color: #2D1102;
+    font-size: 20px;
+}
+
+p2 {
+    font-family: Akatab;
+    color: #FFEFCF;
+    font-size: 20px;
+}
+
+#bg-color {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: black;
+}
+
+#bg {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Images/services_headerbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; /* vertical center */
+
+    text-align: center;
+    color: white;
+    z-index: 0;
+}
+
+#bg-filter {
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 253, 150, 0.1);
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Abril Fatface';
+}
+
+#content h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 72px;
+}
+
+#changecolor {
+    color: #87C159;
+}
+
+.flex-container {
+    display: flex;
+    margin: 0px;
+    padding: 50px;
+    column-gap: 100px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#rptadiv {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 100px;
+}
+
+#bplsdiv {
+    background-color: #87C159;
+    margin: 0;
+    padding: 100px;
+}
+
+#rptabtn:hover, #bplsbtn:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+    opacity: 1.0;
+}
+
+        #rptabtn:hover:after, #bplsbtn:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+
+    #rptabtn::after, #bplsbtn::after {
+        content: "\00bb";
+        padding-right: 20px;
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        transition: 0.4s;
+    }
+
+#rptaimage, #bplsimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers image + button */
+    width: 100%; /* ensures full width */
+}
+
+    #rptaimage img, #bplsimage img {
+        display: block;
+        max-width: 100%; /* keeps it responsive */
+        height: auto;
+    }
+
+#rptabtn, #bplsbtn {
+    margin-top: 12px;
+    height: 30px;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #058240;
+}
+

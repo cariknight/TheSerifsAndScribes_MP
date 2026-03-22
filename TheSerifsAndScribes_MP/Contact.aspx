@@ -18,7 +18,7 @@
                     <div class="contact-info-row">
                         <div class="contact-item">
                             <div class="contact-icon-box">
-                                <span class="contact-icon-placeholder">ICON</span>
+                                <img src="../Images/Assets/Icons/map-green-icon.png" alt="Location" class="contact-icon-placeholder"/>
                             </div>
                             <div class="contact-text">
                                 <h3>Visit Us</h3>
@@ -28,7 +28,7 @@
 
                         <div class="contact-item">
                             <div class="contact-icon-box">
-                                <span class="contact-icon-placeholder">ICON</span>
+                                <img src="../Images/Assets/Icons/clock-green-icon.png" alt="Clock" class="contact-icon-placeholder"/>
                             </div>
                             <div class="contact-text">
                                 <h3>Office Hours</h3>
@@ -80,7 +80,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/emergency-green-icon.png" alt="Emergency Icon"/>
                         </div>
                         <span class="hotline-category">Emergency</span>
                     </div>
@@ -91,7 +91,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/emergency-green-icon.png" alt="Emergency Icon"/>
                         </div>
                         <span class="hotline-category">Emergency</span>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/emergency-green-icon.png" alt="Emergency Icon"/>
                         </div>
                         <span class="hotline-category">Emergency</span>
                     </div>
@@ -113,7 +113,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/stetoscope-green-icon.png" alt="Medical Icon"/>
                         </div>
                         <span class="hotline-category">Medical</span>
                     </div>
@@ -124,7 +124,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/emergency-green-icon.png" alt="Emergency Icon"/>
                         </div>
                         <span class="hotline-category">Security</span>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/admin-green-icon.png" alt="Admin Icon"/>
                         </div>
                         <span class="hotline-category">Admin</span>
                     </div>
@@ -146,7 +146,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/info-green-icon.png" alt="Information Icon"/>
                         </div>
                         <span class="hotline-category">General</span>
                     </div>
@@ -157,7 +157,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/building-green-icon.png" alt="Business Icon"/>
                         </div>
                         <span class="hotline-category">Business</span>
                     </div>
@@ -168,7 +168,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/jail-green-icon.png" alt="Jail Icon"/>
                         </div>
                         <span class="hotline-category">Emergency</span>
                     </div>
@@ -179,7 +179,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/tree-green-icon.png" alt="Environment Icon"/>
                         </div>
                         <span class="hotline-category">Environment</span>
                     </div>
@@ -190,7 +190,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/building-green-icon.png" alt="Business Icon"/>
                         </div>
                         <span class="hotline-category">Business</span>
                     </div>
@@ -201,7 +201,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/Election-green-icon.png" alt="Election Icon"/>
                         </div>
                         <span class="hotline-category">General</span>
                     </div>
@@ -212,7 +212,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/gradcap-green-icon.png" alt="Education Icon"/>
                         </div>
                         <span class="hotline-category">Education</span>
                     </div>
@@ -223,7 +223,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/building-green-icon.png" alt="Business Icon"/>
                         </div>
                         <span class="hotline-category">General</span>
                     </div>
@@ -234,7 +234,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/building-green-icon.png" alt="Business Icon"/>
                         </div>
                         <span class="hotline-category">General</span>
                     </div>
@@ -245,7 +245,7 @@
                 <div class="hotline-card">
                     <div class="hotline-top">
                         <div class="hotline-icon-box">
-                            <span class="hotline-icon-placeholder">ICON</span>
+                            <img src="../Images/Assets/Icons/Grave-green-icon.png" alt="Cemetery Icon"/>
                         </div>
                         <span class="hotline-category">General</span>
                     </div>
@@ -263,9 +263,17 @@
                 </div>
 
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/CIOBinan/" target="_blank" class="icon-box">F</a>
-                    <a href="https://www.instagram.com/cityofbinan/" target="_blank" class="icon-box">I</a>
-                    <a href="https://x.com/CIO_BINAN" target="_blank" class="icon-box">T</a>
+                    <a href="https://www.facebook.com/CIOBinan/" target="_blank" class="icon-box">
+                        <img src="../Images/Assets/Icons/f-white-icon.png" alt="Facebook"/>
+                    </a>
+
+                    <a href="https://www.instagram.com/cityofbinan/" target="_blank" class="icon-box">
+                        <img src="../Images/Assets/Icons/insta-white-icon.png" alt="Instagram"/>
+                    </a>
+
+                    <a href="https://x.com/CIO_BINAN" target="_blank" class="icon-box">
+                        <img src="../Images/Assets/Icons/twt-white-icon.png" alt="Twitter"/>
+                    </a>
                 </div>
             </div>
         </div>
