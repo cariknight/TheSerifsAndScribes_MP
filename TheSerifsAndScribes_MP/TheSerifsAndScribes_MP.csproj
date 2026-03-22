@@ -71,8 +71,15 @@
     <Content Include="AdminDashboard.aspx" />
     <Content Include="CareersDashboard.aspx" />
     <Content Include="Admins.aspx" />
+    <Content Include="Images\agricultural-img.jpg" />
     <Content Include="Images\Binan_Login.png" />
     <Content Include="Announcements.aspx" />
+    <Content Include="Images\commerceleisure-img.jpg" />
+    <Content Include="Images\cottage-img.jpg" />
+    <Content Include="Images\tourism-img.jpg" />
+    <Content Include="Images\tradingcenter-img.jpeg" />
+    <Content Include="Images\user-profile.png" />
+    <Content Include="Images\work-img.png" />
     <Content Include="News.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
