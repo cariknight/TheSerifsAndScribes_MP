@@ -5,7 +5,7 @@
     <!-- Quill rich text editor -->
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
     <style>
-        .page-title { margin-bottom: 10px; font-family: "Akatab Bold", "Roboto", sans-serif; color: #0a7d3b; }
+        .page-title { margin-bottom: 10px; font-family: "Roboto", sans-serif; font-weight: 800; color: #0a7d3b; }
         .page-subtitle { margin-bottom: 22px; color: #5f666f; }
         .layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; }
         .card { border: 1px solid #e1e5ea; border-radius: 14px; background: #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.05); }

@@ -42,11 +42,21 @@
     font-size: 56px;
     font-weight: 700;
     line-height: 1.1;
+    font-family: 'Abril Fatface', serif;
 }
 
     .hero-title span {
         color: #8DC63F; /* green */
     }
+
+/* Global heading styling for Invest page (excluding hero title) */
+.invest-page h1:not(.hero-title),
+.invest-page h2,
+.invest-page h3,
+.invest-page h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
 
 /* HERO TEXT */
 .hero-text {
@@ -93,9 +103,10 @@
 
 .section-title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
     .section-title span {
@@ -206,8 +217,9 @@
 
 .econ-title-text h2 {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
 }
 
     .econ-title-text h2 span {
@@ -267,7 +279,8 @@
 
 .econ-card h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
 }
 
 .econ-card p {
@@ -331,6 +344,7 @@
 .opportunities-title {
     font-size: 28px;
     font-weight: 800;
+    font-family: 'Roboto', sans-serif;
     color: #111;
     margin: 0;
 }
@@ -396,7 +410,8 @@
 
 .opportunities-feature-title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
     margin: 0 0 8px;
 }
 
@@ -483,7 +498,8 @@
 
 .opportunity-card h4 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     color: #111;
 }
@@ -542,7 +558,8 @@
 
 .biz-card h3 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
     margin: 0 0 8px;
     color: #111827;
 }

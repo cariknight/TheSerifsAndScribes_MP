@@ -537,16 +537,16 @@ iframe {
 }
 
 #cityservicesBtn.btn {
-    background-color: #ffffff !important;
-    color: #058240 !important;
+    background-color: #058240 !important;
     border-color: #058240 !important;
+    color: #ffffff !important;
 }
 
 #cityservicesBtn.btn:hover,
 #cityservicesBtn.btn:focus {
-    background-color: #058240 !important;
+    background-color: #047237 !important;
+    border-color: #047237 !important;
     color: #ffffff !important;
-    border-color: #058240 !important;
 }
 
 #viewmoreBtn.btn,

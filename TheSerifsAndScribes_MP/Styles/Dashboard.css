@@ -8,7 +8,7 @@
     --shadow-soft: 0 8px 18px rgba(0, 0, 0, 0.12);
     --nav-width-collapsed: 74px;
     --nav-width-expanded: 240px;
-    --font-heading: "Abril Fatface", "Akatab Bold", serif;
+    --font-heading: "Roboto", "Akatab Bold", "Segoe UI", sans-serif;
     --font-body: "Roboto", "Akatab", "Segoe UI", sans-serif;
 }
 
@@ -35,6 +35,21 @@ html, body {
     display: flex;
     min-height: 100vh;
     background: var(--surface);
+}
+
+.dashboard-content h1,
+.dashboard-content h2,
+.dashboard-content .page-title,
+.dashboard-content .section-header h1 {
+    margin: 0 0 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--brand-green-dark);
+}
+
+.dashboard-content h2 {
+    font-size: 24px;
 }
 
 .sidebar {

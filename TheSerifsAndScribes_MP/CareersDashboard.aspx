@@ -18,7 +18,7 @@
 
 <asp:Content ID="DashboardContent" ContentPlaceHolderID="DashboardContent" runat="server">
     <div class="admin-section">
-        <h2>Careers Dashboard</h2>
+        <h1>Careers Dashboard</h1>
         <p>Manage vacancy lists shown on the public Careers page.</p>
 
         <div class="admin-actions">

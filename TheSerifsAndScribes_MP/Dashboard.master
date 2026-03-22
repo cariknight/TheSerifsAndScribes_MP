@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="~/Images/Binan_City_Seal.png" runat="server" />
     <link rel="shortcut icon" type="image/png" href="~/Images/Binan_City_Seal.png" runat="server" />
     <link href="~/Styles/Fonts.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" runat="server" />
+    <link href="~/Styles/global.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" runat="server" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE0xvE1R9V0M0J0X4tCT0N5pG5hcegvqY7Rq0Q9Yz8+6ztJQw==" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link href="~/Styles/Dashboard.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" runat="server" />
