@@ -36,9 +36,9 @@
                         <span class="nav-label">Announcements</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
-                    <a class="nav-item" href="~/Organization.aspx" runat="server">
+                    <a class="nav-item" href="~/Organizations.aspx" runat="server">
                         <i class="fa-solid fa-sitemap"></i>
-                        <span class="nav-label">Organization</span>
+                        <span class="nav-label">Organizations</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/Admins.aspx" runat="server">

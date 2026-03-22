@@ -148,6 +148,7 @@
     <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
+    <Content Include="Organizations.aspx" />
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
@@ -256,6 +257,14 @@
     <Compile Include="Invest.aspx.designer.cs">
       <DependentUpon>Invest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Organizations.aspx.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organizations.aspx.designer.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationRepository.cs" />
     <Compile Include="OrganizationalChart.aspx.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
