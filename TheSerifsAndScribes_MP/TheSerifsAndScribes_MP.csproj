@@ -88,7 +88,6 @@
     <Content Include="Images\services_banner.png" />
     <Content Include="Images\services_headerbackground.png" />
     <Content Include="Images\address.png" />
-    <Content Include="Images\agricultural-img.jpg" />
     <Content Include="Images\Assets\Icons\admin-green-icon.png" />
     <Content Include="Images\Assets\Icons\award-green-icon.png" />
     <Content Include="Images\Assets\Icons\building-green-icon.png" />
@@ -137,8 +136,6 @@
     <Content Include="Images\Binan_Bayan.png" />
     <Content Include="Images\Binan_Church.png" />
     <Content Include="Images\Binan_City_Seal.png" />
-    <Content Include="Images\commerceleisure-img.jpg" />
-    <Content Include="Images\cottage-img.jpg" />
     <Content Include="Images\email.png" />
     <Content Include="Images\faq.png" />
     <Content Include="Images\invest-image.jpg" />
@@ -150,7 +147,6 @@
     <Content Include="Images\tradingcenter-img.jpeg" />
     <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
-    <Content Include="Images\user-profile.png" />
     <Content Include="Invest.aspx" />
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="Scripts\faq.js" />
@@ -191,16 +187,6 @@
     </Compile>
     <Compile Include="Announcements.aspx.cs">
       <DependentUpon>Announcements.aspx</DependentUpon>
-    
-    <Compile Include="Inquiries.aspx.cs">
-      <DependentUpon>Inquiries.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inquiries.aspx.designer.cs">
-      <DependentUpon>Inquiries.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Announcement.aspx.cs">
-      <DependentUpon>Announcement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Announcements.aspx.designer.cs">
@@ -214,6 +200,13 @@
       <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnnouncementRepository.cs" />
+    <Compile Include="Inquiries.aspx.cs">
+      <DependentUpon>Inquiries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inquiries.aspx.designer.cs">
+      <DependentUpon>Inquiries.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Careers.aspx.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -408,11 +401,4 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
