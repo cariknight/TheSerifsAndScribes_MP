@@ -82,6 +82,7 @@
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
+    <Content Include="Styles\CareerStyle.css" />
     <Content Include="Styles\Contact.css" />
     <Content Include="Styles\Faq.css" />
     <Content Include="Styles\AboutStyle.css" />
