@@ -1,4 +1,4 @@
-ï»¿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Invest.aspx.cs" Inherits="TheSerifsAndScribes_MP.Invest" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Invest.aspx.cs" Inherits="TheSerifsAndScribes_MP.Invest" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="Styles/InvestStyle.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
             </h1>
 
             <p class="hero-text">
-                Biï¿½an is a premier industrial and commercial destination in the Philippines.
+                Bi???an is a premier industrial and commercial destination in the Philippines.
                 Join our thriving economy supported by pro-business policies and world-class infrastructure.
             </p>
         </div>
@@ -35,7 +35,7 @@
                 <p class="section-subtitle">Governance Framework</p>
                 <h2 class="section-title">The Legal Foundation
                     <br />
-                    of <span>Business in Biï¿½an</span>
+                    of <span>Business in Bi???an</span>
                 </h2>
                 <p class="section-text">
                     Our legislative codes are designed to provide transparency, stability, and incentives for long-term business partnerships.
@@ -81,7 +81,7 @@
         <div class="econ-header">
             <div class="econ-title-text">
                 <h2>Economic <span>Fundamentals</span></h2>
-                <p>Detailed data on market values and the operational environment in Biï¿½an.</p>
+                <p>Detailed data on market values and the operational environment in Bi???an.</p>
             </div>
         </div>
 
@@ -128,7 +128,7 @@
                 </div>
                 <h3 class="opportunities-feature-title">Trading Center</h3>
                 <p class="opportunities-feature-desc">
-                    Biï¿½an City is the premier trading hub south of Metro Manila, housing the largest public market in Laguna and the CALABARZON Region. It is a center of commerce with numerous banking institutions and emerging shopping centers serving retailers from nearby towns.
+                    Bi???an City is the premier trading hub south of Metro Manila, housing the largest public market in Laguna and the CALABARZON Region. It is a center of commerce with numerous banking institutions and emerging shopping centers serving retailers from nearby towns.
                 </p>
             </div>
         </div>
@@ -190,7 +190,7 @@
                         <h4>Commercial &amp; Leisure</h4>
                     </div>
                     <p>
-                        Prime opportunities for developers in shopping malls, supermarkets, department stores, and supermarts. Biï¿½anï¿½s growing population and strategic location make it the ideal site for large-scale activity areas and retail centers.
+                        Prime opportunities for developers in shopping malls, supermarkets, department stores, and supermarts. Bi???an???s growing population and strategic location make it the ideal site for large-scale activity areas and retail centers.
                     </p>
                 </div>
             </div>
@@ -229,4 +229,5 @@
     </section>
 
 </asp:Content>
+
 

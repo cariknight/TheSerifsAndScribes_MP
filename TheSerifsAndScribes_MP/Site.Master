@@ -67,6 +67,13 @@
                         <span>FAQS</span>
                     </a>
                 </nav>
+
+                <div class="menu-login">
+                    <a class="menu-login__btn" href="~/Login.aspx" runat="server">
+                        <img src="../Images/Assets/Icons/admin-green-icon.png" alt="" />
+                        <span>Admin Login</span>
+                    </a>
+                </div>
             </div>
 
             <div id="menuOverlay" class="menu-overlay is-hidden" onclick="toggleMenu()" aria-hidden="true"></div>
