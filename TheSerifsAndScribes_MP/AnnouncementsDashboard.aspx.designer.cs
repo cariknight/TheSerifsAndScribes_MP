@@ -11,52 +11,52 @@ namespace TheSerifsAndScribes_MP
 {
 
 
-    public partial class Announcement
+    public partial class AnnouncementsDashboard
     {
 
         /// <summary>
-        /// learnmoreBtn control.
+        /// MessagePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton learnmoreBtn;
+        protected global::System.Web.UI.WebControls.Panel MessagePanel;
 
         /// <summary>
-        /// viewmoreBtn control.
+        /// TitleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton viewmoreBtn;
+        protected global::System.Web.UI.WebControls.TextBox TitleTextBox;
 
         /// <summary>
-        /// readmoreBtn control.
+        /// BodyTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button readmoreBtn;
+        protected global::System.Web.UI.WebControls.TextBox BodyTextBox;
 
         /// <summary>
-        /// readmoreBtn1 control.
+        /// AddButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button readmoreBtn1;
+        protected global::System.Web.UI.WebControls.Button AddButton;
 
         /// <summary>
-        /// readmoreBtn2 control.
+        /// AnnouncementsGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button readmoreBtn2;
+        protected global::System.Web.UI.WebControls.GridView AnnouncementsGrid;
     }
 }

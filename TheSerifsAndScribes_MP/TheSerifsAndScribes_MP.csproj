@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
-    <Content Include="Announcement.aspx" />
+    <Content Include="Announcements.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
     <Content Include="CitizensCharter.aspx" />
@@ -145,7 +145,9 @@
     <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
+    <Content Include="Organizations.aspx" />
     <Content Include="OrganizationalChart.aspx" />
+    <Content Include="AnnouncementsDashboard.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
@@ -186,8 +188,8 @@
       <DependentUpon>Announcements.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Announcement.aspx.designer.cs">
-      <DependentUpon>Announcement.aspx</DependentUpon>
+    <Compile Include="Announcements.aspx.designer.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inquiries.aspx.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
@@ -196,7 +198,6 @@
     <Compile Include="Inquiries.aspx.designer.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnnouncementRepository.cs" />
     <Compile Include="Careers.aspx.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,12 +247,28 @@
     <Compile Include="Invest.aspx.designer.cs">
       <DependentUpon>Invest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Organizations.aspx.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organizations.aspx.designer.cs">
+      <DependentUpon>Organizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementRepository.cs" />
+    <Compile Include="OrganizationRepository.cs" />
     <Compile Include="OrganizationalChart.aspx.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="OrganizationalChart.aspx.designer.cs">
       <DependentUpon>OrganizationalChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementsDashboard.aspx.cs">
+      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnouncementsDashboard.aspx.designer.cs">
+      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">
