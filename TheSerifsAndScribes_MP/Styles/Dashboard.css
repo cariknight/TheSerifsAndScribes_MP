@@ -377,6 +377,13 @@ html, body {
     margin-bottom: 6px;
 }
 
+.stat-card__icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+
 .bg-soft-green {
     background: #e8f6ed;
 }

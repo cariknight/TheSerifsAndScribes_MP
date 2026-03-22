@@ -9,7 +9,7 @@
         <div class="stat-grid">
             <div class="stat-card">
                 <div class="stat-card__icon bg-soft-green">
-                    <i class="fa-solid fa-user-group"></i>
+                    <img src="Images/Assets/Icons/people-green-icon1.png" alt="Total visitors icon" />
                 </div>
                 <p class="stat-card__label">Total Visitors</p>
                 <asp:Literal ID="TotalVisitorsLiteral" runat="server" />
@@ -18,7 +18,7 @@
 
             <div class="stat-card">
                 <div class="stat-card__icon bg-soft-green">
-                    <i class="fa-regular fa-message"></i>
+                    <img src="Images/Assets/Icons/total-inquiries-green-icon.png" alt="Total inquiries icon" />
                 </div>
                 <p class="stat-card__label">Total Inquiries</p>
                 <asp:Literal ID="TotalInquiriesLiteral" runat="server" />
@@ -26,7 +26,7 @@
 
             <div class="stat-card">
                 <div class="stat-card__icon bg-soft-green">
-                    <i class="fa-solid fa-envelope-circle-check"></i>
+                    <img src="Images/Assets/Icons/unread-green-icon.png" alt="Unread inquiries icon" />
                 </div>
                 <p class="stat-card__label">Unread Inquiries</p>
                 <asp:Literal ID="UnreadInquiriesLiteral" runat="server" />
