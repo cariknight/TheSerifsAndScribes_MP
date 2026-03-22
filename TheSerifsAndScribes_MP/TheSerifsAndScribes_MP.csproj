@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
+    <Content Include="Admins.aspx" />
+    <Content Include="Images\Binan_Login.png" />
     <Content Include="Announcements.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
@@ -145,12 +147,15 @@
     <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Organizations.aspx" />
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="AnnouncementsDashboard.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
+    <Content Include="Scripts\Password.js" />
     <Content Include="Services.aspx" />
+    <Content Include="Styles\AdminsStyle.css" />
     <Content Include="Styles\CareerStyle.css" />
     <Content Include="ServicesStyle.css" />
     <Content Include="Styles\Contact.css" />
@@ -159,6 +164,7 @@
     <Content Include="Styles\AnnouncementStyle.css" />
     <Content Include="Styles\Fonts.css" />
     <Content Include="Styles\InvestStyle.css" />
+    <Content Include="Styles\LoginStyle.css" />
     <Content Include="Styles\NavigationBar.css" />
     <Content Include="Styles\Dashboard.css" />
     <Content Include="Styles\contact.css" />
@@ -184,8 +190,12 @@
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Announcement.aspx.cs">
-      <DependentUpon>Announcement.aspx</DependentUpon>
+    <Compile Include="Admins.aspx.cs">
+      <DependentUpon>Admins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins.aspx.designer.cs">
+      <DependentUpon>Admins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Announcements.aspx.cs">
       <DependentUpon>Announcements.aspx</DependentUpon>
@@ -249,6 +259,13 @@
     </Compile>
     <Compile Include="Invest.aspx.designer.cs">
       <DependentUpon>Invest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Organizations.aspx.cs">
       <DependentUpon>Organizations.aspx</DependentUpon>
