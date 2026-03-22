@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <asp:LinkButton ID="viewmoreBtn" ClientIDMode="Static" CssClass="btn btn-primary btn-lg" runat="server" Text="View All Announcement" PostBackUrl="Announcements.aspx" />
+                <asp:LinkButton ID="viewmoreBtn" ClientIDMode="Static" CssClass="btn btn-primary btn-lg" runat="server" Text="View All Announcement" />
             </div>
         </div>
 

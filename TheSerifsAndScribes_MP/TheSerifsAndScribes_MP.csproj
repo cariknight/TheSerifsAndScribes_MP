@@ -69,8 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
-    <Content Include="Announcements.aspx" />
-    <Content Include="AnnouncementsDashboard.aspx" />
+    <Content Include="Announcement.aspx" />
     <Content Include="Inquiries.aspx" />
     <Content Include="Careers.aspx" />
     <Content Include="CitizensCharter.aspx" />
@@ -88,7 +87,6 @@
     <Content Include="Images\services_banner.png" />
     <Content Include="Images\services_headerbackground.png" />
     <Content Include="Images\address.png" />
-    <Content Include="Images\agricultural-img.jpg" />
     <Content Include="Images\Assets\Icons\admin-green-icon.png" />
     <Content Include="Images\Assets\Icons\award-green-icon.png" />
     <Content Include="Images\Assets\Icons\building-green-icon.png" />
@@ -137,8 +135,6 @@
     <Content Include="Images\Binan_Bayan.png" />
     <Content Include="Images\Binan_Church.png" />
     <Content Include="Images\Binan_City_Seal.png" />
-    <Content Include="Images\commerceleisure-img.jpg" />
-    <Content Include="Images\cottage-img.jpg" />
     <Content Include="Images\email.png" />
     <Content Include="Images\faq.png" />
     <Content Include="Images\invest-image.jpg" />
@@ -146,11 +142,8 @@
     <Content Include="Images\FAQs.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Images\staticmap.png" />
-    <Content Include="Images\tourism-img.jpg" />
-    <Content Include="Images\tradingcenter-img.jpeg" />
     <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
-    <Content Include="Images\user-profile.png" />
     <Content Include="Invest.aspx" />
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="Scripts\faq.js" />
@@ -189,9 +182,6 @@
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Announcements.aspx.cs">
-      <DependentUpon>Announcements.aspx</DependentUpon>
-    
     <Compile Include="Inquiries.aspx.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,17 +193,9 @@
       <DependentUpon>Announcement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Announcements.aspx.designer.cs">
-      <DependentUpon>Announcements.aspx</DependentUpon>
+    <Compile Include="Announcement.aspx.designer.cs">
+      <DependentUpon>Announcement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnnouncementsDashboard.aspx.cs">
-      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AnnouncementsDashboard.aspx.designer.cs">
-      <DependentUpon>AnnouncementsDashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AnnouncementRepository.cs" />
     <Compile Include="Careers.aspx.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
