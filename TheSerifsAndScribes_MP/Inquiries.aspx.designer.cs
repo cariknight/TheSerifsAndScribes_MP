@@ -33,12 +33,21 @@ namespace TheSerifsAndScribes_MP
         protected global::System.Web.UI.WebControls.Content Content2;
 
         /// <summary>
-        /// GridInquiries control.
+        /// PanelEmpty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridInquiries;
+        protected global::System.Web.UI.WebControls.Panel PanelEmpty;
+
+        /// <summary>
+        /// RepeaterInquiries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeaterInquiries;
     }
 }

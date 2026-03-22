@@ -1,7 +1,5 @@
 using System;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -9,31 +7,23 @@ namespace TheSerifsAndScribes_MP
 {
     public partial class Inquiries : System.Web.UI.Page
     {
-        private readonly string _connString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                BindGrid();
+                BindList();
             }
         }
 
-        private void BindGrid()
+        private void BindList()
         {
-            using (var conn = new SqlConnection(_connString))
-            using (var cmd = new SqlCommand(@"SELECT messageID, fullName, email, phoneNumber, [message], dateSent, [status] 
-                                              FROM Inquiry ORDER BY dateSent DESC, messageID DESC", conn))
-            using (var adapter = new SqlDataAdapter(cmd))
-            {
-                var table = new DataTable();
-                adapter.Fill(table);
-                GridInquiries.DataSource = table;
-                GridInquiries.DataBind();
-            }
+            var table = InquiryRepository.GetAll();
+            PanelEmpty.Visible = table.Rows.Count == 0;
+            RepeaterInquiries.DataSource = table;
+            RepeaterInquiries.DataBind();
         }
 
-        protected void GridInquiries_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void RepeaterInquiries_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.CommandArgument == null) return;
             if (!int.TryParse(e.CommandArgument.ToString(), out var id)) return;
@@ -43,14 +33,14 @@ namespace TheSerifsAndScribes_MP
 
             switch (e.CommandName)
             {
+                case "Reply":
+                    newStatus = "REPLIED";
+                    break;
                 case "MarkRead":
                     newStatus = "READ";
                     break;
                 case "MarkUnread":
                     newStatus = "UNREAD";
-                    break;
-                case "MarkReplied":
-                    newStatus = "REPLIED";
                     break;
                 case "MarkArchived":
                     newStatus = "ARCHIVED";
@@ -62,38 +52,37 @@ namespace TheSerifsAndScribes_MP
                     return;
             }
 
-            using (var conn = new SqlConnection(_connString))
-            using (var cmd = new SqlCommand())
+            if (delete)
             {
-                cmd.Connection = conn;
-                if (delete)
-                {
-                    cmd.CommandText = "DELETE FROM Inquiry WHERE messageID = @id";
-                }
-                else
-                {
-                    cmd.CommandText = "UPDATE Inquiry SET [status] = @status WHERE messageID = @id";
-                    cmd.Parameters.AddWithValue("@status", newStatus);
-                }
-                cmd.Parameters.AddWithValue("@id", id);
-
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                InquiryRepository.Delete(id);
+            }
+            else
+            {
+                InquiryRepository.UpdateStatus(id, newStatus);
             }
 
-            BindGrid();
+            BindList();
         }
 
-        protected void GridInquiries_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void RepeaterInquiries_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            if (e.Row.RowType != DataControlRowType.DataRow) return;
+            if (e.Item.ItemType != ListItemType.Item && e.Item.ItemType != ListItemType.AlternatingItem) return;
 
-            var status = DataBinder.Eval(e.Row.DataItem, "status") as string;
-            var badge = (System.Web.UI.HtmlControls.HtmlGenericControl)e.Row.FindControl("StatusBadge");
+            var status = DataBinder.Eval(e.Item.DataItem, "status") as string;
+            var badge = (System.Web.UI.HtmlControls.HtmlGenericControl)e.Item.FindControl("StatusBadge");
+            var bodyLiteral = (Literal)e.Item.FindControl("LiteralMessage");
+
+            if (bodyLiteral != null)
+            {
+                var body = DataBinder.Eval(e.Item.DataItem, "message") as string ?? string.Empty;
+                var encoded = HttpUtility.HtmlEncode(body).Replace("\r\n", "<br />").Replace("\n", "<br />");
+                bodyLiteral.Text = encoded;
+            }
+
             if (badge == null || string.IsNullOrEmpty(status)) return;
 
             string cls;
-            switch (status.ToUpper())
+            switch (status.ToUpperInvariant())
             {
                 case "UNREAD":
                     cls = "badge-unread";
@@ -113,7 +102,25 @@ namespace TheSerifsAndScribes_MP
             }
 
             badge.Attributes["class"] = $"badge {cls}";
-            badge.InnerText = status.ToUpper();
+            badge.InnerText = status.ToUpperInvariant();
+        }
+
+        /// <summary>
+        /// Builds the client-side mailto link and keeps postback enabled.
+        /// </summary>
+        protected string BuildMailtoOnClick(object emailObj, object subjectObj, object fullNameObj)
+        {
+            var email = emailObj as string;
+            if (string.IsNullOrWhiteSpace(email)) return "return true;";
+
+            var subject = "Re: " + (subjectObj as string ?? "Your inquiry");
+            var name = fullNameObj as string ?? "there";
+            var body = $"Hi {name},%0D%0A%0D%0A";
+
+            var encodedSubject = HttpUtility.UrlEncode(subject);
+            var encodedBody = HttpUtility.UrlEncode(body);
+
+            return $"window.location.href='mailto:{email}?subject={encodedSubject}&body={encodedBody}';return true;";
         }
     }
 }

@@ -43,20 +43,25 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <asp:TextBox ID="fullname" runat="server" CssClass="contact-input" placeholder="Full Name" />
+                            <asp:TextBox ID="fullname" runat="server" CssClass="contact-input" placeholder="Full Name" MaxLength="50" required="required" />
                         </div>
 
                         <div class="form-group">
-                            <asp:TextBox ID="email" runat="server" CssClass="contact-input" TextMode="Email" placeholder="Email Address" />
+                            <asp:TextBox ID="email" runat="server" CssClass="contact-input" TextMode="Email" placeholder="Email Address" MaxLength="50" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <asp:TextBox ID="subject" runat="server" CssClass="contact-input" placeholder="Subject (optional)" MaxLength="200" />
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="phone" runat="server" CssClass="contact-input" placeholder="Phone (optional)" MaxLength="13" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <asp:TextBox ID="subject" runat="server" CssClass="contact-input" placeholder="Subject" />
-                    </div>
-
-                    <div class="form-group">
-                        <asp:TextBox ID="message" runat="server" CssClass="contact-input contact-textarea" TextMode="MultiLine" Rows="6" placeholder="How can we help you?" />
+                        <asp:TextBox ID="message" runat="server" CssClass="contact-input contact-textarea" TextMode="MultiLine" Rows="6" placeholder="How can we help you?" MaxLength="4000" required="required" />
                     </div>
 
                     <div class="consent">
