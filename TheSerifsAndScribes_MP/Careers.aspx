@@ -126,7 +126,8 @@
                 <h3>Have Questions?</h3>
                 <p>Our HR team is here to assist with any inquiries regarding open positions or the application process.</p>
                 <div class="career-hours">Mon - Fri: 8:00 AM - 5:00 PM</div>
-                <button type="button" class="career-btn career-btn-primary">Contact HR Office</button>
+                <a href="Contact.aspx" class="career-btn career-btn-primary">Contact HR Office</a>
+
             </div>
         </section>
     </div>
