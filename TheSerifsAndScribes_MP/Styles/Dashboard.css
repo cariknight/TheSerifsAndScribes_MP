@@ -100,6 +100,15 @@ html, body {
     background: var(--brand-foreground);
 }
 
+.sidebar__close {
+    display: none;
+    margin-left: auto;
+}
+
+.sidebar.is-expanded .sidebar__close {
+    display: inline-flex;
+}
+
 .sidebar__nav {
     display: flex;
     flex-direction: column;
@@ -256,6 +265,18 @@ html, body {
 .sidebar-overlay.is-visible {
     opacity: 1;
     visibility: visible;
+}
+
+.menu-open .topbar__hamburger {
+    display: none;
+}
+
+.menu-open .sidebar__close {
+    display: inline-flex;
+}
+
+.sidebar.is-expanded ~ .dashboard-main .topbar__hamburger {
+    display: none;
 }
 
 @media (max-width: 991px) {

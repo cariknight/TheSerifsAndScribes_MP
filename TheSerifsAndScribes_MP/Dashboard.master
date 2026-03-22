@@ -18,11 +18,6 @@
                     <a class="brand__logo" href="~/Home.aspx" runat="server">
                         <img src="~/Images/Binan_City_Seal.png" alt="City seal" runat="server" />
                     </a>
-                    <button type="button" class="icon-button brand__hamburger" aria-label="Toggle navigation" aria-controls="sidebar" onclick="toggleSidebar()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </div>
 
                 <nav class="sidebar__nav" aria-label="Primary">
