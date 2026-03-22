@@ -72,6 +72,9 @@
     <Content Include="CareersDashboard.aspx" />
     <Content Include="Admins.aspx" />
     <Content Include="Images\agricultural-img.jpg" />
+    <Content Include="Images\Assets\binan-heritage.jpg" />
+    <Content Include="Images\Assets\binan-statue.jpg" />
+    <Content Include="Images\Assets\binan_arc.jpg" />
     <Content Include="Images\Assets\Icons\bag-yellow-icon.png" />
     <Content Include="Images\Assets\Icons\download-lightgray-icon.png" />
     <Content Include="Images\Assets\Icons\eye-lightgray-icon.png" />
@@ -97,6 +100,7 @@
     <Content Include="Images\Assets\Icons\seedling-green-icon.png" />
     <Content Include="Images\Assets\Icons\total-inquiries-green-icon.png" />
     <Content Include="Images\Assets\Icons\unread-green-icon.png" />
+    <Content Include="Images\Assets\Plaza_Rizal.jpg" />
     <Content Include="Images\Binan_Login.png" />
     <Content Include="Announcements.aspx" />
     <Content Include="Images\commerceleisure-img.jpg" />
@@ -115,7 +119,6 @@
     <Content Include="Fonts\Akatab\OFL.txt" />
     <Content Include="Fonts\Roboto\OFL.txt" />
     <Content Include="Fonts\Roboto\README.txt" />
-    <Content Include="Footer.ascx" />
     <Content Include="FullDisclosurePolicy.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\bploimage.png" />
@@ -187,7 +190,6 @@
     <Content Include="AnnouncementsDashboard.aspx" />
     <Content Include="NewsDashboard.aspx" />
     <Content Include="Scripts\faq.js" />
-    <Content Include="NavBar.ascx" />
     <Content Include="Scripts\Modal.js" />
     <Content Include="Scripts\Password.js" />
     <Content Include="Services.aspx" />

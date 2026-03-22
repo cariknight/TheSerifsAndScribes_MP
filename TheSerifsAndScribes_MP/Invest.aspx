@@ -1,6 +1,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Invest.aspx.cs" Inherits="TheSerifsAndScribes_MP.Invest" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>Invest</title>
     <link href="Styles/InvestStyle.css" rel="stylesheet" />
 </asp:Content>
 

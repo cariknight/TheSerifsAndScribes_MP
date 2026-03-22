@@ -1,6 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Careers.aspx.cs" Inherits="TheSerifsAndScribes_MP.Careers" MasterPageFile="~/Site.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>Careers</title>
     <link href="Styles/CareerStyle.css" rel="stylesheet" />
 </asp:Content>
 
@@ -132,3 +133,7 @@
         </section>
     </div>
 </asp:Content>
+
+
+
+

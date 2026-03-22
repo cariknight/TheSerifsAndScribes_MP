@@ -1,6 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CareersDashboard.aspx.cs" Inherits="TheSerifsAndScribes_MP.CareersDashboard" MasterPageFile="~/Dashboard.master" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>Careers Dashboard</title>
     <style>
         .admin-section { padding: 24px; background: #f8fafc; border-radius: 14px; margin-bottom: 24px; }
         .admin-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
