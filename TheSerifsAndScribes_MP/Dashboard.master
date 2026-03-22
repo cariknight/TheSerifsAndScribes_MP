@@ -21,7 +21,7 @@
                 </div>
 
                 <nav class="sidebar__nav" aria-label="Primary">
-                    <a class="nav-item" href="~/Dashboard.aspx" runat="server">
+                    <a class="nav-item" href="~/AdminDashboard.aspx" runat="server">
                         <i class="fa-solid fa-house"></i>
                         <span class="nav-label">Dashboard</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>

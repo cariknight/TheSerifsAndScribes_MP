@@ -29,7 +29,7 @@ namespace TheSerifsAndScribes_MP
             AnnouncementRepository.Add(title, body);
             TitleTextBox.Text = string.Empty;
             BodyTextBox.Text = string.Empty;
-            ShowMessage("Announcement posted.");
+            ShowMessage("Announcement saved and needs approval.");
             BindGrid();
         }
 
@@ -40,17 +40,26 @@ namespace TheSerifsAndScribes_MP
                 return;
             }
 
-            if (e.CommandName == "delete")
+            switch (e.CommandName)
             {
-                AnnouncementRepository.Delete(id);
-                ShowMessage("Announcement deleted.");
-            }
-            else if (e.CommandName == "toggle")
-            {
-                AnnouncementRepository.ToggleArchive(id);
-                var updated = AnnouncementRepository.Get(id);
-                var status = updated != null && updated.IsArchived ? "archived" : "re-activated";
-                ShowMessage($"Announcement {status}.");
+                case "delete":
+                    AnnouncementRepository.Delete(id);
+                    ShowMessage("Announcement deleted.");
+                    break;
+                case "approve":
+                    AnnouncementRepository.SetStatus(id, AnnouncementStatus.Active);
+                    ShowMessage("Announcement approved and published.");
+                    break;
+                case "archive":
+                    AnnouncementRepository.SetStatus(id, AnnouncementStatus.Archived);
+                    ShowMessage("Announcement archived.");
+                    break;
+                case "activate":
+                    AnnouncementRepository.SetStatus(id, AnnouncementStatus.Active);
+                    ShowMessage("Announcement re-activated.");
+                    break;
+                default:
+                    return;
             }
 
             BindGrid();
@@ -68,6 +77,55 @@ namespace TheSerifsAndScribes_MP
             MessagePanel.CssClass = isError ? "alert alert-danger" : "alert alert-success";
             MessagePanel.Controls.Clear();
             MessagePanel.Controls.Add(new Literal { Text = message });
+        }
+
+        protected string GetStatusLabel(object statusObj)
+        {
+            var status = ToStatus(statusObj);
+            switch (status)
+            {
+                case AnnouncementStatus.NeedApproval:
+                    return "Needs approval";
+                case AnnouncementStatus.Active:
+                    return "Active";
+                case AnnouncementStatus.Archived:
+                    return "Archived";
+                default:
+                    return "Unknown";
+            }
+        }
+
+        protected string GetStatusBadgeClass(object statusObj)
+        {
+            var status = ToStatus(statusObj);
+            switch (status)
+            {
+                case AnnouncementStatus.NeedApproval:
+                    return "badge bg-warning text-dark";
+                case AnnouncementStatus.Active:
+                    return "badge bg-success";
+                case AnnouncementStatus.Archived:
+                    return "badge bg-secondary";
+                default:
+                    return "badge bg-light text-dark";
+            }
+        }
+
+        private AnnouncementStatus ToStatus(object value)
+        {
+            if (value is AnnouncementStatus typed)
+            {
+                return typed;
+            }
+
+            try
+            {
+                return (AnnouncementStatus)Enum.Parse(typeof(AnnouncementStatus), value.ToString(), ignoreCase: true);
+            }
+            catch
+            {
+                return AnnouncementStatus.NeedApproval;
+            }
         }
     }
 }
