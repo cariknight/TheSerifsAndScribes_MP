@@ -52,7 +52,7 @@
                         <span>INVEST</span>
                     </a>
 
-                    <a class="menu-item" runat="server" href="~/Jobs.aspx">
+                    <a class="menu-item" runat="server" href="~/Careers.aspx">
                         <img src="../Images/Assets/Icons/icon-jobs.png" class="menu-icon" alt="" />
                         <span>JOBS/CAREERS</span>
                     </a>
