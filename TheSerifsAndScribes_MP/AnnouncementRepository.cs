@@ -1,16 +1,23 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace TheSerifsAndScribes_MP
 {
+    public enum AnnouncementStatus
+    {
+        NeedApproval,
+        Active,
+        Archived
+    }
+
     public class AnnouncementItem
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
         public DateTime CreatedAt { get; set; }
-        public bool IsArchived { get; set; }
+        public AnnouncementStatus Status { get; set; }
     }
 
     public static class AnnouncementRepository
@@ -38,7 +45,18 @@ namespace TheSerifsAndScribes_MP
             lock (_lock)
             {
                 return _items
-                    .Where(a => !a.IsArchived)
+                    .Where(a => a.Status == AnnouncementStatus.Active)
+                    .OrderByDescending(a => a.CreatedAt)
+                    .ToList();
+            }
+        }
+
+        public static IEnumerable<AnnouncementItem> GetByStatus(AnnouncementStatus status)
+        {
+            lock (_lock)
+            {
+                return _items
+                    .Where(a => a.Status == status)
                     .OrderByDescending(a => a.CreatedAt)
                     .ToList();
             }
@@ -67,7 +85,7 @@ namespace TheSerifsAndScribes_MP
                     Title = title.Trim(),
                     Body = body.Trim(),
                     CreatedAt = DateTime.Now,
-                    IsArchived = false
+                    Status = AnnouncementStatus.NeedApproval
                 });
             }
         }
@@ -84,14 +102,14 @@ namespace TheSerifsAndScribes_MP
             }
         }
 
-        public static void ToggleArchive(Guid id)
+        public static void SetStatus(Guid id, AnnouncementStatus status)
         {
             lock (_lock)
             {
                 var existing = _items.FirstOrDefault(a => a.Id == id);
                 if (existing != null)
                 {
-                    existing.IsArchived = !existing.IsArchived;
+                    existing.Status = status;
                 }
             }
         }
@@ -111,7 +129,7 @@ namespace TheSerifsAndScribes_MP
                     Title = "City Hall maintenance",
                     Body = "City Hall services will be temporarily relocated on April 2 while lobby upgrades are completed.",
                     CreatedAt = DateTime.Now.AddDays(-3),
-                    IsArchived = false
+                    Status = AnnouncementStatus.Active
                 },
                 new AnnouncementItem
                 {
@@ -119,7 +137,7 @@ namespace TheSerifsAndScribes_MP
                     Title = "Scholarship applications open",
                     Body = "The Binan Scholars program is accepting applications until May 15. Submit requirements at the Education Office.",
                     CreatedAt = DateTime.Now.AddDays(-7),
-                    IsArchived = false
+                    Status = AnnouncementStatus.NeedApproval
                 },
                 new AnnouncementItem
                 {
@@ -127,7 +145,7 @@ namespace TheSerifsAndScribes_MP
                     Title = "Traffic advisory",
                     Body = "Expect road closures along Plaza Rizal on March 30 for the heritage parade. Please use alternate routes.",
                     CreatedAt = DateTime.Now.AddDays(-10),
-                    IsArchived = true
+                    Status = AnnouncementStatus.Archived
                 }
             });
         }
