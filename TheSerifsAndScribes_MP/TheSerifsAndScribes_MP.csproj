@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="Announcement.aspx" />
     <Content Include="Careers.aspx" />
     <Content Include="CitizensCharter.aspx" />
@@ -131,9 +132,12 @@
     <Content Include="Images\Binan_City_Seal.png" />
     <Content Include="Images\email.png" />
     <Content Include="Images\faq.png" />
+    <Content Include="Images\invest-image.jpg" />
+    <Content Include="Images\justice-img.png" />
     <Content Include="Images\FAQs.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Images\staticmap.png" />
+    <Content Include="Images\tradingcenter-img.jpg" />
     <Content Include="Images\Transparency_Seal_logo.png" />
     <Content Include="Invest.aspx" />
     <Content Include="OrganizationalChart.aspx" />
@@ -147,6 +151,7 @@
     <Content Include="Styles\Fonts.css" />
     <Content Include="Styles\InvestStyle.css" />
     <Content Include="Styles\NavigationBar.css" />
+    <Content Include="Styles\Dashboard.css" />
     <Content Include="Styles\contact.css" />
     <Content Include="Styles\faq.css" />
     <Content Include="Styles\FooterStyle.css" />
@@ -162,6 +167,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Announcement.aspx.cs">
       <DependentUpon>Announcement.aspx</DependentUpon>
@@ -241,6 +253,13 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.master.cs">
+      <DependentUpon>Dashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.master.designer.cs">
+      <DependentUpon>Dashboard.master</DependentUpon>
+    </Compile>
     <Compile Include="Transparency.aspx.cs">
       <DependentUpon>Transparency.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -315,6 +334,7 @@
     <Content Include="Fonts\Roboto\static\Roboto_SemiCondensed-ThinItalic.ttf" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
+    <Content Include="Dashboard.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
