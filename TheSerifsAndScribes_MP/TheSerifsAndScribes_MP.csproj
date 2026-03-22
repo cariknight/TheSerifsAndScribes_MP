@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminDashboard.aspx" />
+    <Content Include="CareersDashboard.aspx" />
     <Content Include="Announcements.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Inquiries.aspx" />
@@ -264,6 +265,14 @@
       <DependentUpon>Organizations.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnnouncementRepository.cs" />
+    <Compile Include="CareerRepository.cs" />
+    <Compile Include="CareersDashboard.aspx.cs">
+      <DependentUpon>CareersDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CareersDashboard.aspx.designer.cs">
+      <DependentUpon>CareersDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OrganizationRepository.cs" />
     <Compile Include="InquiryRepository.cs" />
     <Compile Include="AdminRepository.cs" />

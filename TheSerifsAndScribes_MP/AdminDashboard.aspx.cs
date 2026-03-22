@@ -11,7 +11,7 @@ namespace TheSerifsAndScribes_MP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // intentionally left blank; specific dashboards live on their own pages.
         }
     }
 }

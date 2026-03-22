@@ -33,31 +33,22 @@ namespace TheSerifsAndScribes_MP
         protected global::System.Web.UI.WebControls.LinkButton cityservicesBtn;
 
         /// <summary>
-        /// readmoreBtn control.
+        /// NoNewsPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button readmoreBtn;
+        protected global::System.Web.UI.WebControls.Panel NoNewsPanel;
 
         /// <summary>
-        /// Button1 control.
+        /// NewsCarouselRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Repeater NewsCarouselRepeater;
 
         /// <summary>
         /// FeaturedPanel control.
@@ -121,68 +112,5 @@ namespace TheSerifsAndScribes_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton viewmoreBtn;
-
-        /// <summary>
-        /// allservicesBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton allservicesBtn;
-
-        /// <summary>
-        /// businessPermitBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton businessPermitBtn;
-
-        /// <summary>
-        /// realPropertyTaxBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton realPropertyTaxBtn;
-
-        /// <summary>
-        /// civilRegistryBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton civilRegistryBtn;
-
-        /// <summary>
-        /// healthServicesBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton healthServicesBtn;
-
-        /// <summary>
-        /// educationBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton educationBtn;
-
-        /// <summary>
-        /// environmentBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton environmentBtn;
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 
 namespace TheSerifsAndScribes_MP
 {
@@ -14,7 +15,17 @@ namespace TheSerifsAndScribes_MP
             if (!IsPostBack)
             {
                 BindLatestAnnouncement();
+                BindLatestNews();
             }
+        }
+
+        private class NewsView
+        {
+            public int Id { get; set; }
+            public string Title { get; set; }
+            public DateTime CreatedAt { get; set; }
+            public string Preview { get; set; }
+            public string Link { get; set; }
         }
 
         private void BindLatestAnnouncement()
@@ -64,6 +75,70 @@ namespace TheSerifsAndScribes_MP
                 preview = preview.Substring(0, 137) + "...";
             }
             return preview;
+        }
+
+        private string BuildNewsPreview(string bodyHtml)
+        {
+            if (string.IsNullOrWhiteSpace(bodyHtml)) return string.Empty;
+            var plain = System.Text.RegularExpressions.Regex.Replace(bodyHtml, "<.*?>", string.Empty);
+            return BuildPreview(plain);
+        }
+
+        private void BindLatestNews()
+        {
+            var news = NewsRepository.GetPublished()
+                .OrderByDescending(n => n.CreatedAt)
+                .Select(n => new NewsView
+                {
+                    Id = n.Id,
+                    Title = n.Title,
+                    CreatedAt = n.CreatedAt,
+                    Preview = BuildNewsPreview(n.BodyHtml),
+                    Link = $"News.aspx#{n.Id}"
+                })
+                .ToList();
+
+            if (news == null || news.Count == 0)
+            {
+                NoNewsPanel.Visible = true;
+                NewsCarouselRepeater.Visible = false;
+                return;
+            }
+
+            // chunk into slides of 3
+            var slides = news
+                .Select((item, index) => new { item, index })
+                .GroupBy(x => x.index / 3)
+                .Select(g => g.Select(x => x.item).ToList())
+                .ToList();
+
+            NoNewsPanel.Visible = false;
+            NewsCarouselRepeater.Visible = true;
+            NewsCarouselRepeater.DataSource = slides;
+            NewsCarouselRepeater.DataBind();
+        }
+
+        protected void NewsCarouselRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType != ListItemType.Item && e.Item.ItemType != ListItemType.AlternatingItem)
+                return;
+
+            var slideItems = e.Item.DataItem as List<NewsView>;
+            var inner = e.Item.FindControl("SlideItemsRepeater") as Repeater;
+            if (inner != null && slideItems != null)
+            {
+                inner.DataSource = slideItems;
+                inner.DataBind();
+            }
+
+            if (e.Item.ItemIndex == 0)
+            {
+                var container = e.Item.FindControl("CarouselItem") as HtmlGenericControl;
+                if (container != null)
+                {
+                    container.Attributes["class"] += " active";
+                }
+            }
         }
 
         private void EnsureFeaturedControls()

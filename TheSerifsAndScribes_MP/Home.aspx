@@ -62,43 +62,51 @@
     <div id="news">
         <p class="kicker">STAY UPDATED</p>
         <h2 class="h2-style">News and Events</h2>
-        <p class="subtitle">Discover what's happening around the city. From community events to official government </p>
-        <div class="flex-container news-cards">
-            <div class="news-card card">
-                <img class="card-img-top" src="" alt="Card image cap" />
-                <div class="card-body">
-                    <h3 class="card-title">Lorem Ipsum</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <div class="news-link-row">
-                        <asp:Button ID="readmoreBtn" CssClass="news-link" runat="server" Text="Read more" />
-                        <span class="news-arrow">&#8594;</span>
+        <p class="subtitle">Discover what's happening around the city. From community events to official government updates.</p>
+
+        <asp:Panel ID="NoNewsPanel" runat="server" CssClass="alert alert-info" Visible="false">
+            No news or events have been published yet. Please check back soon.
+        </asp:Panel>
+
+        <asp:Repeater ID="NewsCarouselRepeater" runat="server" OnItemDataBound="NewsCarouselRepeater_ItemDataBound">
+            <HeaderTemplate>
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <div id="CarouselItem" runat="server" class="carousel-item">
+                    <div class="slide-cards d-flex justify-content-center">
+                        <asp:Repeater ID="SlideItemsRepeater" runat="server">
+                            <ItemTemplate>
+                                <div class="news-card card">
+                                    <div class="card-body">
+                                        <p class="news-meta"><%# ((DateTime)Eval("CreatedAt")).ToString("MMMM dd, yyyy") %></p>
+                                        <h3 class="card-title"><%# Eval("Title") %></h3>
+                                        <p class="card-text"><%# Eval("Preview") %></p>
+                                        <div class="news-link-row">
+                                            <a class="news-link" href='<%# Eval("Link") %>'>Read more</a>
+                                            <span class="news-arrow">&#8594;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
-            </div>
-            <div class="news-card card">
-                <img class="card-img-top" src="" alt="Card image cap" />
-                <div class="card-body">
-                    <h3 class="card-title">Lorem Ipsum</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <div class="news-link-row">
-                        <asp:Button ID="Button1" CssClass="news-link" runat="server" Text="Read more" />
-                        <span class="news-arrow">&#8594;</span>
+            </ItemTemplate>
+            <FooterTemplate>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </div>
-            
-            <div class="news-card card">
-                <img class="card-img-top" src="" alt="Card image cap" />
-                <div class="card-body">
-                    <h3 class="card-title">Lorem Ipsum</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod....</p>
-                    <div class="news-link-row">
-                        <asp:Button ID="Button2" CssClass="news-link" runat="server" Text="Read more" />
-                        <span class="news-arrow">&#8594;</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </FooterTemplate>
+        </asp:Repeater>
     </div>
 
     <div id="space"></div>
@@ -150,9 +158,6 @@
                 <p class="kicker">OUR SERVICES</p>
                 <h2 class="h2-style">City Services Available</h2>
                 <p class="subtitle">Access essential government services conveniently. We are continuously improving our digital infrastructure to serve you better.</p>
-            </div>
-            <div>
-                <asp:LinkButton ID="allservicesBtn" CssClass="btn btn-outline-success" runat="server" Text="All Services" />
             </div>
         </div>
 

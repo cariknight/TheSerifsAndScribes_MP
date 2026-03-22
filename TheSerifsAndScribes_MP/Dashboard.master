@@ -44,6 +44,11 @@
                         <span class="nav-label">News &amp; Events</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
+                    <a class="nav-item" href="~/CareersDashboard.aspx" runat="server">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="nav-label">Jobs / Careers</span>
+                        <i class="fa-solid fa-chevron-right nav-chevron"></i>
+                    </a>
                     <a class="nav-item" href="~/Organizations.aspx" runat="server">
                         <i class="fa-solid fa-sitemap"></i>
                         <span class="nav-label">Organizations</span>

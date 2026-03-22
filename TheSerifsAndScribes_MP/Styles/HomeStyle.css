@@ -367,6 +367,31 @@ iframe {
     position: relative;
 }
 
+#newsCarousel .carousel-item {
+    padding: 12px 0;
+}
+
+#newsCarousel .slide-cards {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#newsCarousel .news-card {
+    margin: 0;
+    max-width: 360px;
+    flex: 1 1 300px;
+}
+
+#newsCarousel .carousel-control-prev-icon,
+#newsCarousel .carousel-control-next-icon {
+    filter: invert(69%) sepia(80%) saturate(654%) hue-rotate(352deg) brightness(97%) contrast(96%);
+}
+
+#newsCarousel .carousel-control-prev,
+#newsCarousel .carousel-control-next {
+    width: 5%;
+}
+
 .news-link-row {
     display: flex;
     align-items: center;
