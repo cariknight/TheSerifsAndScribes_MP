@@ -1,0 +1,21 @@
+﻿
+@font-face {
+    font-family: 'Akatab';
+    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Akatab Bold';
+    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('../Fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+}
+

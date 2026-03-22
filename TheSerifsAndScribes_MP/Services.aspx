@@ -1,15 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="TheSerifsAndScribes_MP.About" %>
+<%@ Page Title="Services" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Services.aspx.cs" Inherits="TheSerifsAndScribes_MP.Services" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="ServicesStyle.css" rel="stylesheet" />
+<asp:Content ID="ServicesHead" ContentPlaceHolderID="HeadContent" runat="server">
+     <link href="ServicesStyle.css" rel="stylesheet" />
     <title>Services</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="bg-color">
+</asp:Content>
+
+<asp:Content ID="ServicesMain" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="bg-color">
             <div id="bg">
                 <div id="bg-filter"></div>
             </div>
@@ -47,6 +44,4 @@
 
 
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

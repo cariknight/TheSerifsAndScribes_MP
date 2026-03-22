@@ -1,15 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Careers.aspx.cs" Inherits="TheSerifsAndScribes_MP.Careers" %>
+<%@ Page Title="Careers" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Careers.aspx.cs" Inherits="TheSerifsAndScribes_MP.Careers" %>
 
-<!DOCTYPE html>
+<asp:Content ID="CareersHead" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="CareersMain" ContentPlaceHolderID="MainContent" runat="server">
+    <div>
+        <!-- Careers content goes here -->
+    </div>
+</asp:Content>

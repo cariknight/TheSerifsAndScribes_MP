@@ -1,0 +1,83 @@
+@import url('Fonts.css');
+
+footer {
+    background-color: #058240;
+    font-family: Akatab;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+#footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 20px;
+}
+
+#footer-container > div {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #footer-container > div {
+        flex: 1 1 45%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    #footer-container {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 30px 50px;
+    }
+
+    #footer-container > div {
+        flex: 1 1 auto;
+    }
+}
+
+img {
+    max-width: 150px;
+    height: auto;
+}
+
+#ph-transparency-seal,
+#bagong-pilipinas {
+    max-width: 80px;
+    height: auto;
+    margin: 0 60px;
+}
+
+footer #footer-container a,
+footer #footer-container a:visited,
+footer #footer-container a:active {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 5px;
+}
+
+footer #footer-container a:hover {
+    text-decoration: underline !important;
+}
+
+footer #footer-container a p {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: 'Akatab';
+}
+
+footer #footer-container .navpg p {
+    font-family: 'Akatab Bold';
+}
+
+/* fallback to force white text if other styles leak in */
+footer #footer-container p {
+    margin: 0;
+    color: white !important;
+}
