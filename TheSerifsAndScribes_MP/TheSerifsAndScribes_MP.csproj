@@ -182,6 +182,9 @@
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Announcement.aspx.cs">
+      <DependentUpon>Announcement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Announcements.aspx.cs">
       <DependentUpon>Announcements.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
