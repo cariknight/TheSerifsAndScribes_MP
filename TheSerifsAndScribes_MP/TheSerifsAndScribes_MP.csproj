@@ -182,6 +182,13 @@
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="Announcements.aspx.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Inquiries.aspx.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,12 +196,17 @@
     <Compile Include="Inquiries.aspx.designer.cs">
       <DependentUpon>Inquiries.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Announcement.aspx.cs">
       <DependentUpon>Announcement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Announcement.aspx.designer.cs">
       <DependentUpon>Announcement.aspx</DependentUpon>
+=======
+    <Compile Include="Announcements.aspx.designer.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Careers.aspx.cs">
       <DependentUpon>Careers.aspx</DependentUpon>
