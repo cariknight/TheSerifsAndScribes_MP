@@ -2,7 +2,7 @@
 
 <asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Home</title>
-    <link href="Styles/HomeStyle.css" rel="stylesheet" />
+    <link href="Styles/HomeStyle.css?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
 </asp:Content>
 
 
@@ -96,50 +96,40 @@
     <div id="space"></div>
     <!-- ANNOUNCEMENT SECTION -->
     <div id="announcement">
-        <div class="flex-container">
-            
+        <div class="flex-container announcement-shell">
             <div id="announcement-left">
-                <div id="announcement-right-content" class="flex-container">
-                    <div>
-                        image
-                    </div>
-                    <div>
-                        image
-                    </div>
-                    <div>
-                        image
-                    </div>
-                    
-                </div>
+                <div class="hero-rect hero-rect--large hero-img-1"></div>
+                <div class="hero-rect hero-rect--small hero-img-2"></div>
+                <asp:Panel ID="FeaturedPanel" runat="server" CssClass="featured-card" Visible="false">
+                    <div class="featured-pill">Latest News</div>
+                    <h5 id="FeaturedTitle" runat="server"></h5>
+                    <p id="FeaturedBody" runat="server"></p>
+                    <small id="FeaturedDate" runat="server" class="text-muted"></small>
+                </asp:Panel>
             </div>
+
             <div id="announcement-right">
                 <p class="kicker">IMPORTANT NOTICES</p>
                 <h2 class="h2-style">Announcements</h2>
-                <p class="subtitle">Stay informed with the latest official announcements advisories and public notices from the City Government of Bi&ntilde;an</p>
+                <p class="subtitle subtitle-left">Stay informed with the latest official announcements advisories and public notices from the City Government of Bi&ntilde;an</p>
 
-                <div class="flex-container">
-                    <div>image</div>
-                    <div>
-                        <h4>Title</h4>
-                        <p>text description here</p>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <div>image</div>
-                    <div>
-                        <h4>Title</h4>
-                        <p>text description here</p>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <div>image</div>
-                    <div>
-                        <h4>Title</h4>
-                        <p>text description here</p>
-                    </div>
-                </div>
+                <asp:Repeater ID="LatestAnnouncementsRepeater" runat="server">
+                    <HeaderTemplate><div class="announcement-list"></HeaderTemplate>
+                    <ItemTemplate>
+                        <div class="announcement-row">
+                            <div class="icon-badge"></div>
+                            <div class="announcement-copy">
+                                <h4><%# Eval("Title") %></h4>
+                                <p><%# Eval("Preview") %></p>
+                                <small class="text-muted"><%# ((DateTime)Eval("CreatedAt")).ToString("MMMM dd, yyyy") %></small>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                    <FooterTemplate></div></FooterTemplate>
+                </asp:Repeater>
+                <asp:Panel ID="NoAnnouncementPanel" runat="server" Visible="false" CssClass="alert alert-info mt-2">No announcements yet. Please check back soon.</asp:Panel>
 
-                <asp:LinkButton ID="viewmoreBtn" ClientIDMode="Static" CssClass="btn btn-primary btn-lg" runat="server" Text="View All Announcement" />
+                <asp:LinkButton ID="viewmoreBtn" ClientIDMode="Static" CssClass="btn btn-primary btn-lg view-all-btn" runat="server" Text="View All Announcement" PostBackUrl="~/Announcements.aspx" />
             </div>
         </div>
 
