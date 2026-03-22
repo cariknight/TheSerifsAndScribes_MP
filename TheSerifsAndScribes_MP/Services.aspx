@@ -11,7 +11,7 @@
                 <div id="bg-filter"></div>
             </div>
             <div id="content">
-                <h1>“Empowering <span id="changecolor">businesses</span> through fast, transparent, and accessible permit services.” </h1>
+                <h1>"Empowering <span id="changecolor">businesses</span> through fast, transparent, and accessible permit services." </h1>
             </div>
         </div>
         <div id="rptadiv">
@@ -23,8 +23,8 @@
                     </a>
                 </div>
                 <p1>
-                    Biñan City's Real Property Tax Administration (RPTA) allows taxpayers to view and pay property taxes (amilyar) online via a digital portal. 
-                    Located at the Treasurer’s Office, City Hall, this system manages the assessment and collection of taxes for residential, commercial, and industrial properties based on the City Ordinance No. 13-(2022).
+                    The Bi&ntilde;an City Business Permit is a mandatory document issued by the City Government of Bi&ntilde;an, Laguna, that grants legal authority for a business to operate within its jurisdiction. 
+                    It confirms that the establishment has met all necessary requirements, including zoning clearance, fire safety inspection, sanitary permits, and payment of applicable local taxes and fees.
                 </p1>
             </div>
 
@@ -32,7 +32,7 @@
 
         <div id="bplsdiv">
             <div class="flex-container">
-                <p2>The Biñan City Business Permit Online Portal is a digital platform provided by the City Government of Biñan, Laguna, that allows business owners to conveniently apply for, renew, and manage their business permits online. 
+                <p2>The Bi&ntilde;an City Business Permit Online Portal is a digital platform provided by the City Government of Bi&ntilde;an, Laguna, that allows business owners to conveniently apply for, renew, and manage their business permits online. 
                     Through the system, users can submit application forms, upload required documents, pay applicable fees, and download their permits electronically, making the process faster, more efficient, and accessible without the need for in-person transactions.</p2>
                 <div id="bplsimage">
                     <img src="..\Images\bploimage.png" />
