@@ -1,0 +1,180 @@
+@import url('Fonts.css');
+
+:root {
+    --brand-primary: #058240;
+    --brand-primary-strong: #046a34;
+    --brand-accent: #87c159;
+    --surface: #f8fafc;
+    --surface-contrast: #ffffff;
+    --text-color: #1f2937;
+    --text-muted: #4b5563;
+    --border-soft: #e5e7eb;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --content-max: 1200px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background: var(--surface);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--brand-primary-strong);
+    opacity: 0.92;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 12px;
+    font-family: 'Abril Fatface', 'Akatab Bold', Georgia, serif;
+    color: var(--brand-primary);
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 14px;
+    color: var(--text-muted);
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px 14px;
+    border: 1px solid var(--border-soft);
+}
+
+.site-body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f5fbf6 0%, #ffffff 40%, #f5fbf6 100%);
+}
+
+.site-main {
+    width: 100%;
+    display: block;
+}
+
+.content-width {
+    max-width: var(--content-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(16px, 4vw, 32px);
+}
+
+.section {
+    padding: clamp(32px, 6vw, 72px) 0;
+}
+
+.card {
+    background: var(--surface-contrast);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(16px, 3vw, 24px);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(18px, 3vw, 28px);
+}
+
+.button,
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-strong));
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(5, 130, 64, 0.18);
+    transition: transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+.button:hover,
+.btn-primary:hover,
+.button:focus-visible,
+.btn-primary:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(5, 130, 64, 0.22);
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(5, 130, 64, 0.12);
+    color: var(--brand-primary-strong);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.responsive-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.responsive-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Utility for sections that need edge-to-edge backgrounds without breaking overall padding */
+.full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 30px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 22px; }
+
+    .content-width {
+        padding: 16px;
+    }
+}

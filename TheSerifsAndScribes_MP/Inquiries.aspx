@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
         .inquiries-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
-        .inquiries-header h2 { margin: 0; font-family: "Akatab Bold", "Roboto", sans-serif; color: #0a7d3b; }
+        .inquiries-header h1 { margin: 0; font-family: "Roboto", sans-serif; font-weight: 800; color: #0a7d3b; }
         .inquiries-shell { display: grid; gap: 14px; }
         .inquiry-card { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 16px; box-shadow: 0 6px 14px rgba(0,0,0,0.06); }
         .inquiry-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
@@ -26,7 +26,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="DashboardContent" runat="server">
     <div class="inquiries-header">
-        <h2>Inquiries</h2>
+        <h1>Inquiries</h1>
         <a href="~/Contact.aspx" runat="server" class="btn btn-outline-success btn-sm contact-link">Go to Contact Form</a>
     </div>
 

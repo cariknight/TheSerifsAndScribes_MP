@@ -168,6 +168,9 @@ nav[aria-label="breadcrumb"] {
     height: 260px;
     border-radius: 30px;
     background-color: grey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .img-small, .img-small1 {
@@ -175,6 +178,31 @@ nav[aria-label="breadcrumb"] {
     height: 160px;
     border-radius: 20px;
     background-color: grey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* History section images */
+#history-img .img-large {
+    background-image: url("../Images/tradingcenter-img.jpg");
+}
+
+#history-img .img-small {
+    background-image: url("../Images/agricultural-img.jpg");
+}
+
+/* Heritage section images */
+#heritage-img .img-large {
+    background-image: url("../Images/tourism-img.jpg");
+}
+
+#heritage-img .img-small {
+    background-image: url("../Images/invest-image.jpg");
+}
+
+#heritage-img .img-small1 {
+    background-image: url("../Images/cottage-img.jpg");
 }
 
 /*HISTORY*/

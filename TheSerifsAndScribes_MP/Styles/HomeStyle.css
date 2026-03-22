@@ -259,11 +259,11 @@ iframe {
 }
 
 .hero-img-1 {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Bi%C3%B1an_City_Hall.jpg");
+    background-image: url("../Images/Binan_Bayan.png");
 }
 
 .hero-img-2 {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Bi%C3%B1an_City%2C_SLEX_from_air_%28Laguna%3B_04-17-2024%29.jpg");
+    background-image: url("../Images/Binan_Church.png");
 }
 
 .featured-pill {
@@ -537,16 +537,16 @@ iframe {
 }
 
 #cityservicesBtn.btn {
-    background-color: #ffffff !important;
-    color: #058240 !important;
+    background-color: #058240 !important;
     border-color: #058240 !important;
+    color: #ffffff !important;
 }
 
 #cityservicesBtn.btn:hover,
 #cityservicesBtn.btn:focus {
-    background-color: #058240 !important;
+    background-color: #047237 !important;
+    border-color: #047237 !important;
     color: #ffffff !important;
-    border-color: #058240 !important;
 }
 
 #viewmoreBtn.btn,

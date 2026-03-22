@@ -3,7 +3,7 @@
 <asp:Content ID="Head" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content" ContentPlaceHolderID="DashboardContent" runat="server">
-    <h1 class="h2-style mb-3">Announcements</h1>
+    <h1 class="page-title">Announcements</h1>
 
     <asp:Panel ID="MessagePanel" runat="server" Visible="false" CssClass="alert" />
 

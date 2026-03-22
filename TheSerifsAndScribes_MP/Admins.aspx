@@ -9,7 +9,7 @@
     <!-- MY ACCOUNT -->
     <section class="admin-section">
         <div class="section-header">
-            <h2>My Account</h2>
+            <h1>My Account</h1>
 
             <div class="section-actions">
                 <asp:Button ID="btnEditInfo" runat="server" Text="Edit Info" CssClass="btn-outline" OnClientClick="openModal('editInfoModal'); return false;" />
@@ -40,7 +40,7 @@
     <!-- ADMIN ACCOUNTS -->
     <section class="admin-section">
         <div class="section-header">
-            <h2>Admin Accounts</h2>
+            <h1>Admin Accounts</h1>
 
             <div class="section-actions">
                 <asp:Button ID="btnManage" runat="server" Text="Manage" CssClass="btn-outline"

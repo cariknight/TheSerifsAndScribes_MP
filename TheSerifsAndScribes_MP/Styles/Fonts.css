@@ -1,12 +1,14 @@
 ﻿
 @font-face {
     font-family: 'Akatab';
-    src: url('../Fonts/Akatab/Akatab-Regular.ttf') format('truetype');
+    src: local('Roboto'), local('Roboto-Regular'), url('../Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'Akatab Bold';
-    src: url('../Fonts/Akatab/Akatab-Bold.ttf') format('truetype');
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 700;
 }
 
 @font-face {
