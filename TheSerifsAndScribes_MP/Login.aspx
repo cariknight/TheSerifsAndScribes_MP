@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Portal</title>
-    <link href="Styles/Fonts.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="Styles/LoginStyle.css" rel="stylesheet" />
 </head>
 
@@ -17,7 +17,7 @@
                     <div class="login-overlay"></div>
 
                     <div class="login-left-content">
-                        <img src="Images/Binan_City_Seal.png" class="login-seal" />
+                        <img src="Images/Binan_City_Seal.png" class="login-seal" alt="Biñan City Seal"/>
 
                         <h1 class="login-welcome">
                             Welcome to <span>Admin Portal</span>
@@ -40,10 +40,13 @@
                     <div class="form-group">
                         <label class="login-label">Password</label>
                         <asp:TextBox ID="password" runat="server" CssClass="login-input" TextMode="Password" placeholder="Enter your Password" />
-                    </div>
 
-                    <div class="forgot-wrap">
-                        <a href="#" class="forgot-link">Forgot Password?</a>
+                        <div class="show-password-wrap">
+                            <input type="checkbox" id="showPasswordToggle" onclick="togglePassword()" />
+                            <label for="showPasswordToggle" class="show-password-label">Show Password</label>
+                        </div>
+
+                        <asp:Label ID="lblMessage" runat="server" CssClass="login-error" Visible="false"></asp:Label>
                     </div>
 
                     <div class="button-wrap">
@@ -53,7 +56,7 @@
 
             </div>
         </div>
-
     </form>
+    <script src="Scripts/Password.js"></script>
 </body>
 </html>

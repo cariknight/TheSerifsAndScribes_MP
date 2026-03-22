@@ -55,6 +55,7 @@
     text-align: center;
     max-width: 420px;
     color: #FFFFFF;
+    padding: 0 16px; 
 }
 
 .login-seal {
@@ -64,14 +65,14 @@
 }
 
 .login-welcome {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.3;
     margin: 0 0 14px;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
+    white-space: nowrap;
 }
-
     .login-welcome span {
         color: #8BC34A;
     }
@@ -139,25 +140,42 @@
         box-shadow: 0 0 0 3px rgba(5, 130, 64, 0.12);
     }
 
-.forgot-wrap {
+.login-error {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #d93025;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+.show-password-wrap {
     display: flex;
     justify-content: flex-end;
-    margin-top: -4px;
-    margin-bottom: 34px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 28px;
+    padding-right: 4px; 
 }
 
-.forgot-link {
+    .show-password-wrap input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        accent-color: #058240;
+        position: relative;
+        top: 1px;
+    }
+
+.show-password-label {
     font-size: 14px;
     color: #6B7280;
-    text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    transition: color 0.2s ease;
+    cursor: pointer;
+    user-select: none;
 }
-
-    .forgot-link:hover {
-        color: #058240;
-        text-decoration: none;
-    }
 
 .button-wrap {
     display: flex;
@@ -212,7 +230,7 @@
 }
 
 @media (max-width: 480px) {
-    .login-page {
+    #login-page {
         padding: 20px 14px;
     }
 

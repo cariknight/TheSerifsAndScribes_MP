@@ -48,10 +48,13 @@
                     </a>
                 </nav>
 
-                <a class="nav-item nav-item--logout" href="~/Logout.aspx" runat="server">
+                <asp:LinkButton ID="btnLogout" runat="server"
+                    CssClass="nav-item nav-item--logout"
+                    OnClick="btnLogout_Click">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <span class="nav-label">Logout</span>
-                </a>
+
+                </asp:LinkButton>
             </aside>
 
             <div class="dashboard-main">
@@ -74,7 +77,7 @@
                             <div class="avatar">
                                 <i class="fa-solid fa-user"></i>
                             </div>
-                            <span>Admin</span>
+                            <span><%= GetAdminName() %></span>
                         </div>
                     </div>
                 </header>

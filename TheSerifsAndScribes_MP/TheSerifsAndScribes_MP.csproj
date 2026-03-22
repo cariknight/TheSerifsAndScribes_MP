@@ -147,7 +147,9 @@
     <Content Include="OrganizationalChart.aspx" />
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
+    <Content Include="Scripts\Password.js" />
     <Content Include="Services.aspx" />
+    <Content Include="Styles\AdminsStyle.css" />
     <Content Include="Styles\Contact.css" />
     <Content Include="Styles\Faq.css" />
     <Content Include="Styles\AboutStyle.css" />
