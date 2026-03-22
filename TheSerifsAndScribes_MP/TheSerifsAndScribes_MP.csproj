@@ -82,6 +82,10 @@
     <Content Include="Footer.ascx" />
     <Content Include="FullDisclosurePolicy.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\bploimage.png" />
+    <Content Include="Images\rptaphoto.png" />
+    <Content Include="Images\services_banner.png" />
+    <Content Include="Images\services_headerbackground.png" />
     <Content Include="Images\address.png" />
     <Content Include="Images\Assets\Icons\admin-green-icon.png" />
     <Content Include="Images\Assets\Icons\award-green-icon.png" />
@@ -145,6 +149,7 @@
     <Content Include="Scripts\faq.js" />
     <Content Include="NavBar.ascx" />
     <Content Include="Services.aspx" />
+    <Content Include="ServicesStyle.css" />
     <Content Include="Styles\Contact.css" />
     <Content Include="Styles\Faq.css" />
     <Content Include="Styles\AboutStyle.css" />
