@@ -15,6 +15,33 @@ namespace TheSerifsAndScribes_MP
     {
 
         /// <summary>
+        /// NotificationBar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel NotificationBar;
+
+        /// <summary>
+        /// NotificationIcon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal NotificationIcon;
+
+        /// <summary>
+        /// NotificationMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal NotificationMessage;
+
+        /// <summary>
         /// btnEditInfo control.
         /// </summary>
         /// <remarks>

@@ -6,6 +6,16 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="DashboardContent" runat="server">
 
+    <asp:Panel ID="NotificationBar" runat="server" CssClass="notification-bar" Visible="false" aria-live="polite">
+        <span class="notification-icon" aria-hidden="true">
+            <asp:Literal ID="NotificationIcon" runat="server" />
+        </span>
+        <span class="notification-message">
+            <asp:Literal ID="NotificationMessage" runat="server" />
+        </span>
+        <button type="button" class="notification-close" onclick="this.closest('.notification-bar').style.display='none'; return false;" aria-label="Dismiss notification">&times;</button>
+    </asp:Panel>
+
     <!-- MY ACCOUNT -->
     <section class="admin-section">
         <div class="section-header">

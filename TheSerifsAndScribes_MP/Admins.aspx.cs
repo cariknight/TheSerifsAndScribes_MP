@@ -8,6 +8,13 @@ namespace TheSerifsAndScribes_MP
 {
     public partial class Admins : System.Web.UI.Page
     {
+        private enum NotificationType
+        {
+            Success,
+            Error,
+            Warning
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -125,6 +132,7 @@ namespace TheSerifsAndScribes_MP
             if (Session["AdminID"] == null)
             {
                 lblEditInfoMessage.Text = "Session expired. Please log in again.";
+                ShowNotification("Session expired. Please log in again.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openEditModal", "openModal('editInfoModal');", true);
                 return;
             }
@@ -140,6 +148,7 @@ namespace TheSerifsAndScribes_MP
                 string.IsNullOrEmpty(email))
             {
                 lblEditInfoMessage.Text = "Please fill in all fields.";
+                ShowNotification("Please fill in all fields.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openEditModal", "openModal('editInfoModal');", true);
                 return;
             }
@@ -166,6 +175,7 @@ namespace TheSerifsAndScribes_MP
                     if (existingCount > 0)
                     {
                         lblEditInfoMessage.Text = "Username or email is already being used by another admin.";
+                        ShowNotification("Username or email is already being used by another admin.", NotificationType.Error);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "openEditModal", "openModal('editInfoModal');", true);
                         return;
                     }
@@ -192,6 +202,7 @@ namespace TheSerifsAndScribes_MP
                     {
                         lblEditInfoMessage.CssClass = "custom-success";
                         lblEditInfoMessage.Text = "Account information updated successfully.";
+                        ShowNotification("Account information updated successfully.");
 
                         LoadMyAccount();
                         LoadAdminAccounts();
@@ -207,6 +218,7 @@ namespace TheSerifsAndScribes_MP
                     else
                     {
                         lblEditInfoMessage.Text = "Failed to update account information.";
+                        ShowNotification("Failed to update account information.", NotificationType.Error);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "openEditModal", "openModal('editInfoModal');", true);
                     }
                 }
@@ -222,6 +234,7 @@ namespace TheSerifsAndScribes_MP
             if (Session["AdminID"] == null)
             {
                 lblChangePasswordMessage.Text = "Session expired. Please log in again.";
+                ShowNotification("Session expired. Please log in again.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                 return;
             }
@@ -235,6 +248,7 @@ namespace TheSerifsAndScribes_MP
                 string.IsNullOrEmpty(confirmPassword))
             {
                 lblChangePasswordMessage.Text = "Please fill in all password fields.";
+                ShowNotification("Please fill in all password fields.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                 return;
             }
@@ -242,6 +256,7 @@ namespace TheSerifsAndScribes_MP
             if (newPassword != confirmPassword)
             {
                 lblChangePasswordMessage.Text = "New password and confirm password do not match.";
+                ShowNotification("New password and confirm password do not match.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                 return;
             }
@@ -262,6 +277,7 @@ namespace TheSerifsAndScribes_MP
                     if (result == null)
                     {
                         lblChangePasswordMessage.Text = "Admin account not found.";
+                        ShowNotification("Admin account not found.", NotificationType.Error);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                         return;
                     }
@@ -271,6 +287,7 @@ namespace TheSerifsAndScribes_MP
                     if (savedPassword != currentPassword)
                     {
                         lblChangePasswordMessage.Text = "Current password is incorrect.";
+                        ShowNotification("Current password is incorrect.", NotificationType.Error);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                         return;
                     }
@@ -288,6 +305,7 @@ namespace TheSerifsAndScribes_MP
                     {
                         lblChangePasswordMessage.CssClass = "custom-success";
                         lblChangePasswordMessage.Text = "Password updated successfully.";
+                        ShowNotification("Password updated successfully.");
 
                         txtCurrentPassword.Text = "";
                         txtNewPassword.Text = "";
@@ -299,6 +317,7 @@ namespace TheSerifsAndScribes_MP
                     {
                         lblChangePasswordMessage.CssClass = "custom-error";
                         lblChangePasswordMessage.Text = "Failed to update password.";
+                        ShowNotification("Failed to update password.", NotificationType.Error);
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "openModal", "openModal('changePasswordModal');", true);
                     }
                 }
@@ -326,6 +345,7 @@ namespace TheSerifsAndScribes_MP
                 string.IsNullOrEmpty(confirmPassword))
             {
                 lblAddAdminMessage.Text = "Please fill in all fields.";
+                ShowNotification("Please fill in all fields.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                 return;
             }
@@ -333,6 +353,7 @@ namespace TheSerifsAndScribes_MP
             if (password != confirmPassword)
             {
                 lblAddAdminMessage.Text = "Password and confirm password do not match.";
+                ShowNotification("Password and confirm password do not match.", NotificationType.Error);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                 return;
             }
@@ -361,6 +382,7 @@ namespace TheSerifsAndScribes_MP
                         {
                             transaction.Rollback();
                             lblAddAdminMessage.Text = "Username or email already exists.";
+                            ShowNotification("Username or email already exists.", NotificationType.Error);
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                             return;
                         }
@@ -393,6 +415,7 @@ namespace TheSerifsAndScribes_MP
                             transaction.Commit();
                             lblAddAdminMessage.CssClass = "custom-success";
                             lblAddAdminMessage.Text = "New admin account created successfully.";
+                            ShowNotification("New admin account created successfully.");
 
                             txtAddFirstName.Text = "";
                             txtAddLastName.Text = "";
@@ -409,6 +432,7 @@ namespace TheSerifsAndScribes_MP
                         {
                             transaction.Rollback();
                             lblAddAdminMessage.Text = "Failed to create admin account.";
+                            ShowNotification("Failed to create admin account.", NotificationType.Error);
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                         }
                     }
@@ -419,6 +443,7 @@ namespace TheSerifsAndScribes_MP
                         transaction.Rollback();
 
                     lblAddAdminMessage.Text = "Failed to create admin account. Please try again.";
+                    ShowNotification("Failed to create admin account. Please try again.", NotificationType.Error);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                 }
             }
@@ -427,26 +452,64 @@ namespace TheSerifsAndScribes_MP
         protected void btnDeleteAdmin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(hfSelectedAdminID.Value))
+            {
+                ShowNotification("Select an admin to delete first.", NotificationType.Warning);
                 return;
+            }
 
             if (Session["AdminID"] != null && hfSelectedAdminID.Value == Session["AdminID"].ToString())
-                return;
-
-            string connStr = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-
-            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "DELETE FROM Admin WHERE adminID = @adminID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@adminID", hfSelectedAdminID.Value);
-
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                }
+                ShowNotification("You cannot delete the account you are currently using.", NotificationType.Warning);
+                return;
             }
-            LoadAdminAccounts();
+
+            try
+            {
+                string connStr = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "DELETE FROM Admin WHERE adminID = @adminID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@adminID", hfSelectedAdminID.Value);
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                LoadAdminAccounts();
+                ShowNotification("Admin account deleted successfully.");
+            }
+            catch (SqlException)
+            {
+                ShowNotification("Failed to delete admin account. Please try again.", NotificationType.Error);
+            }
+        }
+
+        private void ShowNotification(string message, NotificationType type = NotificationType.Success)
+        {
+            NotificationBar.Visible = true;
+            NotificationBar.CssClass = "notification-bar";
+            NotificationIcon.Text = "✓";
+
+            switch (type)
+            {
+                case NotificationType.Error:
+                    NotificationBar.CssClass += " is-error";
+                    NotificationIcon.Text = "!";
+                    break;
+                case NotificationType.Warning:
+                    NotificationBar.CssClass += " is-warning";
+                    NotificationIcon.Text = "!";
+                    break;
+                default:
+                    break;
+            }
+
+            NotificationMessage.Text = message;
         }
     }
 }
