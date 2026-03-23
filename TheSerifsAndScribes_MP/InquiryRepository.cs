@@ -5,9 +5,8 @@ using System.Data.SqlClient;
 
 namespace TheSerifsAndScribes_MP
 {
-    /// <summary>
     /// Data access helper for Inquiry entries (contact form submissions).
-    /// </summary>
+    
     public static class InquiryRepository
     {
         private static readonly string[] ConnectionStrings = new[]
@@ -17,10 +16,8 @@ namespace TheSerifsAndScribes_MP
             ConfigurationManager.ConnectionStrings["DBConnectionExpress"]?.ConnectionString // SQLEXPRESS
         };
 
-        /// <summary>
         /// Try each configured connection string until one opens successfully.
         /// This allows local development to keep working if cloud SQL is unreachable.
-        /// </summary>
         private static SqlConnection CreateOpenConnection()
         {
             SqlException lastSqlEx = null;
