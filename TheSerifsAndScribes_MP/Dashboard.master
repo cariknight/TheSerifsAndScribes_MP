@@ -28,37 +28,37 @@
 
                 <nav class="sidebar__nav" aria-label="Primary">
                     <a class="nav-item" href="~/AdminDashboard.aspx" runat="server">
-                        <i class="fa-solid fa-house"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/clarity_organization-solid.png" alt="Dashboard" runat="server" />
                         <span class="nav-label">Dashboard</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/Inquiries.aspx" runat="server">
-                        <i class="fa-regular fa-message"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/mdi_comment-question.png" alt="Inquiries" runat="server" />
                         <span class="nav-label">Inquiries</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/AnnouncementsDashboard.aspx" runat="server">
-                        <i class="fa-regular fa-bell"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/mdi_announcement.png" alt="Announcements" runat="server" />
                         <span class="nav-label">Announcements</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/NewsDashboard.aspx" runat="server">
-                        <i class="fa-solid fa-newspaper"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/mdi_announcement.png" alt="News and Events" runat="server" />
                         <span class="nav-label">News &amp; Events</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/CareersDashboard.aspx" runat="server">
-                        <i class="fa-solid fa-briefcase"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/clarity_organization-solid.png" alt="Jobs and Careers" runat="server" />
                         <span class="nav-label">Jobs / Careers</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/Organizations.aspx" runat="server">
-                        <i class="fa-solid fa-sitemap"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/clarity_organization-solid.png" alt="Organizations" runat="server" />
                         <span class="nav-label">Organizations</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
                     <a class="nav-item" href="~/Admins.aspx" runat="server">
-                        <i class="fa-solid fa-users"></i>
+                        <img class="nav-icon" src="~/Images/Assets/Icons/dashboard-icons/fluent_people-settings-28-filled.png" alt="Admins" runat="server" />
                         <span class="nav-label">Admins</span>
                         <i class="fa-solid fa-chevron-right nav-chevron"></i>
                     </a>
@@ -67,7 +67,7 @@
                 <asp:LinkButton ID="btnLogout" runat="server"
                     CssClass="nav-item nav-item--logout"
                     OnClick="btnLogout_Click">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <img class="logout-icon" src="~/Images/Assets/Icons/dashboard-icons/oi_account-logout.png" alt="Logout" runat="server" />
                     <span class="nav-label">Logout</span>
 
                 </asp:LinkButton>

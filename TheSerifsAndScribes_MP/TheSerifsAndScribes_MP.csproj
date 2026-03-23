@@ -76,6 +76,11 @@
     <Content Include="Images\Assets\binan-statue.jpg" />
     <Content Include="Images\Assets\binan_arc.jpg" />
     <Content Include="Images\Assets\Icons\bag-yellow-icon.png" />
+    <Content Include="Images\Assets\Icons\dashboard-icons\clarity_organization-solid.png" />
+    <Content Include="Images\Assets\Icons\dashboard-icons\fluent_people-settings-28-filled.png" />
+    <Content Include="Images\Assets\Icons\dashboard-icons\mdi_announcement.png" />
+    <Content Include="Images\Assets\Icons\dashboard-icons\mdi_comment-question.png" />
+    <Content Include="Images\Assets\Icons\dashboard-icons\oi_account-logout.png" />
     <Content Include="Images\Assets\Icons\download-lightgray-icon.png" />
     <Content Include="Images\Assets\Icons\eye-lightgray-icon.png" />
     <Content Include="Images\Assets\Icons\Files-img.jpg" />

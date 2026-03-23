@@ -161,6 +161,26 @@ html, body {
     text-align: center;
 }
 
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+    justify-self: center;
+}
+
+.logout-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+    justify-self: center;
+}
+
+.sidebar .nav-item img {
+    filter: brightness(0) invert(1) !important;
+}
+
 .nav-item .nav-chevron {
     font-size: 12px;
     justify-self: end;
