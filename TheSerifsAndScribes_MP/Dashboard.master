@@ -85,10 +85,6 @@
                         <span>Admin Dashboard</span>
                     </div>
                     <div class="topbar__actions">
-                        <label class="topbar__search" aria-label="Search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="search" placeholder="Search" />
-                        </label>
                         <div class="topbar__user">
                             <div class="avatar">
                                 <i class="fa-solid fa-user"></i>

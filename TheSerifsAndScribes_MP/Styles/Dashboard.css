@@ -250,26 +250,6 @@ html, body {
     margin-left: auto;
 }
 
-.topbar__search {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--surface);
-    padding: 8px 12px;
-    border-radius: 32px;
-    border: 1px solid #d6d9de;
-    color: #6c727a;
-    min-width: 210px;
-}
-
-.topbar__search input {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    width: 100%;
-}
-
 .topbar__user {
     display: inline-flex;
     align-items: center;
@@ -357,11 +337,6 @@ html, body {
         justify-content: space-between;
         width: 100%;
         justify-self: stretch;
-    }
-
-    .topbar__search {
-        flex: 1;
-        min-width: 0;
     }
 }
 
