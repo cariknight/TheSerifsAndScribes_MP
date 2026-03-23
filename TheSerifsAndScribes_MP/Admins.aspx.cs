@@ -342,60 +342,84 @@ namespace TheSerifsAndScribes_MP
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
+                SqlTransaction transaction = conn.BeginTransaction(IsolationLevel.Serializable);
 
-                string checkQuery = @"SELECT COUNT(*) 
-                                      FROM Admin 
-                                      WHERE username = @username OR email = @email";
-
-                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                try
                 {
-                    checkCmd.Parameters.AddWithValue("@username", username);
-                    checkCmd.Parameters.AddWithValue("@email", email);
+                    string checkQuery = @"SELECT COUNT(*) 
+                                          FROM Admin 
+                                          WHERE username = @username OR email = @email";
 
-                    int existingCount = (int)checkCmd.ExecuteScalar();
-
-                    if (existingCount > 0)
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn, transaction))
                     {
-                        lblAddAdminMessage.Text = "Username or email already exists.";
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
-                        return;
+                        checkCmd.Parameters.AddWithValue("@username", username);
+                        checkCmd.Parameters.AddWithValue("@email", email);
+
+                        int existingCount = (int)checkCmd.ExecuteScalar();
+
+                        if (existingCount > 0)
+                        {
+                            transaction.Rollback();
+                            lblAddAdminMessage.Text = "Username or email already exists.";
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
+                            return;
+                        }
+                    }
+
+                    int nextAdminId;
+                    string nextIdQuery = "SELECT ISNULL(MAX(adminID), 0) + 1 FROM Admin";
+
+                    using (SqlCommand nextIdCmd = new SqlCommand(nextIdQuery, conn, transaction))
+                    {
+                        nextAdminId = Convert.ToInt32(nextIdCmd.ExecuteScalar());
+                    }
+
+                    string insertQuery = @"INSERT INTO Admin (adminID, username, firstName, lastName, password, email)
+                                           VALUES (@adminID, @username, @firstName, @lastName, @password, @email)";
+
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn, transaction))
+                    {
+                        insertCmd.Parameters.AddWithValue("@adminID", nextAdminId);
+                        insertCmd.Parameters.AddWithValue("@username", username);
+                        insertCmd.Parameters.AddWithValue("@firstName", firstName);
+                        insertCmd.Parameters.AddWithValue("@lastName", lastName);
+                        insertCmd.Parameters.AddWithValue("@password", password);
+                        insertCmd.Parameters.AddWithValue("@email", email);
+
+                        int rows = insertCmd.ExecuteNonQuery();
+
+                        if (rows > 0)
+                        {
+                            transaction.Commit();
+                            lblAddAdminMessage.CssClass = "custom-success";
+                            lblAddAdminMessage.Text = "New admin account created successfully.";
+
+                            txtAddFirstName.Text = "";
+                            txtAddLastName.Text = "";
+                            txtAddUsername.Text = "";
+                            txtAddEmail.Text = "";
+                            txtAddPassword.Text = "";
+                            txtAddConfirmPassword.Text = "";
+
+                            LoadAdminAccounts();
+
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
+                        }
+                        else
+                        {
+                            transaction.Rollback();
+                            lblAddAdminMessage.Text = "Failed to create admin account.";
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
+                        }
                     }
                 }
-
-                string insertQuery = @"INSERT INTO Admin (username, firstName, lastName, password, email)
-                                       VALUES (@username, @firstName, @lastName, @password, @email)";
-
-                using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                catch (SqlException)
                 {
-                    insertCmd.Parameters.AddWithValue("@username", username);
-                    insertCmd.Parameters.AddWithValue("@firstName", firstName);
-                    insertCmd.Parameters.AddWithValue("@lastName", lastName);
-                    insertCmd.Parameters.AddWithValue("@password", password);
-                    insertCmd.Parameters.AddWithValue("@email", email);
+                    if (transaction.Connection != null)
+                        transaction.Rollback();
 
-                    int rows = insertCmd.ExecuteNonQuery();
-
-                    if (rows > 0)
-                    {
-                        lblAddAdminMessage.CssClass = "custom-success";
-                        lblAddAdminMessage.Text = "New admin account created successfully.";
-
-                        txtAddFirstName.Text = "";
-                        txtAddLastName.Text = "";
-                        txtAddUsername.Text = "";
-                        txtAddEmail.Text = "";
-                        txtAddPassword.Text = "";
-                        txtAddConfirmPassword.Text = "";
-
-                        LoadAdminAccounts();
-
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
-                    }
-                    else
-                    {
-                        lblAddAdminMessage.Text = "Failed to create admin account.";
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
-                    }
+                    lblAddAdminMessage.Text = "Failed to create admin account. Please try again.";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "openAddModal", "openModal('addAdminModal');", true);
                 }
             }
         }
